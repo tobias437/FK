@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ffb4ab", "tertiary-container": "#89f990", "on-error-container": "#ffdad6", "surface-container-lowest": "#0a0e14", "on-tertiary-fixed": "#002106", "surface-tint": "#acd60e", "primary-fixed": "#c7f337", "primary-container": "#c6f135", "inverse-primary": "#516600", "inverse-on-surface": "#2d3137", "outline": "#8e937b", "surface-container": "#1c2026", "surface-variant": "#31353c", "on-primary-fixed": "#161e00", "on-surface-variant": "#c5c9ae", "outline-variant": "#444934", "on-tertiary": "#00390e", "on-secondary": "#2f3131", "surface-container-highest": "#31353c", "tertiary-fixed-dim": "#6fdd78", "secondary": "#c6c6c7", "on-tertiary-fixed-variant": "#005319", "error-container": "#93000a", "surface": "#10141a", "tertiary-fixed": "#8bfb91", "on-primary-fixed-variant": "#3c4d00", "on-primary": "#293500", "on-secondary-fixed-variant": "#454747", "secondary-container": "#454747", "on-background": "#dfe2eb", "on-tertiary-container": "#007426", "primary": "#feffec", "on-error": "#690005", "surface-container-high": "#262a31", "secondary-fixed": "#e2e2e2", "primary-fixed-dim": "#acd60e", "on-secondary-container": "#b4b5b5", "tertiary": "#fbfff5", "surface-container-low": "#181c22", "background": "#10141a", "on-primary-container": "#556b00", "surface-bright": "#353940", "secondary-fixed-dim": "#c6c6c7", "on-secondary-fixed": "#1a1c1c", "surface-dim": "#10141a", "inverse-surface": "#dfe2eb", "on-surface": "#dfe2eb" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-lg": "1.5rem", "space-md": "1rem", "gutter-mobile": "1rem", "space-3xl": "4rem", "space-2xs": "0.25rem", "space-sm": "0.75rem", "gutter-desktop": "1.5rem", "space-2xl": "3rem", "space-xs": "0.5rem", "container-max-width": "1280px", "space-xl": "2rem" }, "fontFamily": { "label-md": [ "Space Grotesk" ], "body-md": [ "Inter" ], "body-sm": [ "Inter" ], "label-sm": [ "Space Grotesk" ], "headline-sm": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "headline-lg-mobile": [ "Space Grotesk" ], "price-hero": [ "Space Grotesk" ], "display-lg": [ "Space Grotesk" ], "headline-md": [ "Space Grotesk" ], "display-lg-mobile": [ "Space Grotesk" ], "label-lg": [ "Space Grotesk" ], "body-lg": [ "Inter" ] }, "fontSize": { "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "price-hero": [ "28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "display-lg": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "display-lg-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 w-full z-40 bg-surface-container-lowest/90 backdrop-blur-md"><div class="w-full bg-surface-container-low px-gutter-mobile lg:px-gutter-desktop py-1 flex items-center justify-center"><p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest flex items-center gap-space-xs"><span class="material-symbols-outlined text-[13px] text-tertiary-container">verified</span>Atención directa por WhatsApp | Envíos en el día<span class="material-symbols-outlined text-[13px] text-tertiary-container">bolt</span></p></div><div class="h-20 w-full px-gutter-mobile lg:px-gutter-desktop max-w-[1280px] mx-auto flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex flex-col group" data-path="inicio" href="#"><span class="font-headline-md text-headline-md font-bold tracking-tight text-primary group-hover:text-primary-container transition-colors">FK</span><span class="font-label-sm text-label-sm text-secondary uppercase -mt-1">tu tienda de soluciones</span></a></div><div class="hidden md:flex flex-1 max-w-md mx-space-md"><div class="w-full flex items-center bg-surface-container px-space-md py-space-xs rounded-lg"><span class="material-symbols-outlined text-secondary text-[18px] mr-space-xs">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none" placeholder="Buscar componentes, móviles o soluciones..." type="text"/></div></div><div class="flex items-center gap-space-sm"><a class="hidden sm:flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-high hover:bg-surface-bright transition-colors" data-path="servicio-tecnico" href="#"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-md text-label-md text-on-surface">Servicio Técnico</span></a><a class="hidden lg:flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors font-label-md text-label-md text-tertiary-container" data-path="soporte-whatsapp" href="#"><span class="material-symbols-outlined text-[18px]">chat</span>WhatsApp</a><button aria-label="Abrir Carrito" class="relative flex items-center justify-center w-10 h-10 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors" onclick="document.getElementById('cart-drawer').classList.remove('translate-x-full'); document.getElementById('cart-backdrop').classList.remove('hidden');" type="button"><span class="material-symbols-outlined text-on-surface text-[20px]">shopping_bag</span><span class="absolute -top-1 -right-1 w-5 h-5 bg-primary-container text-on-primary-container font-label-sm text-label-sm flex items-center justify-center rounded-full font-bold">3</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-2xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="w-full bg-surface-container-lowest"><div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop"><nav class="flex items-center gap-space-lg overflow-x-auto py-2.5" data-active-classes="text-primary-container font-bold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="hogar" href="#">Hogar</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="moda" href="#">Moda</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="tecnologia" href="#">Tecnología</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="accesorios" href="#">Accesorios</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="movil" href="#">Móvil</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="juguetes" href="#">Juguetes</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="cuidados-y-belleza" href="#">Cuidados y Belleza</a></nav></div></div></header><main class="w-full pt-36 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Status Strip -->
+<section class="w-full bg-surface-container-lowest py-space-xs">
+<div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop flex flex-wrap items-center justify-between gap-space-xs">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-2xs text-secondary font-label-sm text-label-sm uppercase">
+<a class="hover:text-primary transition-colors" href="#">Inicio</a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" href="#">Servicios Especializados</a>
+<span>/</span>
+<span class="text-primary-container font-bold">Laboratorio Técnico FK</span>
+</nav>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-full">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary-container"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface">Taller Físico en Las Heras 5267 • Diagnóstico en 45 min</span>
+</div>
+</div>
+</section>
+<!-- Hero Section: Laboratorio FK con Silvino -->
+<section class="w-full bg-gradient-to-b from-surface-container-low to-background py-space-2xl lg:py-space-3xl relative overflow-hidden">
+<div class="absolute -right-32 -top-32 w-96 h-96 bg-primary-container/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Column: Value Prop & Bio -->
+<div class="lg:col-span-7 space-y-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-primary-container text-[18px]">precision_manufacturing</span>
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider">Módulos OLED · Baterías Grado A+ · Microelectrónica SMD</span>
+</div>
+<h1 class="font-headline-lg lg:font-display-lg text-headline-lg lg:text-display-lg text-primary tracking-tight">
+            Laboratorio Técnico Especializado en Hardware &amp; Microelectrónica.
+          </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl leading-relaxed">
+            A cargo de <span class="text-primary font-bold">Silvino</span>. Diagnóstico de placa madre bajo microscopio, cambio de módulos certificados y reemplazo seguro de baterías con ciclos verificados para iPhone, Samsung, Motorola y Xiaomi. Sin intermediarios, sin especulación y con garantía escrita.
+          </p>
+<!-- Badges Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs pt-space-xs">
+<div class="p-space-sm bg-surface-container rounded-lg space-y-1">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">verified</span>
+<p class="font-label-sm text-label-sm text-on-surface font-bold">90 Días Escritos</p>
+<p class="font-body-sm text-body-sm text-secondary">Garantía real de taller</p>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg space-y-1">
+<span class="material-symbols-outlined text-primary-container text-[20px]">timer</span>
+<p class="font-label-sm text-label-sm text-on-surface font-bold">45 Minutos</p>
+<p class="font-body-sm text-body-sm text-secondary">Check-in de diagnóstico</p>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg space-y-1">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">price_check</span>
+<p class="font-label-sm text-label-sm text-on-surface font-bold">Presupuesto Fijo</p>
+<p class="font-body-sm text-body-sm text-secondary">Sin cargos sorpresa</p>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg space-y-1">
+<span class="material-symbols-outlined text-primary-container text-[20px]">handyman</span>
+<p class="font-label-sm text-label-sm text-on-surface font-bold">Trato Directo</p>
+<p class="font-body-sm text-body-sm text-secondary">Hablá con Silvino</p>
+</div>
+</div>
+<!-- CTAs -->
+<div class="pt-space-sm flex flex-wrap items-center gap-space-md">
+<a class="px-space-lg py-space-sm bg-primary-container hover:bg-primary-fixed text-on-primary-container font-label-md text-label-md font-bold rounded-lg flex items-center gap-space-xs transition-all shadow-md" href="https://wa.me/5491168243265?text=Hola%20Silvino,%20necesito%20cotizar%20una%20reparaci%C3%B3n%20en%20el%20Laboratorio%20FK" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+              Consultar a Silvino por WhatsApp
+            </a>
+<a class="px-space-lg py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg flex items-center gap-space-xs transition-colors" href="#cotizador-lab">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+              Calcular Presupuesto Online
+            </a>
+</div>
+</div>
+<!-- Right Column: Visual Station Card -->
+<div class="lg:col-span-5 flex flex-col space-y-space-md">
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-space-md shadow-xl">
+<div class="relative h-64 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Technical clean workshop bench with optical stereo microscope, precision hot air soldering station, opened high end smartphone logic board, organized ESD screwdrivers, dark moody industrial lighting with lime glow accents matching FK aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVt0-FuW-OVnHmyDV9Dn5fQXMbrIY_UBVvgWUif3lpBt-JbyDhMzAq-igRuaZG6YgLk73FmVuGKCogVhWY6EVWR7JHGYsNoPUqoSZPvKpkmiaKlY16MfCCATDl-s6xS03pqoruYS02kdaOBrd7GRceu18XrBiKznV8KWSQWGdhxz3zE4-enh4MY87X_8wnvkoQSFKh-LtAnfTUR3eH7k9Y-VNbvXmrm2w8eYPmctxLaCZE7xCEKwb0qQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-center justify-between">
+<div class="bg-surface-container-lowest/90 backdrop-blur-md px-space-sm py-1 rounded">
+<span class="font-label-sm text-label-sm text-primary font-mono uppercase tracking-wider">Estación 01 • Banco Óptico</span>
+</div>
+<span class="px-space-xs py-0.5 bg-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold rounded">Turnos Hoy: Disponibles</span>
+</div>
+</div>
+<!-- Technician Card Details -->
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center font-headline-sm text-headline-sm text-primary-container font-bold">
+                  S
+                </div>
+<div>
+<h3 class="font-label-md text-label-md text-primary font-bold">Silvino — Especialista en Placa</h3>
+<p class="font-body-sm text-body-sm text-secondary">Microelectrónica &amp; Módulos FK Oficial</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-tertiary-container font-mono block">WhatsApp Directo</span>
+<span class="font-label-md text-label-md text-primary font-bold">11 6824-3265</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3 Pilares Técnicos del Laboratorio -->
+<section class="w-full py-space-2xl bg-surface-container-lowest">
+<div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop space-y-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider">Capacidad de Taller</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Pilares Técnicos Certificados</h2>
+</div>
+<p class="font-body-md text-body-md text-secondary max-w-md">
+          Cada intervención sigue una rigurosa lista de control anti-estática con instrumental de precisión y componentes testeados en frío.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Pilar 1: Displays OLED -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between space-y-space-md hover:bg-surface-container-high transition-colors">
+<div class="space-y-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[28px]">smartphone</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Módulos OLED &amp; Displays Originales</h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+              Sustitución quirúrgica de pantalla para iPhone, Samsung AMOLED y líneas Xiaomi con pegado perimetral térmico hermético.
+            </p>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-secondary pt-space-xs">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[16px]">check_circle</span>
+<span>Restauración de TrueTone y sensor de luz</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[16px]">check_circle</span>
+<span>Calibración táctil de 10 puntos simultáneos</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[16px]">check_circle</span>
+<span>Sellado IP67/68 según fabricante</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-md border-t border-transparent flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-mono">Tiempo: 45-60 min</span>
+<span class="font-label-md text-label-md text-primary-container font-bold">90 Días Garantía</span>
+</div>
+</div>
+<!-- Pilar 2: Baterías -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between space-y-space-md hover:bg-surface-container-high transition-colors">
+<div class="space-y-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[28px]">battery_charging_full</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Baterías Grado A+ con Ciclos Cero</h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+              Celdas de polímero de litio certificadas con IC original para evitar reinicios, calor anómalo o apagones repentinos en frío.
+            </p>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-secondary pt-space-xs">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-container text-[16px]">check_circle</span>
+<span>Verificación de salud al 100% en sistema</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-container text-[16px]">check_circle</span>
+<span>Pruebas de curva de carga y corte térmico</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-container text-[16px]">check_circle</span>
+<span>Cintas adhesivas elásticas de extracción limpia</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-md border-t border-transparent flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-mono">Tiempo: 30-45 min</span>
+<span class="font-label-md text-label-md text-tertiary-container font-bold">Stock Permanente</span>
+</div>
+</div>
+<!-- Pilar 3: Microelectrónica -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between space-y-space-md hover:bg-surface-container-high transition-colors">
+<div class="space-y-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[28px]">memory</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Microelectrónica &amp; Reparación de Placa</h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+              Solución real a placas declaradas "irrecuperables" por otros servicios. Manejo de cortos, pines SMD y chips de gestión energética.
+            </p>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-secondary pt-space-xs">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[16px]">check_circle</span>
+<span>Cambio de pines Type-C y Lightning microscópico</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[16px]">check_circle</span>
+<span>Reemplazo de IC Tristar/Hydra y líneas VDD_MAIN</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[16px]">check_circle</span>
+<span>Limpieza ultrasónica y remoción de corrosión</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-md border-t border-transparent flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-mono">Tiempo: 24 a 48 hs</span>
+<span class="font-label-md text-label-md text-primary-container font-bold">Diagnóstico sin cargo</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tabla Comparativa / Trabajos de Referencia -->
+<section class="w-full py-space-2xl bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop space-y-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider">Transparencia FK</span>
+<h2 class="font-headline-md lg:font-headline-lg text-headline-md lg:text-headline-lg text-primary">Lista de Trabajos Frecuentes y Plazos</h2>
+</div>
+<a class="font-label-sm text-label-sm text-tertiary-container flex items-center gap-space-2xs hover:underline" href="https://wa.me/5491168243265?text=Silvino,%20tengo%20una%20falla%20particular%20que%20quiero%20consultarte" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">help</span>
+          ¿Tu falla no figura aquí? Preguntá directo a Silvino
+        </a>
+</div>
+<div class="overflow-x-auto rounded-xl bg-surface-container shadow-sm">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-highest text-secondary uppercase font-label-sm text-label-sm">
+<tr>
+<th class="p-space-md">Intervención Técnica</th>
+<th class="p-space-md">Modelos Comunes</th>
+<th class="p-space-md">Tiempo Estimado</th>
+<th class="p-space-md">Garantía Escrita</th>
+<th class="p-space-md text-right">Consulta Inmediata</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-bold text-primary flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">screen_rotation</span>
+                Módulo Pantalla OLED Original
+              </td>
+<td class="p-space-md text-secondary">iPhone X al 15 Pro / Galaxy S20 a S24 Ultra</td>
+<td class="p-space-md font-mono text-tertiary-container">45 - 60 min</td>
+<td class="p-space-md">90 días de prueba</td>
+<td class="p-space-md text-right">
+<a class="inline-flex items-center gap-space-2xs px-space-sm py-1 bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container rounded font-label-sm text-label-sm text-primary transition-colors" href="https://wa.me/5491168243265?text=Hola%20Silvino,%20quiero%20cotizar%20m%C3%B3dulo%20OLED%20para%20mi%20m%C3%B3vil" rel="noopener noreferrer" target="_blank">
+<span>Cotizar</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors bg-surface-container/60">
+<td class="p-space-md font-bold text-primary flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-container text-[18px]">battery_saver</span>
+                Cambio Batería Alta Densidad (0 Ciclos)
+              </td>
+<td class="p-space-md text-secondary">iPhone 11/12/13/14, Xiaomi Redmi Note, Moto G</td>
+<td class="p-space-md font-mono text-tertiary-container">35 - 45 min</td>
+<td class="p-space-md">90 días de prueba</td>
+<td class="p-space-md text-right">
+<a class="inline-flex items-center gap-space-2xs px-space-sm py-1 bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container rounded font-label-sm text-label-sm text-primary transition-colors" href="https://wa.me/5491168243265?text=Silvino,%20necesito%20cambio%20de%20bater%C3%ADa%20con%20ciclos%20verificados" rel="noopener noreferrer" target="_blank">
+<span>Cotizar</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-bold text-primary flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">usb</span>
+                Reemplazo Pin de Carga SMD / Flex
+              </td>
+<td class="p-space-md text-secondary">Samsung Serie A/S, Moto Edge/G, Redmi, iPhones</td>
+<td class="p-space-md font-mono text-tertiary-container">60 - 90 min</td>
+<td class="p-space-md">90 días de prueba</td>
+<td class="p-space-md text-right">
+<a class="inline-flex items-center gap-space-2xs px-space-sm py-1 bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container rounded font-label-sm text-label-sm text-primary transition-colors" href="https://wa.me/5491168243265?text=Silvino,%20mi%20m%C3%B3vil%20no%20carga%20o%20tiene%20el%20pin%20flojo" rel="noopener noreferrer" target="_blank">
+<span>Cotizar</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors bg-surface-container/60">
+<td class="p-space-md font-bold text-primary flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[18px]">water_damage</span>
+                Salvataje Placa por Líquidos / Cortocircuito
+              </td>
+<td class="p-space-md text-secondary">Universal Smartphones &amp; Tablets</td>
+<td class="p-space-md font-mono text-tertiary-container">24 - 48 hs</td>
+<td class="p-space-md">90 días sobre línea reparada</td>
+<td class="p-space-md text-right">
+<a class="inline-flex items-center gap-space-2xs px-space-sm py-1 bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container rounded font-label-sm text-label-sm text-primary transition-colors" href="https://wa.me/5491168243265?text=Silvino,%20tengo%20un%20equipo%20mojado%20o%20en%20corto%20para%20revisar" rel="noopener noreferrer" target="_blank">
+<span>Consultar</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Cotizador Interactivo de Reparación Online -->
+<section class="w-full py-space-2xl bg-surface-container-lowest relative" id="cotizador-lab">
+<div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="bg-surface-container p-space-lg lg:p-space-2xl rounded-xl shadow-2xl">
+<div class="max-w-3xl mb-space-lg space-y-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider">Cotizador Express Silvino</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Generá tu Orden de Diagnóstico Rápido</h2>
+<p class="font-body-md text-body-md text-secondary">
+            Completá los datos del equipo. El sistema generará el mensaje técnico estructurado para enviar al WhatsApp de Silvino (9 11 6824-3265) y reservar tu turno de banco.
+          </p>
+</div>
+<form class="space-y-space-lg" id="quote-form" onsubmit="event.preventDefault(); enviarWhatsAppSilvino();">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Selector Marca -->
+<div class="space-y-space-2xs">
+<label class="font-label-md text-label-md text-primary" for="brand-select">Marca del Dispositivo</label>
+<select class="w-full bg-surface-container-highest text-on-surface font-body-sm text-body-sm p-space-sm rounded-lg focus:outline-none focus:bg-surface-bright" id="brand-select">
+<option value="Apple iPhone">Apple iPhone</option>
+<option value="Samsung Galaxy">Samsung Galaxy</option>
+<option value="Motorola">Motorola Moto</option>
+<option value="Xiaomi / Redmi / Poco">Xiaomi / Redmi / Poco</option>
+<option value="Otra marca">Otra Marca / Consulta Especial</option>
+</select>
+</div>
+<!-- Modelo Exacto -->
+<div class="space-y-space-2xs">
+<label class="font-label-md text-label-md text-primary" for="model-input">Modelo Exacto</label>
+<input class="w-full bg-surface-container-highest text-on-surface placeholder:text-secondary font-body-sm text-body-sm p-space-sm rounded-lg focus:outline-none focus:bg-surface-bright" id="model-input" placeholder="Ej: iPhone 13 Pro / Samsung S22" required="" type="text"/>
+</div>
+<!-- Falla Principal -->
+<div class="space-y-space-2xs">
+<label class="font-label-md text-label-md text-primary" for="issue-select">Falla o Síntoma</label>
+<select class="w-full bg-surface-container-highest text-on-surface font-body-sm text-body-sm p-space-sm rounded-lg focus:outline-none focus:bg-surface-bright" id="issue-select">
+<option value="Pantalla Rota / Táctil no responde / Rayas">Módulo Pantalla / Sin imagen / Rayas OLED</option>
+<option value="Batería se descarga rápido o inflada">Batería baja salud o se apaga en frío</option>
+<option value="No carga / Pin de carga con juego">Pin de carga suelto o no detecta cable</option>
+<option value="Equipo mojado / No enciende / Corto">No enciende / Mojado con líquido</option>
+<option value="Cámaras / Sensor de proximidad / Botones">Cámaras o Botones físicos rotos</option>
+<option value="Diagnóstico general de microelectrónica">Diagnóstico general de placa madre</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Nombre -->
+<div class="space-y-space-2xs">
+<label class="font-label-md text-label-md text-primary" for="client-name">Tu Nombre Completo</label>
+<input class="w-full bg-surface-container-highest text-on-surface placeholder:text-secondary font-body-sm text-body-sm p-space-sm rounded-lg focus:outline-none focus:bg-surface-bright" id="client-name" placeholder="Ej: Martín Rodríguez" required="" type="text"/>
+</div>
+<!-- Detalle Adicional -->
+<div class="space-y-space-2xs">
+<label class="font-label-md text-label-md text-primary" for="detail-input">Comentarios Técnicos Adicionales (Opcional)</label>
+<input class="w-full bg-surface-container-highest text-on-surface placeholder:text-secondary font-body-sm text-body-sm p-space-sm rounded-lg focus:outline-none focus:bg-surface-bright" id="detail-input" placeholder="Ej: Se cayó de un metro de altura, el cristal trasero está sano" type="text"/>
+</div>
+</div>
+<!-- Bottom bar with conversion trigger -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[20px]">flash_on</span>
+</div>
+<div class="text-left">
+<span class="font-label-sm text-label-sm text-on-surface font-bold block">Respuesta Directa por Silvino</span>
+<span class="font-body-sm text-body-sm text-secondary">Atención en Las Heras 5267 de Lun a Sáb de 17 a 21 hs.</span>
+</div>
+</div>
+<button class="w-full sm:w-auto px-space-xl py-space-sm bg-primary-container hover:bg-primary-fixed text-on-primary-container font-label-md text-label-md font-bold rounded-lg flex items-center justify-center gap-space-xs transition-transform active:scale-95 shadow-lg" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+              Enviar Consulta Directa a Silvino (WhatsApp)
+            </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- El Manifiesto "Cero Humo" de Silvino -->
+<section class="w-full py-space-2xl bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop space-y-space-xl">
+<div class="text-center max-w-2xl mx-auto space-y-space-xs">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider">Código de Taller</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">El Manifiesto «Cero Humo» de Silvino</h2>
+<p class="font-body-md text-body-md text-secondary">
+          Reparar hardware exige honestidad, precisión y respeto por el equipo del cliente. Esta es nuestra política inquebrantable en Las Heras 5267:
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Principio 1 -->
+<div class="p-space-lg bg-surface-container rounded-xl space-y-space-xs">
+<span class="font-headline-md text-headline-md font-mono text-primary-container font-bold">01.</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Diagnóstico en 45 Min</h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+            Medición de consumo con fuentes reguladas y cámara térmica. Sabés con exactitud el componente dañado antes de pagar un solo peso.
+          </p>
+</div>
+<!-- Principio 2 -->
+<div class="p-space-lg bg-surface-container rounded-xl space-y-space-xs">
+<span class="font-headline-md text-headline-md font-mono text-tertiary-container font-bold">02.</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Piezas Testeadas en Frío</h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+            Cada pantalla o batería se prueba antes de adherir definitivamente al chasis. Sin sorpresas de parpadeos ni calibraciones deficientes.
+          </p>
+</div>
+<!-- Principio 3 -->
+<div class="p-space-lg bg-surface-container rounded-xl space-y-space-xs">
+<span class="font-headline-md text-headline-md font-mono text-primary-container font-bold">03.</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Sin Sobreprecios Ocultos</h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+            El presupuesto acordado por WhatsApp o en mostrador es el final. Si durante el trabajo se detecta una complicación, se consulta antes.
+          </p>
+</div>
+<!-- Principio 4 -->
+<div class="p-space-lg bg-surface-container rounded-xl space-y-space-xs">
+<span class="font-headline-md text-headline-md font-mono text-tertiary-container font-bold">04.</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Garantía Escrita 90 Días</h3>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+            Comprobante físico y digital vinculado al número de serie de la pieza reemplazada. Respaldo directo en el taller sin trabas burocráticas.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Ubicación Taller Físico & Horarios: Las Heras 5267 -->
+<section class="w-full py-space-2xl bg-surface-container-lowest">
+<div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg bg-surface-container rounded-2xl p-space-lg lg:p-space-xl items-center">
+<!-- Info Izquierda -->
+<div class="lg:col-span-6 space-y-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high rounded-full">
+<span class="material-symbols-outlined text-primary-container text-[16px]">pin_drop</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Sede Central de Laboratorio</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+            Traé tu equipo a Las Heras 5267
+          </h2>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+            Podés acercar tu dispositivo de forma espontánea o con turno previo coordinado con Silvino para realizar el diagnóstico presencial en 45 minutos.
+          </p>
+<div class="space-y-space-sm pt-space-xs font-body-sm text-body-sm text-secondary">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+</div>
+<div>
+<span class="text-primary font-bold block">Las Heras 5267</span>
+<span>Laboratorio FK Técnico Oficial</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+<div>
+<span class="text-primary font-bold block">Lunes a Sábados: 17:00 a 21:00 hs</span>
+<span>Atención técnica directa y guardias coordinadas</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</div>
+<div>
+<span class="text-primary font-bold block">+54 9 11 6824-3265</span>
+<span>Canal oficial exclusivo de soporte y cotizaciones de Silvino</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex flex-wrap gap-space-sm">
+<a class="px-space-md py-space-xs bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md rounded-lg flex items-center gap-space-xs transition-colors" href="https://maps.google.com/?q=Las+Heras+5267" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">map</span>
+              Abrir en Google Maps
+            </a>
+<a class="px-space-md py-space-xs bg-primary-container text-on-primary-container hover:bg-primary-fixed font-label-md text-label-md font-bold rounded-lg flex items-center gap-space-xs transition-colors" href="https://wa.me/5491168243265?text=Hola%20Silvino,%20estoy%20por%20acercarme%20al%20laboratorio%20de%20Las%20Heras%205267" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">near_me</span>
+              Avisar que voy para allá
+            </a>
+</div>
+</div>
+<!-- Mapa / Representación Gráfica Derecha -->
+<div class="lg:col-span-6">
+<div class="w-full h-80 bg-surface-container-high rounded-xl relative overflow-hidden bg-cover bg-center flex items-center justify-center p-space-md" data-location="Las Heras 5267" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuByXHQa09c5EmHJ5O4ePueCmoSUh0exYBmQiO-sqmcShV_Lm5rYwhbWuoRk-0mylKGIJicF-S8ssIAat4jZkz7gP653JV3OFmkXFjnodyPMNMGZry8hWhftlLXwWreyda60zjtAd7SEOMndMn8MPFBDYYQDYGPOIbsRXu3sc-jGZmmg5j7KbPG0-vR7F7UkuKKyikhU-N7iTzgPSO7tzbzV6xiOCwETcYw-nZJ9zH2vFuHlumCU2nfBag')">
+<div class="absolute inset-0 bg-surface-container-lowest/60 backdrop-blur-xs"></div>
+<!-- Pin Over Map -->
+<div class="relative z-10 bg-surface-container-low/95 p-space-md rounded-xl max-w-xs text-center space-y-space-2xs shadow-2xl">
+<div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-container text-on-primary-container mb-space-2xs">
+<span class="material-symbols-outlined text-[22px]">build</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary">Taller FK Las Heras</p>
+<p class="font-label-sm text-label-sm text-primary-container font-mono">Las Heras 5267</p>
+<p class="font-body-sm text-body-sm text-secondary">Estación técnica lista con Silvino al frente.</p>
+<div class="pt-space-xs">
+<span class="px-space-sm py-0.5 bg-surface-container-high text-tertiary-container font-label-sm text-label-sm rounded-full inline-block">
+                  Atención activa hoy 17:00 - 21:00 hs
+                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript -->
+<script>
+    function enviarWhatsAppSilvino() {
+      const brand = document.getElementById('brand-select').value;
+      const model = document.getElementById('model-input').value.trim();
+      const issue = document.getElementById('issue-select').value;
+      const name = document.getElementById('client-name').value.trim();
+      const detail = document.getElementById('detail-input').value.trim();
+
+      if (!model || !name) {
+        alert('Por favor completá tu nombre y el modelo del dispositivo.');
+        return;
+      }
+
+      const mensaje = `Hola Silvino, soy ${name}. Quiero consultar presupuesto en el Laboratorio Técnico FK:%0A%0A` +
+        `• *Equipo:* ${brand} - ${model}%0A` +
+        `• *Falla:* ${issue}%0A` +
+        (detail ? `• *Detalle adicional:* ${detail}%0A` : '') +
+        `%0A¿Cuándo puedo acercarlo a Las Heras 5267 o cotizar el repuesto?`;
+
+      const whatsappURL = `https://wa.me/5491168243265?text=${mensaje}`;
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
+</div></main><div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-sm z-50 hidden transition-opacity" id="cart-backdrop" onclick="document.getElementById('cart-drawer').classList.add('translate-x-full'); this.classList.add('hidden');"></div><aside class="fixed top-0 right-0 w-full sm:w-[420px] h-full bg-surface-container-low z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col" id="cart-drawer"><div class="p-space-lg flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary-container">shopping_bag</span><h2 class="font-headline-sm text-headline-sm text-primary">Tu Carrito</h2></div><button class="text-secondary hover:text-on-surface" onclick="document.getElementById('cart-drawer').classList.add('translate-x-full'); document.getElementById('cart-backdrop').classList.add('hidden');" type="button"><span class="material-symbols-outlined">close</span></button></div><div class="p-space-md bg-surface-container"><div class="flex justify-between items-center mb-space-2xs"><span class="font-label-sm text-label-sm text-secondary uppercase">Progreso de Envío Gratis</span><span class="font-label-sm text-label-sm text-primary-container font-bold">¡Alcanzado!</span></div><div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden"><div class="w-full h-full bg-primary-container"></div></div></div><div class="flex-1 overflow-y-auto p-space-lg space-y-space-md"><div class="flex gap-space-md p-space-sm bg-surface-container rounded-lg"><div class="w-16 h-16 bg-surface-container-high rounded flex items-center justify-center"><span class="material-symbols-outlined text-secondary">smartphone</span></div><div class="flex-1 flex flex-col justify-between"><div class="flex justify-between"><span class="font-label-md text-label-md text-on-surface">Módulo Display OLED</span><span class="font-headline-sm text-headline-sm text-primary">$48.500</span></div><div class="flex items-center justify-between mt-space-xs"><div class="flex items-center bg-surface-container-highest rounded px-space-xs py-0.5 gap-space-sm"><button class="text-secondary hover:text-on-surface text-xs" type="button">-</button><span class="font-label-sm text-label-sm text-on-surface">1</span><button class="text-secondary hover:text-on-surface text-xs" type="button">+</button></div><button class="text-secondary hover:text-error text-xs font-label-sm" type="button">Quitar</button></div></div></div></div><div class="p-space-lg bg-surface-container-lowest space-y-space-md"><div class="space-y-space-xs"><div class="flex justify-between font-body-sm text-body-sm text-secondary"><span>Subtotal estimado</span><span>$48.500</span></div><div class="flex justify-between font-headline-sm text-headline-sm text-primary font-bold"><span>Total</span><span class="text-primary-container">$48.500</span></div></div><div class="space-y-space-xs"><a class="w-full py-space-sm bg-primary-container text-on-primary-container font-label-md text-label-md font-bold rounded-lg flex items-center justify-center gap-space-xs hover:bg-primary-fixed transition-colors" data-path="checkout" href="#"><span class="material-symbols-outlined text-[18px]">credit_card</span>Finalizar Pedido</a><a class="w-full py-space-sm bg-surface-container hover:bg-surface-container-high text-tertiary-container font-label-md text-label-md font-bold rounded-lg flex items-center justify-center gap-space-xs transition-colors" data-path="pedido-whatsapp" href="#"><span class="material-symbols-outlined text-[18px]">chat</span>Comprar por WhatsApp</a></div></div></aside><footer class="w-full bg-surface-container-lowest pt-space-3xl pb-space-2xl"><div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-2xl"><div class="space-y-space-md"><div class="flex flex-col"><span class="font-headline-md text-headline-md font-bold tracking-tight text-primary">FK</span><span class="font-label-sm text-label-sm text-secondary uppercase -mt-1">tu tienda de soluciones</span></div><p class="font-body-sm text-body-sm text-secondary">Equipamiento, repuestos certificados y servicio técnico de alta complejidad para tu día a día.</p><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span class="font-label-sm text-label-sm text-on-surface">Taller Técnico Operativo</span></div></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary uppercase">Ubicación y Horarios</h3><ul class="space-y-space-xs font-body-sm text-body-sm text-secondary"><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-primary-container text-[18px]">store</span><span>Las Heras 5267</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">schedule</span><span>Lun a Sáb: 17:00 a 21:00 hs</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">local_shipping</span><span>Envíos en el día para compras confirmadas</span></li></ul></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary uppercase">Contacto Directo</h3><ul class="space-y-space-xs font-body-sm text-body-sm text-secondary"><li><a class="flex items-center gap-space-xs text-tertiary-container hover:underline" data-path="soporte-whatsapp" href="#"><span class="material-symbols-outlined text-[18px]">chat</span>Canal VIP WhatsApp</a></li><li><a class="hover:text-on-surface transition-colors flex items-center gap-space-xs" data-path="servicio-tecnico" href="#"><span class="material-symbols-outlined text-[18px]">build</span>Turnos Servicio Técnico</a></li><li><a class="hover:text-on-surface transition-colors" data-path="garantia-y-devoluciones" href="#">Términos de Garantía</a></li></ul></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary uppercase">Medios de Pago</h3><p class="font-body-sm text-body-sm text-secondary">Procesamiento seguro y acreditación inmediata:</p><div class="flex flex-wrap gap-space-xs pt-space-2xs"><span class="px-space-sm py-1 bg-surface-container rounded font-label-sm text-label-sm text-on-surface">Mercado Pago</span><span class="px-space-sm py-1 bg-surface-container rounded font-label-sm text-label-sm text-on-surface">Transferencia Bancaria</span><span class="px-space-sm py-1 bg-surface-container rounded font-label-sm text-label-sm text-on-surface">Efectivo en Tienda</span></div></div></div><div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop mt-space-2xl pt-space-lg flex flex-col sm:flex-row justify-between items-center gap-space-md"><span class="font-body-sm text-body-sm text-secondary">© 2024 FK — Tu Tienda de Soluciones. Todos los derechos reservados.</span><div class="flex items-center gap-space-lg font-label-sm text-label-sm text-secondary"><a class="hover:text-on-surface transition-colors" data-path="privacidad" href="#">Privacidad</a><a class="hover:text-on-surface transition-colors" data-path="terminos" href="#">Términos y Condiciones</a></div></div></footer></body></html>

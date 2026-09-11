@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>FK — Tu Tienda de Soluciones | Mobile Store</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-dim": "#10141a",
+            "on-primary": "#293500",
+            "surface-container-high": "#262a31",
+            "tertiary-container": "#89f990",
+            "surface-variant": "#31353c",
+            "on-secondary-fixed": "#1a1c1c",
+            "primary-fixed-dim": "#acd60e",
+            "primary-container": "#c6f135",
+            "error": "#ffb4ab",
+            "inverse-primary": "#516600",
+            "secondary-fixed-dim": "#c6c6c7",
+            "surface-container-low": "#181c22",
+            "secondary": "#c6c6c7",
+            "on-primary-fixed": "#161e00",
+            "on-error-container": "#ffdad6",
+            "on-error": "#690005",
+            "on-secondary": "#2f3131",
+            "on-secondary-fixed-variant": "#454747",
+            "surface": "#10141a",
+            "background": "#10141a",
+            "on-tertiary-fixed": "#002106",
+            "outline-variant": "#444934",
+            "on-tertiary-fixed-variant": "#005319",
+            "surface-container-lowest": "#0a0e14",
+            "surface-tint": "#acd60e",
+            "on-tertiary": "#00390e",
+            "tertiary-fixed": "#8bfb91",
+            "primary": "#feffec",
+            "outline": "#8e937b",
+            "primary-fixed": "#c7f337",
+            "secondary-container": "#454747",
+            "inverse-on-surface": "#2d3137",
+            "inverse-surface": "#dfe2eb",
+            "tertiary": "#fbfff5",
+            "on-primary-container": "#556b00",
+            "surface-container-highest": "#31353c",
+            "on-background": "#dfe2eb",
+            "surface-bright": "#353940",
+            "on-surface": "#dfe2eb",
+            "on-surface-variant": "#c5c9ae",
+            "on-secondary-container": "#b4b5b5",
+            "tertiary-fixed-dim": "#6fdd78",
+            "error-container": "#93000a",
+            "on-tertiary-container": "#007426",
+            "on-primary-fixed-variant": "#3c4d00",
+            "surface-container": "#1c2026",
+            "secondary-fixed": "#e2e2e2"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.375rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            headline: ["Space Grotesk", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    body {
+      -webkit-tap-highlight-color: transparent;
+      overscroll-behavior-y: auto;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .touch-target {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen w-full overflow-y-auto overflow-x-hidden pb-16 font-sans">
+<!-- TOP BAR MICRO AVISO -->
+<div class="w-full bg-surface-container-lowest border-b border-surface-container-high py-1.5 px-3 flex items-center justify-between text-[11px] font-mono tracking-tight text-secondary">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+      Las Heras 5267 · 09:00 a 21:00 hs
+    </span>
+<a class="text-tertiary-container font-semibold flex items-center gap-0.5 hover:underline" href="https://wa.me/5491168243265" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[13px]">chat</span> 9 11 6824-3265
+    </a>
+</div>
+<!-- HEADER COMPACTO MOBILE STICKY -->
+<header class="sticky top-0 z-40 bg-surface/95 backdrop-blur-md border-b border-surface-container-high shadow-lg">
+<div class="px-3.5 h-16 flex items-center justify-between gap-2">
+<!-- NUEVO LOGO OFICIAL FK -->
+<a class="flex items-center gap-2 select-none flex-shrink-0" href="#">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest border border-surface-container-high flex items-center justify-center overflow-hidden p-1">
+<img alt="FK Monograma" class="w-full h-full object-contain invert brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0jXZkhADeZhLMnTNCYNHEPaJ6Pv9JQMhmTMFYExHZvSNyS0D-7uDCzZJ92OW1kHEv8p6DDmNqZ87BbLKZYSaTFz3YtoQ54kHrBqryX0SpQTOBFBs0cLK6tocaW9WRLm0AyPdt5VccHhnGbd87ZFW0ef1t0iTkd5WRiVixOfKNLszXMz5pD56OFLpfOBq0AnwY5FLY2R8cNWHejWC9FUNYRWas-tdD4n3SnBbnIBNmwr666Ug_iJgiovZQVY8B-WFQ7aU"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-headline font-extrabold text-xl tracking-tight text-primary leading-none">FK</span>
+<span class="text-[9px] px-1.5 py-0.2 bg-primary-container text-on-primary-container font-bold rounded">SOLUCIONES</span>
+</div>
+<span class="text-[10px] text-secondary tracking-normal -mt-0.5">tu tienda de soluciones</span>
+</div>
+</a>
+<!-- BUSCADOR RÁPIDO O ACCIONES -->
+<div class="flex items-center gap-2">
+<a aria-label="WhatsApp Oficial" class="h-9 px-2.5 rounded-lg bg-surface-container-high text-tertiary-container border border-surface-container-highest flex items-center gap-1 text-xs font-bold active:scale-95 transition-transform" href="https://wa.me/5491168243265?text=Hola%20FK,%20tengo%20una%20consulta" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span class="text-[11px]">Chat</span>
+</a>
+<!-- ACCESO DIRECTO SERVICIO TÉCNICO CON SILVINO -->
+<a class="h-9 px-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface border border-surface-container-highest flex items-center gap-1 text-[11px] font-bold active:scale-95 transition-transform" href="#servicio-tecnico-section">
+<span class="material-symbols-outlined text-primary-container text-[16px]">build</span>
+<span>Taller Silvino</span>
+</a>
+<!-- BOTÓN CARRITO MOBILE CON BADGE FLOTANTE -->
+<button aria-label="Ver Carrito" class="relative w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-bold active:scale-90 transition-transform shadow-md" id="header-cart-btn" onclick="openCartDrawer()" type="button">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="absolute -top-1.5 -right-1.5 w-5 h-5 bg-tertiary-container text-on-tertiary text-[10px] font-extrabold flex items-center justify-center rounded-full border border-background shadow" id="cart-badge">0</span>
+</button>
+</div>
+</div>
+<!-- CHIPS DE CATEGORÍAS ACTUALIZADOS -->
+<nav class="flex items-center gap-1.5 overflow-x-auto no-scrollbar px-3 py-2 bg-surface-container-lowest/90 border-t border-surface-container-high" id="mobile-categories-nav">
+<button class="cat-pill px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-primary-container text-on-primary-container transition-all" data-cat="all" onclick="selectCategory('all')">Todos</button>
+<button class="cat-pill px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface transition-all" data-cat="audio-tecno" onclick="selectCategory('audio-tecno')">Tecnología &amp; Audio</button>
+<button class="cat-pill px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface transition-all" data-cat="cocina" onclick="selectCategory('cocina')">Cocina</button>
+<button class="cat-pill px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface transition-all" data-cat="hogar" onclick="selectCategory('hogar')">Hogar &amp; Clima</button>
+<button class="cat-pill px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface transition-all" data-cat="accesorios" onclick="selectCategory('accesorios')">Accesorios</button>
+</nav>
+</header>
+<!-- BANNER RECUPERACIÓN DE CARRITO MOBILE -->
+<div class="hidden bg-surface-container-high border-b border-primary-container/30 px-3.5 py-2" id="cart-recovery-banner">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary-container text-[18px] flex-shrink-0">shopping_cart_checkout</span>
+<p class="text-xs text-on-surface truncate">Tenés productos guardados en tu orden</p>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<button class="text-[11px] font-bold bg-primary-container text-on-primary-container px-2.5 py-1 rounded-md" onclick="openCartDrawer()" type="button">Ver pedido</button>
+<button aria-label="Cerrar aviso" class="text-secondary p-1" onclick="dismissRecoveryBanner()" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<main class="w-full flex flex-col space-y-5 pt-3">
+<!-- HERO COMPACTO MOBILE -->
+<section class="px-3.5">
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-b from-surface-container to-surface-container-low border border-surface-container-high p-4 space-y-3.5 shadow-xl">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-container/10 border border-primary-container/20 text-[11px] font-bold text-primary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span> Catálogo Certificado FK
+          </span>
+<span class="text-[11px] text-tertiary-container font-mono font-bold">Envíos en el día</span>
+</div>
+<div>
+<h1 class="font-headline text-xl font-bold text-primary leading-snug">
+            Tecnología, equipamiento y soluciones que encajan con tu día.
+          </h1>
+<p class="text-xs text-secondary mt-1">
+            Audio original, electrodomésticos para el hogar y laboratorio técnico con el especialista Silvino.
+          </p>
+</div>
+<!-- ACCIONES TÁCTILES RÁPIDAS -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<a class="touch-target flex items-center justify-center gap-1.5 bg-primary-container text-on-primary-container font-bold text-xs rounded-xl shadow-md active:scale-95 transition-transform" href="#catalogo">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+            Explorar Catálogo
+          </a>
+<a class="touch-target flex items-center justify-center gap-1.5 bg-surface-container-high hover:bg-surface-bright text-tertiary-container font-bold text-xs rounded-xl border border-surface-container-highest active:scale-95 transition-transform" href="https://wa.me/5491168243265?text=Hola%20FK,%20quiero%20hacer%20una%20consulta%20directa" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+            WhatsApp 9 11 6824-3265
+          </a>
+</div>
+<!-- TARJETA TALLER / LABORATORIO TÉCNICO SILVINO -->
+<div class="bg-surface-container-lowest/90 backdrop-blur rounded-xl p-3 border border-surface-container-high flex items-center justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container flex-shrink-0 border border-surface-container-high">
+<span class="material-symbols-outlined text-[20px]">build_circle</span>
+</div>
+<div>
+<span class="text-[10px] uppercase font-bold text-tertiary-container block">Laboratorio Especializado</span>
+<p class="text-xs font-bold text-on-surface">Especialista Silvino · 90d garantía</p>
+<p class="text-[10px] text-secondary">Las Heras 5267 · Turno en 45 min</p>
+</div>
+</div>
+<a class="px-3 py-2 rounded-lg bg-tertiary-container text-on-tertiary text-[11px] font-extrabold flex-shrink-0 active:scale-95 transition-transform" href="#servicio-tecnico-section">
+            Pedir Turno
+          </a>
+</div>
+<!-- 4 PILARES EN MICRO GRID -->
+<div class="grid grid-cols-2 gap-2 pt-1 border-t border-surface-container-high">
+<div class="flex items-center gap-1.5 text-[11px] text-secondary">
+<span class="material-symbols-outlined text-primary-container text-[16px]">store</span>
+<span>Local: Las Heras 5267</span>
+</div>
+<div class="flex items-center gap-1.5 text-[11px] text-secondary">
+<span class="material-symbols-outlined text-tertiary-container text-[16px]">schedule</span>
+<span>Todos los días: 9 a 21 hs</span>
+</div>
+<div class="flex items-center gap-1.5 text-[11px] text-secondary">
+<span class="material-symbols-outlined text-tertiary-container text-[16px]">chat</span>
+<span>WhatsApp directo</span>
+</div>
+<div class="flex items-center gap-1.5 text-[11px] text-secondary">
+<span class="material-symbols-outlined text-primary-container text-[16px]">qr_code_2</span>
+<span>Alias: LF2024.MP</span>
+</div>
+</div>
+</div>
+</section>
+<!-- BARRA DE BÚSQUEDA Y FILTRO RÁPIDO -->
+<section class="px-3.5" id="catalogo">
+<div class="flex items-center gap-2 bg-surface-container px-3 py-2.5 rounded-xl border border-surface-container-high">
+<span class="material-symbols-outlined text-secondary text-[18px]">search</span>
+<input class="w-full bg-transparent text-xs text-on-surface placeholder:text-secondary focus:outline-none" id="mobile-search-input" oninput="handleSearch(this.value)" placeholder="Buscar por JBL, cafetera, difusor, cables..." type="text"/>
+<button class="hidden text-secondary p-1" id="mobile-search-clear" onclick="clearSearch()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- DESCRIPCIÓN DE CATEGORÍA ACTIVA -->
+<div class="mt-2.5 flex items-center justify-between text-xs text-secondary px-0.5">
+<span class="font-bold text-primary-container uppercase text-[11px] tracking-wide" id="active-cat-label">Todos los productos</span>
+<span class="text-[11px] font-mono" id="active-count-label">Cargando...</span>
+</div>
+</section>
+<!-- CATÁLOGO DE PRODUCTOS EN MOBILE FIRST (GRID 2 COLUMNAS) -->
+<section class="px-3.5">
+<div class="grid grid-cols-2 gap-2.5" id="products-grid">
+<!-- Renderizado dinámico vía JavaScript -->
+</div>
+<!-- EMPTY STATE -->
+<div class="hidden py-10 px-4 text-center bg-surface-container rounded-2xl border border-surface-container-high space-y-2 mt-2" id="empty-state">
+<span class="material-symbols-outlined text-4xl text-secondary">inventory_2</span>
+<p class="text-sm font-bold text-primary">No se encontraron productos</p>
+<p class="text-xs text-secondary">Probá con otro término o consultanos stock directo por WhatsApp.</p>
+<a class="inline-flex items-center gap-1 mt-2 px-3.5 py-2 rounded-lg bg-surface-container-highest text-tertiary-container text-xs font-bold" href="https://wa.me/5491168243265" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span> Consultar stock por WhatsApp
+        </a>
+</div>
+</section>
+<!-- SECCIÓN SERVICIO TÉCNICO MOBILE CON ESPECIALISTA SILVINO -->
+<section class="px-3.5 pt-4" id="servicio-tecnico-section">
+<div class="bg-surface-container rounded-2xl p-4 border border-surface-container-high space-y-3.5 shadow-lg">
+<div class="flex items-center gap-2.5">
+<span class="p-2 rounded-xl bg-tertiary-container/10 text-tertiary-container border border-tertiary-container/20">
+<span class="material-symbols-outlined text-[22px]">build_circle</span>
+</span>
+<div>
+<span class="text-[10px] uppercase font-mono font-bold text-tertiary-container tracking-wider">Laboratorio Técnico FK</span>
+<h2 class="font-headline font-bold text-base text-primary leading-tight">Especialista Silvino</h2>
+</div>
+</div>
+<p class="text-xs text-secondary leading-relaxed">
+          Reparación express de smartphones, cambio de pantallas OLED, pines de carga, baterías probadas y microsoldadura. Diagnóstico transparente y turno inmediato en Las Heras 5267.
+        </p>
+<div class="bg-surface-container-lowest p-2.5 rounded-xl border border-surface-container-high flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-lg">verified_user</span>
+<span class="text-on-surface font-medium">Garantía escrita 90 días</span>
+</div>
+<a class="text-[11px] text-tertiary-container font-bold flex items-center gap-0.5" href="https://wa.me/5491168243265" target="_blank">
+            9 11 6824-3265 <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+<!-- FORMULARIO DIRECTO WHATSAPP PARA TALLER -->
+<form class="space-y-2.5 pt-1" onsubmit="handleTechServiceSubmit(event)">
+<div>
+<label class="text-[10px] uppercase tracking-wider text-secondary font-bold mb-1 block">Tu Nombre</label>
+<input class="w-full bg-surface-container-lowest border border-surface-container-high rounded-lg px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none" id="tech-name" placeholder="Ej: Lucas Pérez" required="" type="text"/>
+</div>
+<div>
+<label class="text-[10px] uppercase tracking-wider text-secondary font-bold mb-1 block">Teléfono / WhatsApp</label>
+<input class="w-full bg-surface-container-lowest border border-surface-container-high rounded-lg px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none" id="tech-phone" placeholder="Ej: 11 6824 3265" required="" type="tel"/>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="text-[10px] uppercase tracking-wider text-secondary font-bold mb-1 block">Marca</label>
+<select class="w-full bg-surface-container-lowest border border-surface-container-high rounded-lg px-2 py-2 text-xs text-on-surface focus:outline-none" id="tech-brand">
+<option value="iPhone (Apple)">iPhone (Apple)</option>
+<option value="Samsung">Samsung</option>
+<option value="Motorola">Motorola</option>
+<option value="Xiaomi">Xiaomi</option>
+<option value="Otra">Otra</option>
+</select>
+</div>
+<div>
+<label class="text-[10px] uppercase tracking-wider text-secondary font-bold mb-1 block">Modelo</label>
+<input class="w-full bg-surface-container-lowest border border-surface-container-high rounded-lg px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none" id="tech-model" placeholder="Ej: iPhone 13 / A54" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="text-[10px] uppercase tracking-wider text-secondary font-bold mb-1 block">Falla o Arreglo requerido</label>
+<textarea class="w-full bg-surface-container-lowest border border-surface-container-high rounded-lg px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none resize-none" id="tech-issue" placeholder="Pantalla partida, no enciende, pin de carga roto, batería..." required="" rows="2"></textarea>
+</div>
+<button class="touch-target w-full bg-tertiary-container hover:bg-tertiary-fixed text-on-tertiary font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 active:scale-95 transition-transform shadow-md" type="submit">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+            Solicitar Turno con Silvino por WhatsApp
+          </button>
+</form>
+</div>
+</section>
+<!-- SECCIÓN FINALIZAR COMPRA EXPRESS (SIN REGISTRO) -->
+<section class="px-3.5 pt-2" id="checkout-section">
+<div class="bg-surface-container rounded-2xl p-4 border border-surface-container-high space-y-4 shadow-lg">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-2.5">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary-container text-[11px] font-bold flex items-center justify-center">✓</span>
+<h2 class="font-headline font-bold text-sm text-primary">Finalizar Compra Express</h2>
+</div>
+<span class="text-[11px] text-tertiary-container font-mono font-bold">Sin Registro</span>
+</div>
+<form class="space-y-3.5" id="mobile-checkout-form" onsubmit="handleMobileCheckoutSubmit(event)">
+<!-- DATOS PERSONALES -->
+<div class="space-y-2">
+<span class="text-[11px] uppercase font-bold text-primary-container tracking-wider block">1. Datos del Cliente</span>
+<input class="w-full bg-surface-container-lowest border border-surface-container-high rounded-lg px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none" id="chk-name" placeholder="Nombre completo *" required="" type="text"/>
+<input class="w-full bg-surface-container-lowest border border-surface-container-high rounded-lg px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none" id="chk-phone" placeholder="WhatsApp / Teléfono de contacto *" required="" type="tel"/>
+<input class="w-full bg-surface-container-lowest border border-surface-container-high rounded-lg px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none" id="chk-email" placeholder="Correo electrónico *" required="" type="email"/>
+</div>
+<!-- FORMA DE ENTREGA -->
+<div class="space-y-2">
+<span class="text-[11px] uppercase font-bold text-primary-container tracking-wider block">2. Modalidad de Entrega</span>
+<div class="grid grid-cols-2 gap-2">
+<label class="flex flex-col p-2.5 rounded-xl border border-surface-container-high bg-surface-container-lowest cursor-pointer hover:border-primary-container/50">
+<div class="flex items-center justify-between">
+<input checked="" class="text-primary-container focus:ring-0" name="chk-shipping" onchange="toggleShippingField(false)" type="radio" value="retiro"/>
+<span class="text-[10px] font-bold text-tertiary-container">GRATIS</span>
+</div>
+<span class="text-xs font-bold text-primary mt-1">Retiro en Local</span>
+<span class="text-[10px] text-secondary">Las Heras 5267</span>
+</label>
+<label class="flex flex-col p-2.5 rounded-xl border border-surface-container-high bg-surface-container-lowest cursor-pointer hover:border-primary-container/50">
+<div class="flex items-center justify-between">
+<input class="text-primary-container focus:ring-0" name="chk-shipping" onchange="toggleShippingField(true)" type="radio" value="envio"/>
+<span class="text-[10px] font-bold text-secondary">Coordinado</span>
+</div>
+<span class="text-xs font-bold text-primary mt-1">Envío en el Día</span>
+<span class="text-[10px] text-secondary">Mensajería Moto</span>
+</label>
+</div>
+<div class="hidden" id="chk-address-box">
+<input class="w-full bg-surface-container-lowest border border-surface-container-high rounded-lg px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none" id="chk-address" placeholder="Dirección exacta, timbre/piso y localidad..." type="text"/>
+</div>
+</div>
+<!-- MÉTODO DE PAGO Y ALIAS EXACTO LF2024.MP -->
+<div class="space-y-2">
+<span class="text-[11px] uppercase font-bold text-primary-container tracking-wider block">3. Método de Pago</span>
+<div class="p-3 bg-surface-container-lowest rounded-xl border border-primary-container/30 space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<input checked="" class="text-primary-container focus:ring-0" name="chk-payment" type="radio" value="mercadopago"/>
+<span class="text-xs text-primary font-bold">Mercado Pago / Transferencia</span>
+</div>
+<span class="text-[10px] px-2 py-0.5 rounded bg-primary-container/20 text-primary-container font-mono font-bold">ALIAS OFICIAL</span>
+</div>
+<!-- ALIAS BOX CON BOTON DE COPIAR -->
+<div class="flex items-center justify-between bg-surface-container p-2 rounded-lg border border-surface-container-high">
+<div>
+<span class="text-[10px] text-secondary block font-mono">Alias Mercado Pago:</span>
+<span class="text-sm font-mono font-extrabold text-primary select-all tracking-wider" id="mp-alias-text">LF2024.MP</span>
+</div>
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary-container text-[11px] font-bold active:scale-90 transition-transform flex items-center gap-1" id="copy-btn" onclick="copyAlias()" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span> Copiar
+                </button>
+</div>
+<p class="text-[11px] text-secondary leading-snug">
+                Escaneá el código o utilizá el alias para realizar el pago. Coordinación y comprobante por WhatsApp al <strong class="text-primary font-mono">9 11 6824-3265</strong>.
+              </p>
+</div>
+</div>
+<!-- RESUMEN FINAL -->
+<div class="bg-surface-container-lowest rounded-xl p-3 border border-surface-container-high space-y-1.5">
+<div class="flex items-center justify-between text-xs text-secondary">
+<span>Soluciones en el carrito:</span>
+<span class="font-bold text-on-surface" id="chk-total-items-badge">0 productos</span>
+</div>
+<div class="flex items-center justify-between text-sm font-bold text-primary pt-1 border-t border-surface-container-high">
+<span>Total Estimado:</span>
+<span class="text-primary-container text-base font-extrabold font-headline" id="chk-total-amount">$0</span>
+</div>
+</div>
+<button class="touch-target w-full bg-primary-container hover:bg-primary-fixed text-on-primary-container font-headline font-bold text-xs rounded-xl flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-transform" type="submit">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+            REALIZAR COMPRA POR WHATSAPP
+          </button>
+</form>
+</div>
+</section>
+</main>
+<!-- FOOTER MOBILE CON IDENTIDAD FK -->
+<footer class="w-full bg-surface-container-lowest border-t border-surface-container-high mt-8 py-6 px-4 space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-full bg-surface-container border border-surface-container-high flex items-center justify-center p-1">
+<img alt="FK Logo" class="w-full h-full object-contain invert brightness-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOWJ5nptjrNU0rF2Yr7TmV502Pc01NPW1-mxir1nIc7OHit1VF04mFAO95GZBkySz13lgNq-TiNJZIR9_yVa_are_GsGl023yufcqPlYf446A2T4_XORP77qn7AOk4jNd1bvDgEVq6OZLtaj5H3EB6cCT7Yt02s58wYkNpoxQuSTZ8Hygg0enrFq24GlCg4xDOItC0Z_XLC4IYqj1-Eqr3Hw4yNNcRezyN6OwJ9PgcSOzIEQMJ7f6yl7SxrIs83QLgpC0"/>
+</div>
+<div>
+<span class="font-headline font-extrabold text-base text-primary leading-none">FK SOLUCIONES</span>
+<p class="text-[10px] text-secondary">tu tienda de soluciones</p>
+</div>
+</div>
+<a class="px-3 py-1.5 rounded-lg bg-surface-container text-tertiary-container text-xs font-bold flex items-center gap-1 border border-surface-container-high" href="https://wa.me/5491168243265" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span> 9 11 6824-3265
+      </a>
+</div>
+<div class="text-xs text-secondary space-y-1 border-t border-surface-container-high/60 pt-3">
+<p class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary-container text-[14px]">store</span> Taller &amp; Tienda: Las Heras 5267</p>
+<p class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[14px]">schedule</span> Todos los días: 09:00 a 21:00 hs</p>
+<p class="flex items-center gap-1.5"><span class="material-symbols-outlined text-tertiary-container text-[14px]">build</span> Laboratorio Técnico con el Especialista Silvino</p>
+<p class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary-container text-[14px]">credit_card</span> Alias Mercado Pago: LF2024.MP</p>
+</div>
+<div class="pt-2 border-t border-surface-container-high flex items-center justify-between text-[11px] text-secondary">
+<span>© 2024 FK Soluciones</span>
+<div class="flex gap-3">
+<a class="hover:text-primary" href="#catalogo">Catálogo</a>
+<a class="hover:text-primary" href="#servicio-tecnico-section">Laboratorio Silvino</a>
+</div>
+</div>
+</footer>
+<!-- DRAWER / BOTTOM SHEET DEL CARRITO (OCULTO POR DEFECTO PARA EVITAR PANTALLA CORTADA O CONGELADA) -->
+<div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-sm z-50 hidden transition-opacity" id="cart-backdrop" onclick="closeCartDrawer()"></div>
+<aside class="fixed bottom-0 right-0 w-full max-h-[85vh] bg-surface-container border-t border-surface-container-high rounded-t-3xl z-50 hidden flex flex-col shadow-2xl transition-transform" id="cart-drawer">
+<!-- BARRA SUPERIOR CON BOTÓN EXPLÍCITO DE CIERRE -->
+<div class="w-12 h-1 bg-surface-container-highest rounded-full mx-auto mt-2"></div>
+<div class="p-3.5 flex items-center justify-between border-b border-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">shopping_bag</span>
+<h2 class="font-headline font-bold text-sm text-primary">Tu Orden FK</h2>
+<span class="text-[11px] px-1.5 py-0.5 rounded bg-surface-container-high text-secondary font-mono" id="drawer-items-count">0</span>
+</div>
+<button aria-label="Cerrar carrito" class="w-8 h-8 rounded-full bg-surface-container-high text-secondary flex items-center justify-center hover:text-on-surface font-bold text-sm" onclick="closeCartDrawer()" type="button">
+        ✕
+      </button>
+</div>
+<!-- LISTA DE PRODUCTOS EN EL CARRITO -->
+<div class="flex-1 overflow-y-auto p-3.5 space-y-2.5 max-h-[48vh]" id="drawer-items-list">
+<!-- Inyectado dinámicamente -->
+</div>
+<!-- FOOTER DEL DRAWER -->
+<div class="p-3.5 bg-surface-container-lowest border-t border-surface-container-high space-y-2.5">
+<div class="flex items-center justify-between text-xs text-secondary">
+<span>Entrega coordinada:</span>
+<span class="text-tertiary-container font-semibold">Envíos en el día</span>
+</div>
+<div class="flex items-center justify-between text-base font-headline font-bold text-primary">
+<span>Total:</span>
+<span class="text-primary-container text-lg font-extrabold" id="drawer-total-price">$0</span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="touch-target bg-primary-container hover:bg-primary-fixed text-on-primary-container font-bold text-xs rounded-xl flex items-center justify-center gap-1 active:scale-95 transition-transform" onclick="goToCheckout()" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+          Realizar Compra
+        </button>
+<a class="touch-target bg-surface-container-high hover:bg-surface-bright text-tertiary-container border border-surface-container-highest font-bold text-xs rounded-xl flex items-center justify-center gap-1 active:scale-95 transition-transform" href="#" id="drawer-whatsapp-btn" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+          WhatsApp
+        </a>
+</div>
+</div>
+</aside>
+<!-- MODAL DETALLE DE PRODUCTO (OCULTO POR DEFECTO PARA NO BLOQUEAR NINGÚN SCROLL) -->
+<div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-sm z-50 hidden" id="product-modal-backdrop" onclick="closeProductModal()"></div>
+<div class="fixed bottom-0 left-0 right-0 max-h-[90vh] bg-surface-container border-t border-surface-container-high rounded-t-3xl z-50 hidden flex-col shadow-2xl overflow-hidden" id="product-modal">
+<!-- BARRA HEADER MODAL -->
+<div class="w-12 h-1 bg-surface-container-highest rounded-full mx-auto mt-2.5 mb-1"></div>
+<div class="px-4 py-2 flex items-center justify-between border-b border-surface-container-high">
+<span class="text-[10px] uppercase font-mono font-bold text-primary-container tracking-wider" id="modal-category-tag">Categoría</span>
+<button aria-label="Cerrar modal" class="w-8 h-8 rounded-full bg-surface-container-high text-secondary flex items-center justify-center font-bold text-sm" onclick="closeProductModal()" type="button">
+        ✕
+      </button>
+</div>
+<div class="overflow-y-auto p-4 space-y-3.5 max-h-[72vh]">
+<!-- IMAGEN ENCUADRADA CUADRADA -->
+<div class="relative w-full aspect-square bg-surface-container-lowest rounded-2xl overflow-hidden p-2 flex items-center justify-center border border-surface-container-high">
+<img alt="Producto FK" class="w-full h-full object-contain" id="modal-image" src=""/>
+<span class="absolute top-2.5 left-2.5 bg-primary-container text-on-primary-container font-bold text-[10px] px-2 py-0.5 rounded uppercase" id="modal-badge-tag">Destacado</span>
+</div>
+<!-- TÍTULO Y PRECIO -->
+<div>
+<h3 class="font-headline font-bold text-base text-primary leading-snug" id="modal-title">Nombre de producto</h3>
+<div class="flex items-baseline justify-between mt-1">
+<span class="text-xl font-extrabold text-primary-container font-headline" id="modal-price">$0</span>
+<span class="text-[11px] text-tertiary-container font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Stock en Las Heras 5267
+          </span>
+</div>
+</div>
+<p class="text-xs text-secondary leading-relaxed border-t border-surface-container-high pt-2" id="modal-desc">
+        Descripción del producto.
+      </p>
+<!-- VARIANTES -->
+<div class="space-y-1.5" id="modal-variants-section">
+<label class="text-[10px] font-bold uppercase tracking-wider text-secondary">Opciones / Modelo:</label>
+<div class="flex flex-wrap gap-1.5" id="modal-variants-list"></div>
+</div>
+<!-- CANTIDAD -->
+<div class="flex items-center justify-between pt-1">
+<label class="text-[10px] font-bold uppercase tracking-wider text-secondary">Cantidad:</label>
+<div class="flex items-center bg-surface-container-lowest rounded-lg border border-surface-container-high p-0.5">
+<button class="w-8 h-8 flex items-center justify-center text-primary text-base font-bold active:scale-90" onclick="adjustModalQty(-1)" type="button">-</button>
+<span class="w-8 text-center text-xs font-bold text-on-surface" id="modal-qty-text">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary text-base font-bold active:scale-90" onclick="adjustModalQty(1)" type="button">+</button>
+</div>
+</div>
+</div>
+<!-- BOTONES MODAL -->
+<div class="p-3 bg-surface-container-lowest border-t border-surface-container-high grid grid-cols-2 gap-2">
+<button class="touch-target bg-primary-container hover:bg-primary-fixed text-on-primary-container font-bold text-xs rounded-xl flex items-center justify-center gap-1 shadow-md active:scale-95 transition-transform" onclick="addModalItemToCart()" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+        Añadir al carrito
+      </button>
+<a class="touch-target bg-surface-container-high text-tertiary-container border border-surface-container-highest font-bold text-xs rounded-xl flex items-center justify-center gap-1 active:scale-95 transition-transform" href="#" id="modal-whatsapp-link" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+        Consultar
+      </a>
+</div>
+</div>
+<!-- TOAST DE CONFIRMACIÓN AL AÑADIR -->
+<div class="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 bg-primary-container text-on-primary-container px-4 py-2 rounded-full font-bold text-xs shadow-2xl flex items-center gap-1.5 transition-all duration-300 opacity-0 pointer-events-none" id="cart-toast">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span id="toast-text">Producto sumado</span>
+</div>
+<!-- JAVASCRIPT LOGIC -->
+<script>
+    const PHONE_NUMBER = "5491168243265";
+    const DISPLAY_PHONE = "9 11 6824-3265";
+    const ALIAS_MP = "LF2024.MP";
+
+    // CATÁLOGO COMPLETO ACTUALIZADO CON TODAS LAS FOTOS AÑADIDAS
+    const PRODUCTS = [
+      {
+        id: "prod-jbl-520",
+        category: "audio-tecno",
+        name: "Auriculares JBL Tune 520 BT Wireless Noise Free",
+        price: 25000,
+        badge: "JBL Oficial",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCGnFGZwIDr0zrKViz9ijgdDbQLaJilohMuyF38l8DOzediSYtu8d75_L5la8SrKoIV-Y7JwvZTjK_LQB2Yy3h6jrHQbOLFrN0248eUhTb2MmrKloUwvjOCZtUVsgdH-g7vQlaaIHxq1r1cxiAsXovbrfcQLUEyzSYCJRXsOhCKQfYICsrtrTQbUDRvlnvXlB6_oam9IWxugRnCBNGNv8nn3ylSV5e1BpIUs03FJzjfEGx-wSeI703iNniugveGN66gUUw",
+        description: "Auriculares inalámbricos JBL Pure Bass con Bluetooth 5.3, batería de hasta 57 horas y carga rápida.",
+        variants: ["Negro Mate"]
+      },
+      {
+        id: "prod-soul-chillout",
+        category: "audio-tecno",
+        name: "Auriculares Soul Chill Out BT 300 Wireless",
+        price: 25000,
+        badge: "Tendencia",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDfvp6UQFiC5TXQNFefygxP7IdcqLKwl-lRYvJ-5xzN74ufOX2YX7j8KQen5HAlRhi1_nTx5WHO6We2E1TikZeHd0OjrpOpTexhbTLuQOfgqfOu8tdsGrzB9rcjZimCDUbzcj70LoHThfviHSNWQcQmy49YxOTGIvrn3ew9STWhNiUcEfsI30Gl0qbd1G1ALRlXv5h0SfnLMdoPM-n4WrysZsHq5RLhwGSrnKb7Z9LPJq0s57k5z1Tf3yc4BOlT5wo7Xkc",
+        description: "Sonido envolvente con micrófono integrado para manos libres, vincha soft ajustable y diseño premium.",
+        variants: ["Azul Violeta", "Rose Gold"]
+      },
+      {
+        id: "prod-headset-capitan",
+        category: "audio-tecno",
+        name: "Headset Gamer Capitán América 806-45 BT 5.0",
+        price: 20000,
+        badge: "Edición Especial",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAfHv5UaL2EL_hGLqczgFM0mNTdDX3BA0MI740c6rhEB9j74tFetfHl89J2gi46WGpoOInGB_OAE3xC8MNSiM_bIFpNhkbojHWCNvhUB6htmkg0fg4VPwPygujSVElJf7Oj9mzK2MbLEBouiYZfEvbr-o6b0caXrXLQ3c4RNxqGSt1ahhuWCKwX0Fa1_Wmn84PcjfRAUOP2kZ2Yon2pYRaWYWSXLjuolPkln1tSJrYYi1YQh93Zmsj_vn_IGAwBWV7XAiY",
+        description: "Graves potentes Surging Bass, conexión inalámbrica 5.0 HD estéreo y diseño temático de Marvel.",
+        variants: ["Azul Capitán"]
+      },
+      {
+        id: "prod-apple-battery",
+        category: "accesorios",
+        name: "Apple Battery Pack MagSafe Inalámbrica",
+        price: 35000,
+        badge: "MagSafe",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAWOjDSFyZDuEtp2vLlNiPQY43Nx9sle1MnMCIjzgK8unH-lHnE107PthF0q0LTOZRAGs5e_pHz6DI1NaTtD-GYkNOK-zpMQxuup3nm_QM-GguOrmg05QNrjBna052ryTMM7sbX-i5oxeqCvzx4Jqfe5io1P0L8Xq1bANsjTkNKR_CIP8VwiGOKKJdvinf2aU5OpeKwO5t78sae77DxAae7ypXzJiK3rsz11N8hvmJzjMNateD3cNj8tGYzygEX8PjL9ew",
+        description: "Carga magnética compatible con iPhone serie 12 en adelante. Diseño ultra compacto y seguro.",
+        variants: ["Blanco Puro"]
+      },
+      {
+        id: "prod-apple-cable",
+        category: "accesorios",
+        name: "Cable Lightning to USB Apple 1 Metro",
+        price: 12000,
+        badge: "Original",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBrqYSHYyDdt3eowL4SpJroRhl3SDdAUMJXmtZ5Kz_9bF-n_RZCAKSruZW4b8NpknHMo2NVl2G8V_8DRE5KY9bT0Z4rp71ZUkZ8-EybRu7U_nu9q6GJx4Ta2FkX2S8yaptNrgUyOBjotNJVrg8oONulP8xOjBP8lSrYGhRA0RaExM3HOZN7hxw7-SGypZUDr1sQfDZWmTYFHc4dYVEGvZZ7Yqm9S3lGPPnkk2jyBiis4eFP988Oe2vGkjvxHqS23OK1Nts",
+        description: "Cable para carga y sincronización de alta velocidad garantizada para dispositivos Apple.",
+        variants: ["1 Metro Blanco"]
+      },
+      {
+        id: "prod-cargador-auto",
+        category: "accesorios",
+        name: "Cargador Rápido Auto Pro21 3.4A USB + Type-C",
+        price: 15000,
+        badge: "Carga Rápida",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuClGLyfVAHkWbPdIEs-nwD6yjD5_9uwNm9SchUzCxLSryLbdDMMr_IlDpr4IgZW6n8v-FzwgB-FfMcHl-fuggeBw96DwYrYBW-LWacZv5ePuUtoQr-YGs10LC--F1COb_L7PujFrJOCVq76z-tZxECSpESIDqZbbazH66ZG0quPLsMvRDeeTFWHaSxFoxC_82_XT0-LzYFUHT3pHlsJaY-A8RyXgmqeF8hSC7Ed7X4oE5ewAyiJ7ud9EgV9cjs3Nv7gnSM",
+        description: "Doble puerto USB y Type-C con potencia de 3.4A para recargar tu celular al instante mientras manejás.",
+        variants: ["Blanco & Azul"]
+      },
+      {
+        id: "prod-difusor-botella",
+        category: "hogar",
+        name: "Difusor Humidificador Madera Botella",
+        price: 18000,
+        badge: "Aromaterapia",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBa5C9GUxFSW8nIyvknN5UeNa2dU1k_NR7v6JegT_9MduJAVshGSVWZZ66qgfjNSzsy1FErUdTgtr_MV_o9U1rI8fSW9-Lzsg8TaJ_5nAdCWzfaWjyrWXhF5DDo7Zn5i65cKHmOdww_iz_Dk7vDsosjh_ojKV17Jta_9cMGf2Ak3yrt5HtaSJgUAEayPvvONJhEYuoZprjlco0FUCdXvyGj69J1CkAB9w1t2r6Fwo9hCdYRllhC-0SOT2sbdy8HCK7FKIk",
+        description: "Silencioso, acabado madera nogal con iluminación tenue para aromatizar ambientes y relajar.",
+        variants: ["Madera Nogal"]
+      },
+      {
+        id: "prod-difusor-volcan",
+        category: "hogar",
+        name: "Difusor Humidificador Volcán / Leña",
+        price: 22000,
+        badge: "Efecto Fuego",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuD97aM3pmFFNFzS5FnwaRZTTwEwh4qGhr_OR2VBI6TU-GZuvMeRnAYDsTmPXD4cQ4nWIUWdc9NrPvM4JpuIWd_yJO8MeFupew96HGHHJfZeXU0y02fcYDVp5WIjt5pcP7S_qhSx2BWGpsyIGu0vUm8VfITxPWR5BN57IHjmuuyrKnGwcYddWQAjPEFCtfJaREyyC_MEDw1SHS_Liw5gGN3WHQP4PEr4v54YB23Pg2uIE3g562kF54GgtEGAkmNPp68Ou7U",
+        description: "Efecto visual de leños encendidos, pulverización ultrasónica constante y bajo consumo.",
+        variants: ["Madera Rústica"]
+      },
+      {
+        id: "prod-difusor-esfera",
+        category: "hogar",
+        name: "Difusor Humidificador Esfera Madera",
+        price: 16000,
+        badge: "Diseño Zen",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCvtGjNbJrfM0Zv2N6iHQjtSgSOGc6Fn6jAOVbKez4w5vEfdUjN8JVf-kbynb4lvGZ7uslEnqZeV1HzCP1kSzgyLO44L45sC7VZ4OGasO45WQzNwRxCEEdTMK6cRr_-gfFQPUpIl_-piy1us9jbr1utzzJcvO56wPAjT-0VZZgsfm-UU9oVJpK6DkjPtUJiHjy8g2D2piOmYnq2IJ9K_t6CxW4RwPkENJgzyo8zxW2mRl4my7vsbipbVqWkTiFbfcsehi8",
+        description: "Esfera de madera clara con botón táctil integrado. Ideal para escritorios y dormitorios.",
+        variants: ["Madera Clara"]
+      },
+      {
+        id: "prod-wafflera",
+        category: "cocina",
+        name: "Waflera Eléctrica Oryx S1813",
+        price: 28000,
+        badge: "Desayunos",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB-tf49Kk_9-umY4wxNrUjgkuhOp35sbWO1E5zdXjevSQ7T1Fi2nZdOSAVXJuuV_jI7yBWjpzQ1KMQ3d_u4yrE-Lyauwa5Vu-pyCIQCS6UCQWapBTJJhg92VYAlBcytmOrrwNmOJ4H_A4Vq0f9r9iefGXKHL0r1IHvLkiXHZrzOjXwy-iLgk6qfjyom1ATB3XRFwV7Iai5Z-QywZr8N5hyTDD1cdClH6JvDmbk1cG6yYdXQRKRO_x7X9HVexpg2cPvsJ9g",
+        description: "Placas antiadherentes de cocción rápida y uniforme. Termostato automático y luces testigo.",
+        variants: ["Inox & Negro"]
+      },
+      {
+        id: "prod-tostadora-yelmo",
+        category: "cocina",
+        name: "Tostadora Eléctrica Yelmo TO 3006 700W",
+        price: 32000,
+        badge: "6 Niveles",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCkldedyYfQW2RSKc_U3ZsGWscIopia4u8lWN81tmxbFj5RJTtanRwxABSNuj8MWJ8vKJQSEjWO0Jg5gGA7J3DzGAHOoEikY1C0CkLncSeU0F9i8I_q_ZBfyeAT4s0hFuWuEWzmcmFVo5ho4hYj9uhZgvKFuPwuJAr87P8MHnOOO9rAVYvubdrDF34TETN3zwY8rEQHmf6_N2DxxOxwFPOsbC1w1EBpxfNNIqAm6XSrqrzNn4ZGwrEJ4wc7cFznCZxrwkM",
+        description: "Tostadora de diseño vintage verde oliva con 6 niveles de tostado y bandeja recolectora de migas.",
+        variants: ["Verde Oliva"]
+      },
+      {
+        id: "prod-afilador",
+        category: "cocina",
+        name: "Afilador de Cuchillos Manual 3 Niveles Sharpener",
+        price: 6000,
+        badge: "Imprescindible",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBtnAllKDitjUZo4qrgYdU2fe6UU0S5fd4A-Zf1nvKu_Ong151szaEZpFcpvYVRapNF7rwZ0DMPYaliS7kkW2JRLxsiHYsfmvFj5EJjrspbfMwovPWMjbm720bCIbgxUxmmgXcnoL8esplM-W-V7MV68qyPNnAgxm6iDnxXKZP8jF9CO6Te-ekanACX4Q9W4mX044Xm7B6JqE1FEjkjgNZdDHw61qF0ZbicSYlvfxpeT7M2k5OW2_RNTUoqKm9jDU3veiY",
+        description: "Tres fases de afilado: tungsteno, diamante y cerámica. Mango ergonómico y base de sujeción segura.",
+        variants: ["Rojo & Negro"]
+      },
+      {
+        id: "prod-licuadora-profile",
+        category: "cocina",
+        name: "Licuadora Profile PR-600 Jarra Vidrio 1.5L Pica Hielo",
+        price: 55000,
+        badge: "Pica Hielo",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCZswf3fYGKZLvctYzKAQwbExT9j7WWKdTcCX6Wj9J6vVVGlnaMZt-sOUU6AvjzLjWSnhPoWQy0RtQ9A9heaKuBnkPROMgPPW-TXl0ZkLCvb7Mi6u2-Kg2nwrezSPvCMwvNZ_-uiBkn0LlgKpVBJIC7jkwRf1IIpYhAKjBZpJ9tK5iKRSnZ7hK8MXdW3CknClLUffkFqRqbkmKHuhILAKyw0_yjA17cM1Gt6ihfr8UdqK8DpusHnv3hmF3QX6m7Jth3lkk",
+        description: "Cuchillas dentadas de acero inoxidable, jarra de vidrio templado de 1.5 litros y selector multinivel.",
+        variants: ["Inox & Vidrio"]
+      },
+      {
+        id: "prod-plancha-profile",
+        category: "hogar",
+        name: "Plancha a Vapor Profile PR578-22B 2200W",
+        price: 30000,
+        badge: "2200 Watts",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCkPZGgyF_MyBfnHRILOu2hdJsbt_yMtscPrFsvXpnUbvoclpphAR4D_1ly-HcW81DejuEZ2zFdQHYNlKXTJzC77uH-QfVaiwpyL5YYZw-XMGChqJjoitMNzTkJo7bW5ZEHs9LbyIW9bmC8yKqxLGYdmT1z-AQbE40LTjpcI0j-3S1QqRKBT_Ugl5LEeh6yA_RjztLM3ITbTI39TPt2Rx6LptlX7lBPKKaqohOUjV1fuMKCd0omtqCr92XmqZIo4N0shxM",
+        description: "Suela cerámica antiadherente, función vapor vertical para prendas colgadas y autolimpieza.",
+        variants: ["Azul Cerámico"]
+      },
+      {
+        id: "prod-mixer-startrak",
+        category: "cocina",
+        name: "Mixer Acero con Accesorios Star Trak 1000W",
+        price: 55000,
+        badge: "1000W Turbo",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAjKPtbuZq_Oy38LVPmr7J7LxaGDAvxNKK2j_ylbapvzNFuB5Otvz31FsE_u0zvADpp16rRLa-WWqUKJP9mVdB-9g8YhpNKNVVQc0oJHMh2b2_rleuExmi5VJAAMD_zkPoC2KnVSMc3hl1um5yo8dujvegU9lGqvrgh_o6Zhehes4D-Agk0fJaywDoGg1tpogoPd-nbklTKzAYOLGJ7UdizkawOW9ARAeafeyjPVZyJ5XoC1_GDkrHWICWganBuF9HXUM8",
+        description: "Set completo: vaso medidor, batidor de alambre y accesorio picador procesador con motor de 1000W.",
+        variants: ["Acero Inoxidable"]
+      },
+      {
+        id: "prod-cupcakes-oryx",
+        category: "cocina",
+        name: "Máquina de Cupcakes Oryx Antiadherente",
+        price: 38000,
+        badge: "Repostería",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA7tzEZ0NmuCxbgUI7yh6oPuhHvpm9T7Oq57b71tripQ0SNt7aI8O6jm6aBJtAa0D2wa8Oc8MJoENYk8pWC3FMPosLT7TkjY7xKQKox06nmwoYTEomm8rdEh1QuIVYLM2wDbdS7aBKAF-YMQ8gkKFSeoKW3Ck0owiXknFOv3Eadf0EiMh3yDho6U17kK8Av1esKE2-jKDxd0CLJZoAotYaHF2qkhv-DecfeORsrEmSxIvXN_fNksdJtGgrsgRYDL4ao6vM",
+        description: "Prepará 7 deliciosos muffins o cupcakes en minutos sin prender el horno tradicional.",
+        variants: ["Negro Mate"]
+      },
+      {
+        id: "prod-cafetera-gentil",
+        category: "cocina",
+        name: "Cafetera Italiana Gentil 9 Pocillos Aluminio",
+        price: 22000,
+        badge: "Café Intenso",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDdEdjBULOgrRajLiZFJEl7EnI04icCEWz6_018YW_lbxcqYLHbGfVM-vnQBWOvXtE0QdGNqR1gBQKf5ZJEtcGFsG1_pfMRHohCzscV6H8hO3_Umot10frZ7GA4IaQwRz8AGCCzRmudgBdtXUXMEf8mbvEavUUUNKRS7rlBerqje06XS6eZN_B3d0T1b3zg7zRUTXX1UZnS4QzgzHg44l-vxddIe52SPdyLFgBid0GVeKOzpiBY9AT2yEz4SmSeDYiHB2U",
+        description: "Cafetera Moka tradicional en aluminio fundido de alta densidad para 9 tazas de café expreso.",
+        variants: ["Aluminio 9 Tazas"]
+      },
+      {
+        id: "prod-sandwichera-onica",
+        category: "cocina",
+        name: "Sandwichera Eléctrica Onica Sellado Triangular",
+        price: 25000,
+        badge: "Corte y Cierre",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB55_ClA-cCoTNG6EW9VgpBvTU9mqLAzZ9OOW3aycObH59W7bGocK0BGYy7UT7CISyG4x8ISdaQhCtMlnVhb7qCYkYfGZI-2vw4DXo1PtdZHpXejkcQiEjNqUPXx5P0lf-Al249NLh9NgNTZPbzoDSBnV77XOeQbesQ8Ya68kgVvcl_gkdYxS_4py23hroyOqHbwDAKs4hLe4LGPHjfvgAsDcu6y5ey0RUwAJUi1ve78DKDUVtxzKd3EARZqhrRO6c1_cI",
+        description: "Placas triangulares antiadherentes que sellan y cortan los sándwiches a la perfección con luz indicadora.",
+        variants: ["Estándar Onica"]
+      }
+    ];
+
+    let currentCategory = "all";
+    let cart = [];
+    let modalActiveProduct = null;
+    let modalSelectedVariant = "";
+    let modalQty = 1;
+
+    function init() {
+      loadCart();
+      renderProducts();
+      updateCartUI();
+      checkCartRecovery();
+    }
+
+    function loadCart() {
+      try {
+        const stored = localStorage.getItem("fk_mobile_cart_v2");
+        if (stored) {
+          cart = JSON.parse(stored);
+        }
+      } catch (e) {
+        cart = [];
+      }
+    }
+
+    function saveCart() {
+      try {
+        localStorage.setItem("fk_mobile_cart_v2", JSON.stringify(cart));
+      } catch (e) {}
+      updateCartUI();
+      checkCartRecovery();
+    }
+
+    function checkCartRecovery() {
+      const banner = document.getElementById("cart-recovery-banner");
+      const dismissed = sessionStorage.getItem("fk_dismiss_banner");
+      if (cart.length > 0 && !dismissed) {
+        banner.classList.remove("hidden");
+      } else {
+        banner.classList.add("hidden");
+      }
+    }
+
+    function dismissRecoveryBanner() {
+      sessionStorage.setItem("fk_dismiss_banner", "true");
+      document.getElementById("cart-recovery-banner").classList.add("hidden");
+    }
+
+    function showToast(text) {
+      const toast = document.getElementById("cart-toast");
+      document.getElementById("toast-text").textContent = text;
+      toast.classList.remove("opacity-0", "pointer-events-none");
+      toast.classList.add("opacity-100");
+      setTimeout(() => {
+        toast.classList.remove("opacity-100");
+        toast.classList.add("opacity-0", "pointer-events-none");
+      }, 2000);
+    }
+
+    function copyAlias() {
+      navigator.clipboard.writeText(ALIAS_MP).then(() => {
+        const btn = document.getElementById("copy-btn");
+        btn.innerHTML = `<span class="material-symbols-outlined text-[14px]">done</span> ¡Copiado!`;
+        setTimeout(() => {
+          btn.innerHTML = `<span class="material-symbols-outlined text-[14px]">content_copy</span> Copiar`;
+        }, 2200);
+      });
+    }
+
+    function selectCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll(".cat-pill").forEach(btn => {
+        if (btn.getAttribute("data-cat") === cat) {
+          btn.className = "cat-pill px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-primary-container text-on-primary-container shadow transition-all";
+        } else {
+          btn.className = "cat-pill px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface transition-all";
+        }
+      });
+
+      const label = document.getElementById("active-cat-label");
+      const catNames = {
+        all: "Todos los productos",
+        "audio-tecno": "Tecnología & Audio",
+        cocina: "Equipamiento de Cocina",
+        hogar: "Hogar, Clima & Relax",
+        accesorios: "Accesorios & Telefonía"
+      };
+      label.textContent = catNames[cat] || "Catálogo";
+
+      renderProducts();
+    }
+
+    function handleSearch(val) {
+      const clearBtn = document.getElementById("mobile-search-clear");
+      if (val.trim()) {
+        clearBtn.classList.remove("hidden");
+      } else {
+        clearBtn.classList.add("hidden");
+      }
+      renderProducts(val.trim().toLowerCase());
+    }
+
+    function clearSearch() {
+      const input = document.getElementById("mobile-search-input");
+      input.value = "";
+      document.getElementById("mobile-search-clear").classList.add("hidden");
+      renderProducts();
+    }
+
+    function renderProducts(query = "") {
+      const grid = document.getElementById("products-grid");
+      const empty = document.getElementById("empty-state");
+      const countLabel = document.getElementById("active-count-label");
+
+      let filtered = PRODUCTS;
+
+      if (currentCategory !== "all") {
+        filtered = filtered.filter(p => p.category === currentCategory);
+      }
+
+      if (query) {
+        filtered = filtered.filter(p => 
+          p.name.toLowerCase().includes(query) || 
+          p.description.toLowerCase().includes(query)
+        );
+      }
+
+      countLabel.textContent = `${filtered.length} artículos`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = "";
+        empty.classList.remove("hidden");
+        return;
+      }
+
+      empty.classList.add("hidden");
+
+      grid.innerHTML = filtered.map(prod => {
+        const formattedPrice = "$" + prod.price.toLocaleString("es-AR");
+        const waMsg = encodeURIComponent(`Hola FK, quiero consultar por ${prod.name} (${formattedPrice}) en Las Heras 5267`);
+
+        return `
+          <article class="bg-surface-container rounded-2xl p-2.5 flex flex-col justify-between border border-surface-container-high shadow hover:border-surface-container-highest transition-all relative">
+            <!-- CONTENEDOR IMAGEN CUADRADA -->
+            <div onclick="openProductModal('${prod.id}')" class="relative w-full aspect-square bg-surface-container-lowest rounded-xl overflow-hidden p-2 flex items-center justify-center cursor-pointer">
+              <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-contain hover:scale-105 transition-transform duration-300">
+              <span class="absolute top-1.5 left-1.5 bg-surface-container-highest/90 text-primary-container text-[9px] font-bold px-1.5 py-0.5 rounded uppercase">${prod.badge}</span>
+            </div>
+
+            <!-- INFORMACIÓN DEL PRODUCTO -->
+            <div class="mt-2 flex-1 flex flex-col justify-between">
+              <div onclick="openProductModal('${prod.id}')" class="cursor-pointer">
+                <span class="text-[9px] uppercase font-mono text-secondary tracking-wider block">${prod.category}</span>
+                <h3 class="font-headline text-xs font-bold text-primary line-clamp-2 leading-snug mt-0.5">${prod.name}</h3>
+              </div>
+
+              <div class="mt-2 pt-1 border-t border-surface-container-high/60">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm font-extrabold text-primary-container font-headline">${formattedPrice}</span>
+                  <span class="text-[9px] text-tertiary-container font-semibold">Stock Hoy</span>
+                </div>
+
+                <!-- ACCIONES RÁPIDAS MOBILE -->
+                <div class="grid grid-cols-2 gap-1.5 mt-2">
+                  <button type="button" onclick="quickAdd('${prod.id}')" class="touch-target h-10 bg-primary-container hover:bg-primary-fixed text-on-primary-container font-bold text-[11px] rounded-lg flex items-center justify-center gap-1 active:scale-95 transition-transform">
+                    <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+                    <span>Sumar</span>
+                  </button>
+
+                  <a href="https://wa.me/${PHONE_NUMBER}?text=${waMsg}" target="_blank" rel="noopener" class="touch-target h-10 bg-surface-container-highest text-tertiary-container font-bold text-[11px] rounded-lg flex items-center justify-center gap-1 active:scale-95 transition-transform" aria-label="Consultar por WhatsApp">
+                    <span class="material-symbols-outlined text-[16px]">chat</span>
+                    <span>Duda</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    // CARRITO
+    function quickAdd(id) {
+      const prod = PRODUCTS.find(p => p.id === id);
+      if (!prod) return;
+      addToCart(prod, prod.variants[0] || "Estándar", 1);
+      showToast(`Sumaste: ${prod.name}`);
+    }
+
+    function addToCart(prod, variant, qty) {
+      const idx = cart.findIndex(i => i.id === prod.id && i.variant === variant);
+      if (idx > -1) {
+        cart[idx].qty += qty;
+      } else {
+        cart.push({
+          id: prod.id,
+          name: prod.name,
+          price: prod.price,
+          variant: variant,
+          qty: qty,
+          image: prod.image
+        });
+      }
+      saveCart();
+    }
+
+    function changeQty(index, delta) {
+      if (cart[index]) {
+        cart[index].qty += delta;
+        if (cart[index].qty <= 0) {
+          cart.splice(index, 1);
+        }
+        saveCart();
+      }
+    }
+
+    function removeFromCart(index) {
+      if (cart[index]) {
+        cart.splice(index, 1);
+        saveCart();
+      }
+    }
+
+    function updateCartUI() {
+      const badge = document.getElementById("cart-badge");
+      const drawerCount = document.getElementById("drawer-items-count");
+      const drawerList = document.getElementById("drawer-items-list");
+      const drawerTotal = document.getElementById("drawer-total-price");
+      const chkBadge = document.getElementById("chk-total-items-badge");
+      const chkTotal = document.getElementById("chk-total-amount");
+      const waLink = document.getElementById("drawer-whatsapp-btn");
+
+      let totalQty = 0;
+      let totalPrice = 0;
+
+      cart.forEach(item => {
+        totalQty += item.qty;
+        totalPrice += item.price * item.qty;
+      });
+
+      badge.textContent = totalQty;
+      drawerCount.textContent = totalQty;
+      drawerTotal.textContent = "$" + totalPrice.toLocaleString("es-AR");
+      chkBadge.textContent = `${totalQty} productos`;
+      chkTotal.textContent = "$" + totalPrice.toLocaleString("es-AR");
+
+      if (cart.length === 0) {
+        drawerList.innerHTML = `
+          <div class="py-8 text-center text-secondary space-y-2">
+            <span class="material-symbols-outlined text-3xl">shopping_bag</span>
+            <p class="text-xs">Tu orden está vacía actualmente.</p>
+            <button onclick="closeCartDrawer()" class="px-3 py-1 rounded bg-surface-container-high text-xs font-bold text-on-surface">Explorar Catálogo</button>
+          </div>
+        `;
+      } else {
+        drawerList.innerHTML = cart.map((item, idx) => `
+          <div class="flex items-center gap-2.5 p-2 bg-surface-container-lowest rounded-xl border border-surface-container-high">
+            <div class="w-12 h-12 aspect-square bg-surface-container rounded-lg p-1 flex-shrink-0 flex items-center justify-center">
+              <img src="${item.image}" alt="${item.name}" class="w-full h-full object-contain">
+            </div>
+            <div class="flex-1 min-w-0">
+              <h4 class="text-xs font-bold text-on-surface truncate">${item.name}</h4>
+              <span class="text-[10px] text-secondary font-mono">${item.variant}</span>
+              <div class="text-xs font-bold text-primary-container">$${(item.price * item.qty).toLocaleString("es-AR")}</div>
+            </div>
+            <div class="flex flex-col items-end gap-1 flex-shrink-0">
+              <div class="flex items-center bg-surface-container rounded border border-surface-container-high">
+                <button onclick="changeQty(${idx}, -1)" class="w-6 h-6 flex items-center justify-center text-xs font-bold text-secondary hover:text-on-surface">-</button>
+                <span class="w-5 text-center text-[11px] font-bold text-on-surface">${item.qty}</span>
+                <button onclick="changeQty(${idx}, 1)" class="w-6 h-6 flex items-center justify-center text-xs font-bold text-secondary hover:text-on-surface">+</button>
+              </div>
+              <button onclick="removeFromCart(${idx})" class="text-[10px] text-error hover:underline">Quitar</button>
+            </div>
+          </div>
+        `).join("");
+      }
+
+      let msg = `Hola FK! Quiero consultar/confirmar este pedido desde la tienda online:%0A%0A`;
+      cart.forEach(i => {
+        msg += `▪ ${i.name} [${i.variant}] x${i.qty} = $${(i.price * i.qty).toLocaleString("es-AR")}%0A`;
+      });
+      msg += `%0A*TOTAL: $${totalPrice.toLocaleString("es-AR")}*%0APago sugerido: Alias ${ALIAS_MP}`;
+      waLink.href = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(msg)}`;
+    }
+
+    function openCartDrawer() {
+      const drawer = document.getElementById("cart-drawer");
+      const backdrop = document.getElementById("cart-backdrop");
+      drawer.classList.remove("hidden");
+      backdrop.classList.remove("hidden");
+    }
+
+    function closeCartDrawer() {
+      const drawer = document.getElementById("cart-drawer");
+      const backdrop = document.getElementById("cart-backdrop");
+      drawer.classList.add("hidden");
+      backdrop.classList.add("hidden");
+    }
+
+    function goToCheckout() {
+      closeCartDrawer();
+      const chk = document.getElementById("checkout-section");
+      if (chk) {
+        chk.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    // MODAL DE PRODUCTO
+    function openProductModal(id) {
+      const prod = PRODUCTS.find(p => p.id === id);
+      if (!prod) return;
+
+      modalActiveProduct = prod;
+      modalSelectedVariant = prod.variants[0] || "Estándar";
+      modalQty = 1;
+
+      document.getElementById("modal-category-tag").textContent = prod.category;
+      document.getElementById("modal-title").textContent = prod.name;
+      document.getElementById("modal-price").textContent = "$" + prod.price.toLocaleString("es-AR");
+      document.getElementById("modal-desc").textContent = prod.description;
+      document.getElementById("modal-badge-tag").textContent = prod.badge;
+      document.getElementById("modal-image").src = prod.image;
+      document.getElementById("modal-qty-text").textContent = "1";
+
+      const varsContainer = document.getElementById("modal-variants-list");
+      varsContainer.innerHTML = prod.variants.map((v, i) => `
+        <button type="button" onclick="selectModalVar('${v}', this)" class="modal-var-pill px-2.5 py-1 rounded-lg text-xs font-bold ${i === 0 ? 'bg-primary-container text-on-primary-container' : 'bg-surface-container-highest text-secondary'} border border-surface-container-high transition-all">
+          ${v}
+        </button>
+      `).join("");
+
+      updateModalWaLink();
+
+      const modal = document.getElementById("product-modal");
+      const backdrop = document.getElementById("product-modal-backdrop");
+      modal.classList.remove("hidden");
+      backdrop.classList.remove("hidden");
+    }
+
+    function closeProductModal() {
+      const modal = document.getElementById("product-modal");
+      const backdrop = document.getElementById("product-modal-backdrop");
+      modal.classList.add("hidden");
+      backdrop.classList.add("hidden");
+    }
+
+    function selectModalVar(v, btn) {
+      modalSelectedVariant = v;
+      document.querySelectorAll(".modal-var-pill").forEach(b => {
+        b.className = "modal-var-pill px-2.5 py-1 rounded-lg text-xs font-bold bg-surface-container-highest text-secondary border border-surface-container-high";
+      });
+      btn.className = "modal-var-pill px-2.5 py-1 rounded-lg text-xs font-bold bg-primary-container text-on-primary-container border border-surface-container-high";
+      updateModalWaLink();
+    }
+
+    function adjustModalQty(delta) {
+      modalQty = Math.max(1, modalQty + delta);
+      document.getElementById("modal-qty-text").textContent = modalQty;
+    }
+
+    function updateModalWaLink() {
+      if (!modalActiveProduct) return;
+      const text = encodeURIComponent(`Hola FK, quiero consultar por ${modalActiveProduct.name} (${modalSelectedVariant}) en Las Heras 5267`);
+      document.getElementById("modal-whatsapp-link").href = `https://wa.me/${PHONE_NUMBER}?text=${text}`;
+    }
+
+    function addModalItemToCart() {
+      if (!modalActiveProduct) return;
+      addToCart(modalActiveProduct, modalSelectedVariant, modalQty);
+      showToast(`Sumado: ${modalActiveProduct.name}`);
+      closeProductModal();
+      openCartDrawer();
+    }
+
+    // FORMULARIOS Y WHATSAPP INTEGRACIÓN
+    function toggleShippingField(show) {
+      const box = document.getElementById("chk-address-box");
+      const input = document.getElementById("chk-address");
+      if (show) {
+        box.classList.remove("hidden");
+        input.setAttribute("required", "true");
+      } else {
+        box.classList.add("hidden");
+        input.removeAttribute("required");
+      }
+    }
+
+    function handleTechServiceSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById("tech-name").value.trim();
+      const phone = document.getElementById("tech-phone").value.trim();
+      const brand = document.getElementById("tech-brand").value;
+      const model = document.getElementById("tech-model").value.trim();
+      const issue = document.getElementById("tech-issue").value.trim();
+
+      let msg = `¡Hola Silvino / Laboratorio FK! Solicito turno técnico:%0A%0A`;
+      msg += `▪ *Cliente:* ${name}%0A`;
+      msg += `▪ *WhatsApp:* ${phone}%0A`;
+      msg += `▪ *Dispositivo:* ${brand} - ${model}%0A`;
+      msg += `▪ *Falla reportada:* ${issue}%0A%0A`;
+      msg += `¿Tienen disponibilidad hoy en Las Heras 5267?`;
+
+      window.open(`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(msg)}`, "_blank");
+    }
+
+    function handleMobileCheckoutSubmit(e) {
+      e.preventDefault();
+      if (cart.length === 0) {
+        alert("Tu orden está vacía. Sumá productos del catálogo antes de confirmar.");
+        return;
+      }
+
+      const name = document.getElementById("chk-name").value.trim();
+      const phone = document.getElementById("chk-phone").value.trim();
+      const email = document.getElementById("chk-email").value.trim();
+      const shipping = document.querySelector('input[name="chk-shipping"]:checked').value;
+      const address = document.getElementById("chk-address").value.trim();
+
+      let total = 0;
+      cart.forEach(i => { total += i.price * i.qty; });
+
+      let order = `*NUEVO PEDIDO EXPRESS - FK TIENDA DE SOLUCIONES*%0A`;
+      order += `━━━━━━━━━━━━━━━━━━━━━%0A`;
+      order += `*Cliente:* ${name}%0A`;
+      order += `*WhatsApp:* ${phone}%0A`;
+      order += `*Email:* ${email}%0A%0A`;
+      order += `*MODALIDAD DE ENTREGA:* ${shipping === 'retiro' ? 'Retiro en Local (Las Heras 5267)' : 'Envío coordinado en el día a: ' + address}%0A`;
+      order += `*PAGO MERCADO PAGO:* Alias LF2024.MP%0A%0A`;
+      order += `*DETALLE DE PRODUCTOS:*%0A`;
+      cart.forEach(i => {
+        order += `• ${i.name} [${i.variant}] x${i.qty} = $${(i.price * i.qty).toLocaleString("es-AR")}%0A`;
+      });
+      order += `━━━━━━━━━━━━━━━━━━━━━%0A`;
+      order += `*TOTAL A PAGAR: $${total.toLocaleString("es-AR")}*%0A%0A`;
+      order += `(Adjunto comprobante o confirmo método de envío)`;
+
+      window.open(`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(order)}`, "_blank");
+    }
+
+    document.addEventListener("DOMContentLoaded", init);
+  </script>
+</body></html>

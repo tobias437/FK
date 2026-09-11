@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>FK — Tu Tienda de Soluciones</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}input:focus, select:focus, textarea:focus{outline:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ffb4ab", "tertiary-container": "#89f990", "on-error-container": "#ffdad6", "surface-container-lowest": "#0a0e14", "on-tertiary-fixed": "#002106", "surface-tint": "#acd60e", "primary-fixed": "#c7f337", "primary-container": "#c6f135", "inverse-primary": "#516600", "inverse-on-surface": "#2d3137", "outline": "#8e937b", "surface-container": "#1c2026", "surface-variant": "#31353c", "on-primary-fixed": "#161e00", "on-surface-variant": "#c5c9ae", "outline-variant": "#444934", "on-tertiary": "#00390e", "on-secondary": "#2f3131", "surface-container-highest": "#31353c", "tertiary-fixed-dim": "#6fdd78", "secondary": "#c6c6c7", "on-tertiary-fixed-variant": "#005319", "error-container": "#93000a", "surface": "#10141a", "tertiary-fixed": "#8bfb91", "on-primary-fixed-variant": "#3c4d00", "on-primary": "#293500", "on-secondary-fixed-variant": "#454747", "secondary-container": "#454747", "on-background": "#dfe2eb", "on-tertiary-container": "#007426", "primary": "#feffec", "on-error": "#690005", "surface-container-high": "#262a31", "secondary-fixed": "#e2e2e2", "primary-fixed-dim": "#acd60e", "on-secondary-container": "#b4b5b5", "tertiary": "#fbfff5", "surface-container-low": "#181c22", "background": "#10141a", "on-primary-container": "#556b00", "surface-bright": "#353940", "secondary-fixed-dim": "#c6c6c7", "on-secondary-fixed": "#1a1c1c", "surface-dim": "#10141a", "inverse-surface": "#dfe2eb", "on-surface": "#dfe2eb" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-lg": "1.5rem", "space-md": "1rem", "gutter-mobile": "1rem", "space-3xl": "4rem", "space-2xs": "0.25rem", "space-sm": "0.75rem", "gutter-desktop": "1.5rem", "space-2xl": "3rem", "space-xs": "0.5rem", "container-max-width": "1280px", "space-xl": "2rem" }, "fontFamily": { "label-md": [ "Space Grotesk" ], "body-md": [ "Inter" ], "body-sm": [ "Inter" ], "label-sm": [ "Space Grotesk" ], "headline-sm": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "headline-lg-mobile": [ "Space Grotesk" ], "price-hero": [ "Space Grotesk" ], "display-lg": [ "Space Grotesk" ], "headline-md": [ "Space Grotesk" ], "display-lg-mobile": [ "Space Grotesk" ], "label-lg": [ "Space Grotesk" ], "body-lg": [ "Inter" ] }, "fontSize": { "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "price-hero": [ "28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "display-lg": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "display-lg-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen">
+<!-- NOTIFICACIÓN FLOTANTE (TOAST) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="app-toast">
+<div class="bg-surface-container-highest border border-primary-container/60 shadow-2xl px-space-md py-space-sm rounded-lg flex items-center gap-space-sm text-primary">
+<span class="material-symbols-outlined text-primary-container text-[20px]" id="toast-icon">check_circle</span>
+<span class="font-label-md text-label-md" id="toast-message">Producto añadido al carrito</span>
+</div>
+</div>
+<header class="fixed top-0 left-0 w-full z-40 bg-surface-container-lowest/95 backdrop-blur-md border-b border-surface-container-high/40"><div class="w-full bg-surface-container-low px-gutter-mobile lg:px-gutter-desktop py-1 flex items-center justify-center"><p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest flex items-center gap-space-xs"><span class="material-symbols-outlined text-[13px] text-tertiary-container">verified</span>Atención directa por WhatsApp | Envíos en el día<span class="material-symbols-outlined text-[13px] text-tertiary-container">bolt</span></p></div><div class="h-20 w-full px-gutter-mobile lg:px-gutter-desktop max-w-[1280px] mx-auto flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><button aria-label="Abrir menú móvil" class="md:hidden text-on-surface p-1 hover:text-primary-container transition-colors" onclick="toggleMobileMenu()" type="button"><span class="material-symbols-outlined text-[26px]">menu</span></button><a class="flex flex-col group cursor-pointer" data-path="inicio" href="#" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;"><span class="font-headline-md text-headline-md font-bold tracking-tight text-primary group-hover:text-primary-container transition-colors">FK</span><span class="font-label-sm text-label-sm text-secondary uppercase -mt-1 font-semibold tracking-wider">tu tienda de soluciones</span></a></div><div class="hidden md:flex flex-1 max-w-md mx-space-md"><div class="w-full flex items-center bg-surface-container px-space-md py-space-xs rounded-lg border border-surface-container-high/60 focus-within:border-primary-container/70 transition-colors"><span class="material-symbols-outlined text-secondary text-[18px] mr-space-xs">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none" id="header-search-input" oninput="syncHeaderSearch(this.value)" placeholder="Buscar productos, marcas o soluciones..." type="text"/></div></div><div class="flex items-center gap-space-sm"><button class="hidden sm:flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-high hover:bg-surface-bright transition-colors" onclick="scrollToSection('servicio-tecnico-section')" type="button"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-md text-label-md text-on-surface">Servicio Técnico</span></button><a class="hidden lg:flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors font-label-md text-label-md text-tertiary-container" data-path="soporte-whatsapp" href="https://wa.me/5491123456789?text=Hola%20FK,%20quiero%20hacer%20una%20consulta%20directa" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span>WhatsApp</a><button aria-label="Abrir Carrito" class="relative flex items-center justify-center w-10 h-10 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer" onclick="openCartDrawer()" type="button"><span class="material-symbols-outlined text-on-surface text-[20px]">shopping_bag</span><span class="cart-badge-counter absolute -top-1 -right-1 w-5 h-5 bg-primary-container text-on-primary-container font-label-sm text-label-sm flex items-center justify-center rounded-full font-bold">0</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-2xs cursor-pointer" onclick="scrollToSection('checkout-section')"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="w-full bg-surface-container-lowest border-t border-surface-container-high/40"><div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop"><nav class="flex items-center gap-space-md sm:gap-space-lg overflow-x-auto py-2.5" id="nav-category-links"><button class="nav-cat-link font-label-md text-label-md uppercase tracking-wider text-primary-container font-bold whitespace-nowrap transition-colors" data-navcat="all" onclick="selectCategory('all', true)" type="button">Todos</button><button class="nav-cat-link font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors" data-navcat="hogar" onclick="selectCategory('hogar', true)" type="button">Hogar</button><button class="nav-cat-link font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors" data-navcat="moda" onclick="selectCategory('moda', true)" type="button">Moda</button><button class="nav-cat-link font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors" data-navcat="tecnologia" onclick="selectCategory('tecnologia', true)" type="button">Tecnología</button><button class="nav-cat-link font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors" data-navcat="accesorios" onclick="selectCategory('accesorios', true)" type="button">Accesorios</button><button class="nav-cat-link font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors" data-navcat="movil" onclick="selectCategory('movil', true)" type="button">Móvil</button><button class="nav-cat-link font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors" data-navcat="juguetes" onclick="selectCategory('juguetes', true)" type="button">Juguetes</button><button class="nav-cat-link font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors" data-navcat="cuidados" onclick="selectCategory('cuidados', true)" type="button">Cuidados y Belleza</button></nav></div></div></header>
+<!-- MENÚ MÓVIL LATERAL -->
+<div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-sm z-50 hidden transition-opacity" id="mobile-menu-backdrop" onclick="toggleMobileMenu()"></div>
+<aside class="fixed top-0 left-0 w-72 h-full bg-surface-container z-50 transform -translate-x-full transition-transform duration-300 flex flex-col justify-between p-space-lg border-r border-surface-container-high" id="mobile-menu-drawer">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-space-sm">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-primary">FK</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase -mt-1">soluciones</span>
+</div>
+<button class="text-secondary hover:text-on-surface p-1" onclick="toggleMobileMenu()"><span class="material-symbols-outlined">close</span></button>
+</div>
+<nav class="flex flex-col space-y-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-secondary tracking-widest pt-2">Categorías</span>
+<button class="text-left py-2 font-label-md text-label-md uppercase text-on-surface hover:text-primary-container transition-colors" onclick="selectCategory('all', true); toggleMobileMenu();">Todos los productos</button>
+<button class="text-left py-2 font-label-md text-label-md uppercase text-on-surface hover:text-primary-container transition-colors" onclick="selectCategory('hogar', true); toggleMobileMenu();">Hogar</button>
+<button class="text-left py-2 font-label-md text-label-md uppercase text-on-surface hover:text-primary-container transition-colors" onclick="selectCategory('moda', true); toggleMobileMenu();">Moda</button>
+<button class="text-left py-2 font-label-md text-label-md uppercase text-on-surface hover:text-primary-container transition-colors" onclick="selectCategory('tecnologia', true); toggleMobileMenu();">Tecnología</button>
+<button class="text-left py-2 font-label-md text-label-md uppercase text-on-surface hover:text-primary-container transition-colors" onclick="selectCategory('accesorios', true); toggleMobileMenu();">Accesorios</button>
+<button class="text-left py-2 font-label-md text-label-md uppercase text-on-surface hover:text-primary-container transition-colors" onclick="selectCategory('movil', true); toggleMobileMenu();">Móvil &amp; Taller</button>
+<button class="text-left py-2 font-label-md text-label-md uppercase text-on-surface hover:text-primary-container transition-colors" onclick="selectCategory('juguetes', true); toggleMobileMenu();">Juguetes</button>
+<button class="text-left py-2 font-label-md text-label-md uppercase text-on-surface hover:text-primary-container transition-colors" onclick="selectCategory('cuidados', true); toggleMobileMenu();">Cuidados y Belleza</button>
+</nav>
+<div class="pt-space-md border-t border-surface-container-high space-y-space-xs">
+<button class="w-full py-2 bg-surface-container-high hover:bg-surface-bright rounded text-left px-3 font-label-md text-on-surface flex items-center justify-between" onclick="scrollToSection('servicio-tecnico-section'); toggleMobileMenu();">
+<span>Servicio Técnico</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+</button>
+<button class="w-full py-2 bg-surface-container-high hover:bg-surface-bright rounded text-left px-3 font-label-md text-on-surface flex items-center justify-between" onclick="scrollToSection('checkout-section'); toggleMobileMenu();">
+<span>Finalizar Pedido</span>
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</button>
+</div>
+</div>
+<a class="w-full py-space-sm bg-tertiary-container text-on-tertiary font-label-md text-label-md font-bold rounded-lg flex items-center justify-center gap-2" href="https://wa.me/5491123456789?text=Hola%20FK,%20quiero%20hacer%20una%20consulta%20directa" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span> WhatsApp Oficial
+  </a>
+</aside>
+<main class="w-full pt-36 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- BANNER RECUPERACIÓN DE CARRITO DISCRETO (LocalStorage) -->
+<div class="hidden w-full bg-surface-container-high py-space-xs px-gutter-mobile lg:px-gutter-desktop transition-all" id="cart-recovery-banner">
+<div class="max-w-[1280px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-space-xs text-center sm:text-left">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">shopping_basket</span>
+<p class="font-body-sm text-body-sm text-on-surface">¿Querés continuar con tu compra? Tenés productos guardados en tu carrito.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="font-label-sm text-label-sm font-bold text-on-primary-container bg-primary-container hover:bg-primary-fixed px-space-md py-1 rounded-lg uppercase transition-all cursor-pointer" onclick="openCartDrawer()" type="button">Continuar compra</button>
+<button aria-label="Cerrar aviso" class="text-secondary hover:text-on-surface p-1 cursor-pointer" onclick="dismissRecoveryBanner()" type="button"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+</div>
+</div>
+<!-- SECCIÓN 1: HERO / BANNER COMERCIAL -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest py-space-2xl lg:py-space-3xl px-gutter-mobile lg:px-gutter-desktop">
+<div class="absolute inset-0 pointer-events-none bg-gradient-to-br from-primary-container/10 via-transparent to-surface-container-lowest opacity-70"></div>
+<div class="max-w-[1280px] mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-space-2xl">
+<div class="flex-1 space-y-space-lg text-left">
+<div class="space-y-space-2xs">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+            Tienda Oficial · Laboratorio de Hardware
+          </div>
+<div class="flex flex-col">
+<span class="font-display-lg text-display-lg text-primary tracking-tighter leading-none select-none">FK</span>
+<span class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest -mt-2">tu tienda de soluciones</span>
+</div>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary max-w-2xl font-bold tracking-tight">
+          Tecnología, equipamiento y soluciones que encajan con tu día.
+        </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl">
+          Ecosistema integral de productos certificados, repuestos y laboratorio especializado con diagnóstico transparente en el acto.
+        </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="px-space-xl py-space-md bg-primary-container text-on-primary-container font-label-md text-label-md font-bold rounded-lg flex items-center gap-space-xs hover:bg-primary-fixed shadow-md transition-all cursor-pointer" onclick="scrollToSection('catalogo'); return false;">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+            Explorar Catálogo
+          </a>
+<a class="px-space-xl py-space-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-bold rounded-lg flex items-center gap-space-xs transition-colors" href="https://wa.me/5491123456789?text=Hola%20FK,%20quiero%20hacer%20una%20consulta%20directa" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">chat</span>
+            Hablar por WhatsApp
+          </a>
+</div>
+<!-- 4 PILARES DE CONFIANZA -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md pt-space-lg">
+<div class="flex items-center gap-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<span class="material-symbols-outlined text-primary-container text-[22px]">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Compra 100% Segura</span>
+<span class="font-body-sm text-[11px] text-secondary">Transacciones directas</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<span class="material-symbols-outlined text-tertiary-container text-[22px]">local_shipping</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Envíos en el Día</span>
+<span class="font-body-sm text-[11px] text-secondary">Compras confirmadas</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<span class="material-symbols-outlined text-tertiary-container text-[22px]">support_agent</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Atención WhatsApp</span>
+<span class="font-body-sm text-[11px] text-secondary">Respuesta inmediata</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<span class="material-symbols-outlined text-primary-container text-[22px]">build_circle</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Garantía &amp; Taller</span>
+<span class="font-body-sm text-[11px] text-secondary">Soporte oficial</span>
+</div>
+</div>
+</div>
+</div>
+<!-- VISUAL SPOTLIGHT / HERO METRICS -->
+<div class="w-full lg:w-[460px] bg-surface-container p-space-lg rounded-xl shadow-xl relative">
+<div class="flex justify-between items-center pb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-tertiary-container font-bold uppercase">Estado Taller FK</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Las Heras 5267</span>
+</div>
+<div class="relative w-full h-56 rounded-lg overflow-hidden bg-surface-container-high mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Taller de microelectrónica y reparación de celulares con microscopio óptico digital herramientas de precisión y banco de trabajo técnico bajo iluminación cálida y limpia en entorno profesional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW205OTkyOBi26xpArwqo7ELDOgVNBZVdpXt1eWkXwHPhMVZCwZpSf9NUuXvX_c9vSq4dXxmOJbuTX_JUekOdkoEPbMvw8MzLVRpoysqrgEWscxDyLU3xJv1jlvZspFPU1sAXXRqEq42sPrUuq833xpzYw39s3SraMFvXiedrgT7v5I1etPfSuuJD6tL9zlCSh-ixJ61aMKyF7crSE52rHiZJhiMtZKbK4IrseIGO2LdoSOg0ear8kaA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent flex items-end p-space-md">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Módulos OLED · Baterías · Microelectrónica</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm bg-surface-container-lowest rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary uppercase block">SLA Diagnóstico</span>
+<span class="font-price-hero text-headline-md text-primary-container font-bold">45 min</span>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary uppercase block">Garantía Técnica</span>
+<span class="font-price-hero text-headline-md text-tertiary-container font-bold">90 Días</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 2 & 3: CATEGORÍAS, BUSCADOR Y CATÁLOGO DE PRODUCTOS -->
+<section class="w-full py-space-3xl px-gutter-mobile lg:px-gutter-desktop max-w-[1280px] mx-auto space-y-space-xl" id="catalogo">
+<!-- ESTRATEGIA DE LAS CATEGORÍAS -->
+<div class="space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase font-bold tracking-wider">Exploración Táctica</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">Catálogo de Soluciones</h2>
+</div>
+<!-- BUSCADOR INSTANTÁNEO -->
+<div class="w-full md:w-80 flex items-center bg-surface-container px-space-md py-space-xs rounded-lg shadow-sm border border-surface-container-high/60 focus-within:border-primary-container/70 transition-colors">
+<span class="material-symbols-outlined text-secondary text-[20px] mr-space-xs">search</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none" id="product-search-input" oninput="handleSearch(this.value)" placeholder="Buscar por producto, color o marca..." type="text"/>
+<button class="hidden text-secondary hover:text-on-surface text-[14px] cursor-pointer" id="search-clear-btn" onclick="clearSearch()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- BOTONES DE CATEGORÍAS EN CATÁLOGO -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-xs" id="category-pills">
+<button class="cat-filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md uppercase tracking-wider bg-primary-container text-on-primary-container font-bold whitespace-nowrap shadow-sm cursor-pointer" data-cat="all" onclick="selectCategory('all')" type="button">
+          Todos los Productos
+        </button>
+<button class="cat-filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md uppercase tracking-wider bg-surface-container text-secondary hover:text-on-surface whitespace-nowrap cursor-pointer" data-cat="hogar" onclick="selectCategory('hogar')" type="button">
+          Hogar
+        </button>
+<button class="cat-filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md uppercase tracking-wider bg-surface-container text-secondary hover:text-on-surface whitespace-nowrap cursor-pointer" data-cat="moda" onclick="selectCategory('moda')" type="button">
+          Moda
+        </button>
+<button class="cat-filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md uppercase tracking-wider bg-surface-container text-secondary hover:text-on-surface whitespace-nowrap cursor-pointer" data-cat="tecnologia" onclick="selectCategory('tecnologia')" type="button">
+          Tecnología
+        </button>
+<button class="cat-filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md uppercase tracking-wider bg-surface-container text-secondary hover:text-on-surface whitespace-nowrap cursor-pointer" data-cat="accesorios" onclick="selectCategory('accesorios')" type="button">
+          Accesorios
+        </button>
+<button class="cat-filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md uppercase tracking-wider bg-surface-container text-secondary hover:text-on-surface whitespace-nowrap cursor-pointer" data-cat="movil" onclick="selectCategory('movil')" type="button">
+          Móvil
+        </button>
+<button class="cat-filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md uppercase tracking-wider bg-surface-container text-secondary hover:text-on-surface whitespace-nowrap cursor-pointer" data-cat="juguetes" onclick="selectCategory('juguetes')" type="button">
+          Juguetes
+        </button>
+<button class="cat-filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md uppercase tracking-wider bg-surface-container text-secondary hover:text-on-surface whitespace-nowrap cursor-pointer" data-cat="cuidados" onclick="selectCategory('cuidados')" type="button">
+          Cuidados y Belleza
+        </button>
+</div>
+<!-- DESCRIPCIÓN COMERCIAL EXACTA DE CATEGORÍA ACTIVA -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm" id="category-description-panel">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase font-bold" id="cat-desc-title">Catálogo Unificado FK</span>
+<p class="font-body-sm text-body-sm text-secondary" id="cat-desc-text">Explorá todo el stock de equipamiento para el hogar, tecnología, telefonía y repuestos certificados con entrega en el día.</p>
+</div>
+<div class="flex flex-wrap gap-space-2xs" id="cat-subcategories-pill">
+<!-- Subcategorías automáticas -->
+</div>
+</div>
+</div>
+<!-- GRID DE PRODUCTOS DINÁMICA -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-space-lg" id="products-grid">
+<!-- Inyectado mediante renderProducts() -->
+</div>
+<!-- ESTADO VACÍO CUANDO NO HAY PRODUCTOS O FILTRO SIN STOCK -->
+<div class="hidden w-full py-space-3xl px-space-lg bg-surface-container text-center rounded-xl space-y-space-md" id="empty-category-state">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mx-auto text-secondary">
+<span class="material-symbols-outlined text-[32px]">inventory_2</span>
+</div>
+<div class="space-y-space-2xs max-w-md mx-auto">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">No encontramos coincidencias para tu búsqueda</h3>
+<p class="font-body-sm text-body-sm text-secondary">Probá buscando con otros términos o explorá las categorías completas.</p>
+</div>
+<button class="inline-flex items-center gap-space-xs px-space-lg py-space-sm bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg font-bold transition-all cursor-pointer" onclick="clearSearch(); selectCategory('all');" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+        Limpiar filtros / Ver todo
+</button>
+</div>
+</section>
+<!-- SECCIÓN 6: SERVICIO TÉCNICO DE TELEFONÍA CELULAR (LABORATORIO FK) -->
+<section class="w-full bg-surface-container-low py-space-3xl px-gutter-mobile lg:px-gutter-desktop" id="servicio-tecnico-section">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<div class="lg:col-span-6 space-y-space-lg">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-highest font-label-sm text-label-sm text-tertiary-container font-bold">
+<span class="material-symbols-outlined text-[16px]">precision_manufacturing</span>
+          LABORATORIO TÉCNICO OFICIAL
+        </div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">
+          Servicio Técnico de Telefonía Celular Especializado
+        </h2>
+<p class="font-body-lg text-body-lg text-secondary">
+          Diagnóstico honesto, cambio de módulos OLED y Amoled, reemplazo de baterías con ciclos certificados, pines de carga y microelectrónica de alta precisión para Apple, Samsung, Motorola y Xiaomi.
+        </p>
+<div class="grid grid-cols-2 gap-space-md">
+<div class="p-space-md bg-surface-container rounded-lg space-y-space-2xs">
+<span class="material-symbols-outlined text-primary-container text-[24px]">phonelink_setup</span>
+<h4 class="font-label-md text-label-md text-primary font-bold">Módulos &amp; Displays</h4>
+<p class="font-body-sm text-body-sm text-secondary">Instalación calibrada con sellado hidrófugo y garantía escrita.</p>
+</div>
+<div class="p-space-md bg-surface-container rounded-lg space-y-space-2xs">
+<span class="material-symbols-outlined text-tertiary-container text-[24px]">battery_charging_full</span>
+<h4 class="font-label-md text-label-md text-primary font-bold">Baterías Originales</h4>
+<p class="font-body-sm text-body-sm text-secondary">Reemplazo rápido con verificación de salud del 100%.</p>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[24px]">pin_drop</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold block">Taller Central: Las Heras 5267</span>
+<span class="font-body-sm text-body-sm text-secondary">Atención técnica: Lun a Sáb 17:00 a 21:00 hs</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-container font-bold uppercase">En el día</span>
+</div>
+</div>
+<!-- FORMULARIO INTEGRADO DE SERVICIO TÉCNICO -->
+<div class="lg:col-span-6 bg-surface-container p-space-xl rounded-xl shadow-xl space-y-space-md">
+<div class="border-b border-surface-container-highest pb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Solicitar Turno Técnico Rápido</h3>
+<p class="font-body-sm text-body-sm text-secondary">Completá los datos de tu dispositivo para cotización inmediata por WhatsApp.</p>
+</div>
+<form class="space-y-space-sm" id="tech-service-form" onsubmit="handleTechServiceSubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-secondary uppercase mb-1">Tu Nombre Completo *</label>
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg font-body-sm text-on-surface placeholder:text-secondary focus:bg-surface-container-highest border border-surface-container-high/40 focus:border-primary-container/70" id="tech-client-name" placeholder="Ej. Martín Gómez" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-secondary uppercase mb-1">Tu WhatsApp *</label>
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg font-body-sm text-on-surface placeholder:text-secondary focus:bg-surface-container-highest border border-surface-container-high/40 focus:border-primary-container/70" id="tech-client-phone" placeholder="Ej. 11 3456 7890" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-secondary uppercase mb-1">Marca del Equipo *</label>
+<select class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg font-body-sm text-on-surface focus:bg-surface-container-highest border border-surface-container-high/40 focus:border-primary-container/70" id="tech-brand" required="">
+<option value="">Seleccionar marca</option>
+<option value="iPhone (Apple)">iPhone (Apple)</option>
+<option value="Samsung">Samsung</option>
+<option value="Motorola">Motorola</option>
+<option value="Xiaomi">Xiaomi</option>
+<option value="Otra Marca">Otra Marca</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-secondary uppercase mb-1">Modelo Exacto *</label>
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg font-body-sm text-on-surface placeholder:text-secondary focus:bg-surface-container-highest border border-surface-container-high/40 focus:border-primary-container/70" id="tech-model" placeholder="Ej. iPhone 13 / Galaxy A54" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-secondary uppercase mb-1">Tipo de Falla o Reparación Requerida *</label>
+<textarea class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg font-body-sm text-on-surface placeholder:text-secondary focus:bg-surface-container-highest resize-none border border-surface-container-high/40 focus:border-primary-container/70" id="tech-issue" placeholder="Describí qué le sucede al equipo (pantalla rota, no carga, se apaga solo, mojado, etc.)..." required="" rows="3"></textarea>
+</div>
+<button class="w-full py-space-md bg-tertiary-container hover:bg-tertiary-fixed text-on-tertiary font-label-md text-label-md font-bold rounded-lg flex items-center justify-center gap-space-xs shadow-md transition-all cursor-pointer" type="submit">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+            Solicitar Turno por WhatsApp
+          </button>
+<span class="block text-center font-label-sm text-[11px] text-secondary">
+            Te responderemos con presupuesto previo de piezas y disponibilidad de slot en taller.
+          </span>
+</form>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 7: CHECKOUT EN UN SOLO PASO (ONE-PAGE CHECKOUT) -->
+<section class="w-full py-space-3xl px-gutter-mobile lg:px-gutter-desktop max-w-[1280px] mx-auto space-y-space-xl" id="checkout-section">
+<div class="text-left space-y-space-2xs">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary-container uppercase font-bold">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+        Modo Invitado Express
+      </div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">Finalizar Pedido en Un Solo Paso</h2>
+<p class="font-body-md text-body-md text-secondary">Sin contraseñas forzosas ni registros engorrosos. Confirmación inmediata vía WhatsApp Business.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- FORMULARIO CHECKOUT -->
+<div class="lg:col-span-7 bg-surface-container p-space-xl rounded-xl space-y-space-lg shadow-md">
+<form class="space-y-space-lg" id="checkout-form" onsubmit="handleCheckoutSubmit(event)">
+<!-- 1. IDENTIFICACIÓN -->
+<div class="space-y-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center justify-center">1</span>
+<h3 class="font-label-lg text-label-lg text-primary font-bold uppercase">Datos de Contacto</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-secondary uppercase mb-1">Nombre y Apellido *</label>
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg font-body-sm text-on-surface placeholder:text-secondary border border-surface-container-high/40 focus:border-primary-container/70" id="chk-name" placeholder="Tu nombre completo" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-secondary uppercase mb-1">WhatsApp / Teléfono *</label>
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg font-body-sm text-on-surface placeholder:text-secondary border border-surface-container-high/40 focus:border-primary-container/70" id="chk-phone" placeholder="Ej. 11 2345 6789" required="" type="tel"/>
+</div>
+<div class="sm:col-span-2">
+<label class="block font-label-sm text-label-sm text-secondary uppercase mb-1">Correo Electrónico (Para comprobante) *</label>
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg font-body-sm text-on-surface placeholder:text-secondary border border-surface-container-high/40 focus:border-primary-container/70" id="chk-email" placeholder="tucorreo@ejemplo.com" required="" type="email"/>
+</div>
+</div>
+</div>
+<!-- 2. ENTREGA -->
+<div class="space-y-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center justify-center">2</span>
+<h3 class="font-label-lg text-label-lg text-primary font-bold uppercase">Modalidad de Entrega</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<label class="flex items-start gap-space-sm p-space-md bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors border border-surface-container-high/40">
+<input checked="" class="mt-1 text-primary-container focus:ring-0" name="shipping-method" onchange="toggleShippingAddress(false)" type="radio" value="retiro"/>
+<div class="space-y-0.5">
+<span class="font-label-md text-label-md text-primary font-bold block">Retiro en Tienda FK</span>
+<span class="font-body-sm text-body-sm text-secondary block">Las Heras 5267 (17:00 a 21:00 hs)</span>
+<span class="font-label-sm text-label-sm text-tertiary-container font-bold block">GRATIS</span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-md bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors border border-surface-container-high/40">
+<input class="mt-1 text-primary-container focus:ring-0" name="shipping-method" onchange="toggleShippingAddress(true)" type="radio" value="envio"/>
+<div class="space-y-0.5">
+<span class="font-label-md text-label-md text-primary font-bold block">Envío en el Día a Domicilio</span>
+<span class="font-body-sm text-body-sm text-secondary block">Mensajería Express coordinada</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold block">A coordinar por WhatsApp</span>
+</div>
+</label>
+</div>
+<div class="hidden pt-space-2xs" id="address-container">
+<label class="block font-label-sm text-label-sm text-secondary uppercase mb-1">Dirección de Entrega y Localidad *</label>
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg font-body-sm text-on-surface placeholder:text-secondary border border-surface-container-high/40 focus:border-primary-container/70" id="chk-address" placeholder="Calle, número, piso, dpto y localidad..." type="text"/>
+</div>
+</div>
+<!-- 3. MEDIOS DE PAGO -->
+<div class="space-y-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center justify-center">3</span>
+<h3 class="font-label-lg text-label-lg text-primary font-bold uppercase">Método de Pago</h3>
+</div>
+<div class="space-y-space-xs">
+<label class="flex items-center justify-between p-space-md bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors border border-surface-container-high/40">
+<div class="flex items-center gap-space-sm">
+<input checked="" class="text-primary-container focus:ring-0" name="payment-method" onchange="togglePaymentNotice('transfer')" type="radio" value="transferencia"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">Transferencia Bancaria Inmediata</span>
+<span class="font-body-sm text-body-sm text-secondary">Datos bancarios seguros provistos al confirmar</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary-container bg-surface-container px-space-xs py-0.5 rounded">Recomendado</span>
+</label>
+<!-- PANEL INFORMATIVO TRANSFERENCIA SEGURO -->
+<div class="p-space-md bg-surface-container-lowest rounded-lg space-y-space-2xs text-secondary font-body-sm border border-surface-container-high/40" id="transfer-notice">
+<div class="flex items-center gap-space-xs text-primary-container font-label-sm text-label-sm font-bold uppercase">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                  Espacio Reservado para CBU / Alias
+                </div>
+<p class="">El CBU/Alias oficial se adjuntará automáticamente en el mensaje de WhatsApp para que operes con total tranquilidad sin intermediarios ni comisiones extras.</p>
+</div>
+<label class="flex items-center justify-between p-space-md bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors border border-surface-container-high/40">
+<div class="flex items-center gap-space-sm">
+<input class="text-primary-container focus:ring-0" name="payment-method" onchange="togglePaymentNotice('mp')" type="radio" value="mercadopago"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">Mercado Pago</span>
+<span class="font-body-sm text-body-sm text-secondary">Link de cobro o QR directo</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary">credit_card</span>
+</label>
+<label class="flex items-center justify-between p-space-md bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors border border-surface-container-high/40">
+<div class="flex items-center gap-space-sm">
+<input class="text-primary-container focus:ring-0" name="payment-method" onchange="togglePaymentNotice('cash')" type="radio" value="efectivo"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">Efectivo al Retirar</span>
+<span class="font-body-sm text-body-sm text-secondary">Abonás directamente en el local de Las Heras 5267</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary">payments</span>
+</label>
+</div>
+</div>
+<button class="w-full py-space-md bg-primary-container hover:bg-primary-fixed text-on-primary-container font-label-md text-label-md font-bold rounded-lg flex items-center justify-center gap-space-xs shadow-md transition-all cursor-pointer" type="submit">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+            CONFIRMAR Y ENVIAR PEDIDO POR WHATSAPP
+          </button>
+</form>
+</div>
+<!-- RESUMEN DEL PEDIDO EN CHECKOUT -->
+<div class="lg:col-span-5 bg-surface-container p-space-xl rounded-xl space-y-space-md h-fit shadow-md">
+<div class="flex justify-between items-center pb-space-sm border-b border-surface-container-highest">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Resumen de Compra</h3>
+<span class="font-label-sm text-label-sm text-secondary" id="chk-items-count">0 items</span>
+</div>
+<div class="space-y-space-sm max-h-72 overflow-y-auto pr-1" id="chk-order-items"><p class="font-body-sm text-secondary py-space-sm">No hay items en el carrito. Seleccioná soluciones del catálogo para continuar.</p></div>
+<div class="pt-space-md space-y-space-xs border-t border-surface-container-highest">
+<div class="flex justify-between font-body-sm text-body-sm text-secondary">
+<span class="">Subtotal estimado</span>
+<span class="" id="chk-subtotal-price">$0</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-secondary">
+<span class="">Costo de entrega</span>
+<span class="text-tertiary-container font-label-sm" id="chk-shipping-cost">Gratis (Retiro en local)</span>
+</div>
+<div class="flex justify-between font-headline-md text-headline-md text-primary font-bold pt-space-xs">
+<span class="">Total Final</span>
+<span class="text-primary-container font-price-hero font-bold" id="chk-total-price">$0</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-lg flex items-center gap-space-xs text-secondary font-body-sm text-[12px]">
+<span class="material-symbols-outlined text-tertiary-container text-[18px]">verified</span>
+          Tu orden se reserva por 24hs una vez emitido el mensaje.
+        </div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 4: MODAL DE FICHA DE PRODUCTO DETALLADA -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-gutter-mobile bg-surface-container-lowest/80 backdrop-blur-sm" id="product-modal" onclick="handleModalBackdropClick(event)">
+<div class="bg-surface-container rounded-xl w-full max-w-3xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col md:flex-row relative border border-surface-container-high" onclick="event.stopPropagation()">
+<button aria-label="Cerrar modal" class="absolute top-space-sm right-space-sm z-10 w-9 h-9 bg-surface-container-highest/90 hover:bg-surface-bright rounded-full flex items-center justify-center text-on-surface cursor-pointer" onclick="closeProductModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<!-- GALERÍA MODAL -->
+<div class="w-full md:w-1/2 p-space-lg bg-[#141820] flex flex-col justify-between items-center">
+<div class="relative w-full h-64 sm:h-72 rounded-lg overflow-hidden bg-surface-container-lowest flex items-center justify-center">
+<img class="w-full h-full object-contain p-2 transition-transform duration-300 hover:scale-105" data-alt="Detalle del producto" id="modal-main-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASLQHseWUVapu82Lr8C5DbSG-fDjJqTdQIsuBc1BQJ07OC2_QaefUcsZaDzZS3yzlMQhzHq6yyxjyuhXLK_c-d2Hdcn9GtBlo_jfyRX5-mUWwtlFwVYlrNJnQgXFkK975Q5zIDB6AmsYkASHb8-JaYBK9ld2cPnUmTBU8FCXZJCgInk1hpWbqdGGSlwYQGLbzieKKZ4Q-mPmJmvy3bXFllYkDYYQ0mHZuNB_m3cb81oteBo5iqJFir4WMf42l1_-Q5iyo"/>
+<span class="absolute top-space-xs left-space-xs font-label-sm text-label-sm bg-primary-container text-on-primary-container px-space-xs py-0.5 rounded font-bold uppercase" id="modal-badge">Novedad</span>
+</div>
+<!-- MINIATURAS -->
+<div class="flex gap-space-xs pt-space-sm w-full justify-center" id="modal-thumbs-container">
+<!-- Miniaturas dinámicas -->
+</div>
+</div>
+<!-- DETALLE Y CONTROLES MODAL -->
+<div class="w-full md:w-1/2 p-space-xl flex flex-col justify-between overflow-y-auto space-y-space-md bg-surface-container">
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm text-primary-container font-bold uppercase" id="modal-category">Categoría</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold" id="modal-title">Título del Producto</h3>
+<p class="font-body-sm text-body-sm text-secondary" id="modal-desc">Descripción completa y detallada de la solución seleccionada.</p>
+<div class="pt-space-xs">
+<span class="font-price-hero text-headline-lg text-primary-container font-bold" id="modal-price">$0</span>
+</div>
+</div>
+<!-- SELECTORES DE VARIANTE Y CANTIDAD -->
+<div class="space-y-space-sm pt-space-xs">
+<div>
+<label class="block font-label-sm text-label-sm text-secondary uppercase mb-1">Color / Versión:</label>
+<div class="flex flex-wrap gap-space-xs" id="modal-variants-container">
+<!-- Botones de variantes -->
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-secondary uppercase mb-1">Cantidad:</label>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center bg-surface-container-highest rounded-lg p-1">
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container text-md font-bold cursor-pointer" onclick="adjustModalQty(-1)" type="button">-</button>
+<span class="w-10 text-center font-label-md text-label-md text-primary font-bold" id="modal-qty-val">1</span>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container text-md font-bold cursor-pointer" onclick="adjustModalQty(1)" type="button">+</button>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> En stock inmediato
+              </span>
+</div>
+</div>
+</div>
+<!-- CTAS PRINCIPALES DEL MODAL -->
+<div class="space-y-space-xs pt-space-md">
+<button class="w-full py-space-md bg-primary-container hover:bg-primary-fixed text-on-primary-container font-label-md text-label-md font-bold rounded-lg flex items-center justify-center gap-space-xs shadow-md transition-all cursor-pointer" id="modal-add-btn" onclick="addModalProductToCart()" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+            AÑADIR AL CARRITO
+          </button>
+<button class="w-full py-space-sm bg-surface-container-highest hover:bg-surface-bright text-primary font-label-md text-label-md font-bold rounded-lg flex items-center justify-center gap-space-xs transition-colors cursor-pointer" id="modal-buy-now-btn" onclick="buyModalProductNow()" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+            COMPRAR AHORA (IR AL CHECKOUT)
+          </button>
+<a class="w-full py-space-xs text-tertiary-container hover:underline font-label-sm text-label-sm font-bold flex items-center justify-center gap-space-xs" href="#" id="modal-wa-btn" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+            Hacer consulta rápida por WhatsApp
+          </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BACKDROP Y DRAWER DEL CARRITO -->
+<div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-sm z-50 hidden transition-opacity" id="cart-backdrop" onclick="closeCartDrawer()"></div>
+<aside class="fixed top-0 right-0 w-full sm:w-[440px] h-full bg-surface-container-low z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col shadow-2xl border-l border-surface-container-high" id="cart-drawer"><div class="p-space-lg flex items-center justify-between bg-surface-container-lowest border-b border-surface-container-high/60"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary-container text-[24px]">shopping_bag</span><h2 class="font-headline-sm text-headline-sm text-primary font-bold">Tu Carrito</h2></div><button aria-label="Cerrar carrito" class="text-secondary hover:text-on-surface p-1 cursor-pointer" onclick="closeCartDrawer()" type="button"><span class="material-symbols-outlined">close</span></button></div><div class="p-space-md bg-surface-container border-b border-surface-container-high/40"><div class="flex justify-between items-center mb-space-2xs"><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Progreso de Envío Gratis</span><span class="font-label-sm text-label-sm text-primary-container font-bold" id="drawer-shipping-progress-text">¡Envío en el día disponible!</span></div><div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary-container transition-all duration-300" id="drawer-shipping-bar" style="width: 100%;"></div></div></div><div class="flex-1 overflow-y-auto p-space-lg space-y-space-md" id="drawer-items-list">
+<!-- Items inyectados mediante updateCartUI() -->
+</div><div class="p-space-lg bg-surface-container-lowest space-y-space-md border-t border-surface-container-high/60"><div class="space-y-space-xs"><div class="flex justify-between font-body-sm text-body-sm text-secondary"><span class="">Subtotal estimado</span><span class="font-price-hero font-bold text-on-surface" id="drawer-subtotal-val">$0</span></div><div class="flex justify-between font-headline-sm text-headline-sm text-primary font-bold"><span class="">Total</span><span class="text-primary-container font-price-hero" id="drawer-total-val">$0</span></div></div><div class="space-y-space-xs"><button class="w-full py-space-sm bg-primary-container hover:bg-primary-fixed text-on-primary-container font-label-md text-label-md font-bold rounded-lg flex items-center justify-center gap-space-xs transition-colors cursor-pointer" onclick="closeCartDrawer(); scrollToSection('checkout-section');" type="button"><span class="material-symbols-outlined text-[18px]">credit_card</span>Finalizar Pedido (Checkout)</button><a class="w-full py-space-sm bg-surface-container hover:bg-surface-container-high text-tertiary-container font-label-md text-label-md font-bold rounded-lg flex items-center justify-center gap-space-xs transition-colors" href="https://wa.me/5491123456789?text=Hola%20FK,%20tengo%20una%20consulta%20sobre%20sus%20productos" id="drawer-wa-order-btn" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span>Comprar por WhatsApp</a></div></div></aside>
+<footer class="w-full bg-surface-container-lowest pt-space-3xl pb-space-2xl border-t border-surface-container-high/40"><div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-2xl"><div class="space-y-space-md"><div class="flex flex-col"><span class="font-headline-md text-headline-md font-bold tracking-tight text-primary">FK</span><span class="font-label-sm text-label-sm text-secondary uppercase -mt-1 font-semibold">tu tienda de soluciones</span></div><p class="font-body-sm text-body-sm text-secondary">Equipamiento, repuestos certificados y servicio técnico de alta complejidad para tu día a día.</p><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface">Taller Técnico Operativo</span></div></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary uppercase font-bold">Ubicación y Horarios</h3><ul class="space-y-space-xs font-body-sm text-body-sm text-secondary"><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-primary-container text-[18px]">store</span><span class="">Las Heras 5267</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">schedule</span><span class="">Lun a Sáb: 17:00 a 21:00 hs</span></li><li class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">local_shipping</span><span class="">Envíos en el día para compras confirmadas</span></li></ul></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary uppercase font-bold">Contacto Directo</h3><ul class="space-y-space-xs font-body-sm text-body-sm text-secondary"><li class=""><a class="flex items-center gap-space-xs text-tertiary-container hover:underline" href="https://wa.me/5491123456789?text=Hola%20FK,%20quiero%20hacer%20una%20consulta%20directa" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span>Canal VIP WhatsApp</a></li><li class=""><button class="hover:text-on-surface transition-colors flex items-center gap-space-xs text-left cursor-pointer" onclick="scrollToSection('servicio-tecnico-section')" type="button"><span class="material-symbols-outlined text-[18px]">build</span>Turnos Servicio Técnico</button></li><li class=""><a class="hover:text-on-surface transition-colors" data-path="garantia-y-devoluciones" href="#" onclick="showToast('Garantía oficial escrita de hasta 90 días en taller y productos.'); return false;">Términos de Garantía</a></li></ul></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-primary uppercase font-bold">Medios de Pago</h3><p class="font-body-sm text-body-sm text-secondary">Procesamiento seguro y acreditación inmediata:</p><div class="flex flex-wrap gap-space-xs pt-space-2xs"><span class="px-space-sm py-1 bg-surface-container rounded font-label-sm text-label-sm text-on-surface">Mercado Pago</span><span class="px-space-sm py-1 bg-surface-container rounded font-label-sm text-label-sm text-on-surface">Transferencia Bancaria</span><span class="px-space-sm py-1 bg-surface-container rounded font-label-sm text-label-sm text-on-surface">Efectivo en Tienda</span></div></div></div><div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop mt-space-2xl pt-space-lg flex flex-col sm:flex-row justify-between items-center gap-space-md border-t border-surface-container-high/30"><span class="font-body-sm text-body-sm text-secondary">© 2024 FK — Tu Tienda de Soluciones. Todos los derechos reservados.</span><div class="flex items-center gap-space-lg font-label-sm text-label-sm text-secondary"><a class="hover:text-on-surface transition-colors" data-path="privacidad" href="#" onclick="showToast('Tus datos son resguardados bajo estricta confidencialidad.'); return false;">Privacidad</a><a class="hover:text-on-surface transition-colors" data-path="terminos" href="#" onclick="showToast('Operaciones sujetas a validación de stock y confirmación por WhatsApp.'); return false;">Términos y Condiciones</a></div></div></footer>
+<script>
+  // 1. SISTEMA CENTRALIZADO DE DATOS (CONFIG & CATÁLOGO)
+  const CONFIG = {
+    whatsappNumber: "5491123456789",
+    storeName: "FK — tu tienda de soluciones",
+    address: "Las Heras 5267",
+    hours: "17:00 a 21:00 hs",
+    freeShippingThreshold: 50000
+  };
+
+  const CATEGORIES_DATA = {
+    all: {
+      title: "Catálogo Unificado FK",
+      description: "Explorá todo el stock de equipamiento para el hogar, tecnología, telefonía y repuestos certificados con entrega en el día.",
+      subcategories: ["Cocina & Anafes", "Climatización", "Telefonía & OLED", "Audio & Carga", "Hogar & Utilidad"]
+    },
+    hogar: {
+      title: "Hogar & Electrodomésticos",
+      description: "Soluciones prácticas, equipamiento eléctrico, anafes y utilidades para todos los días.",
+      subcategories: ["Cocina", "Climatización", "Limpieza", "Utilidad Diaria"]
+    },
+    moda: {
+      title: "Moda & Transporte Urbano",
+      description: "Prendas, mochilas tácticas e impermeables diseñadas para proteger tu equipamiento.",
+      subcategories: ["Mochilas Porta Notebook", "Bolsos Materos Térmicos", "Accesorios Urbanos"]
+    },
+    tecnologia: {
+      title: "Tecnología & Hardware",
+      description: "Cargadores GaN de alta potencia, audio premium, wearables y periféricos de alto rendimiento.",
+      subcategories: ["Cargadores Rápidos GaN", "Audio Bluetooth ANC", "Periféricos", "Smart Gadgets"]
+    },
+    accesorios: {
+      title: "Accesorios & Complementos",
+      description: "Complementos de máxima durabilidad: soportes vehiculares MagSafe, organizadores y cables reforzados.",
+      subcategories: ["Soportes Auto MagSafe", "Organizadores de Mesa", "Cables Reforzados"]
+    },
+    movil: {
+      title: "Móvil & Laboratorio de Reparación",
+      description: "Todo para cuidar y reparar tu celular: Módulos OLED, baterías certificadas y pines de carga originales.",
+      subcategories: ["Módulos OLED Originales", "Baterías Certificadas", "Pines de Carga", "Herramientas de Precisión"]
+    },
+    juguetes: {
+      title: "Juguetes & Gadgets Retro",
+      description: "Dispositivos para jugar, divertirse y regalar: drones didácticos, mini consolas y entretenimiento.",
+      subcategories: ["Drones Educativos", "Consolas Retro Portátiles", "Gadgets de Juegos"]
+    },
+    cuidados: {
+      title: "Cuidados y Belleza Personal",
+      description: "Dispositivos electrónicos para el cuidado y estilismo personal con cuchillas de precisión autoinoxidables.",
+      subcategories: ["Afeitadoras Waterproof", "Recortadoras de Barba", "Cuidado y Bienestar"]
+    }
+  };
+
+  const PRODUCTS = [
+    {
+      id: "prod-wafflera",
+      category: "hogar",
+      name: "Wafflera Eléctrica Oryx S1813",
+      price: 28000,
+      badge: "Destacado",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuC7yUlpF-RbKD3lLSiXhblZ0qan6Qbhu5OoTbTIea_jHbWw2N3tpTdiHxa4rGllvwfV_YbZ_d02tGsBLCImts67kPMU6CFfMxf16U-hU6FyXSQL9rqaA1U0f8ZPWulCA5oaMnFmXiDlSiMfakgdzDWyoWcE7mGXNxc81_fDhECq66wdmBiRPawMF4OOgTMXEn33poTyZ9GMWl8B9DizuEwYd1XXYH-UyukxfX6sTEARDOzQCLU77dKvQAgXy6jkbz8siic",
+      description: "Wafflera eléctrica compacta y potente marca Oryx S1813. Placas antiadherentes de calentamiento homogéneo, cierre de seguridad con traba y luces LED testigo de temperatura ideal.",
+      variants: [
+        { name: "Color", options: ["Negro / Inox", "Plata"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-anafe-1h",
+      category: "hogar",
+      name: "Anafe Eléctrico Hytoshy 1 Hornalla HT-100A-1 1000W",
+      price: 25000,
+      badge: "Más Vendido",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAIPTDQFxThDW3XZdVtXd83R5azsjgVY2KwfMztxulw8MTSI5kj0f0Oc7-VyTIW7YXbcfKT9oFt5MHE1Mo0e3CrzAXO3lt3zFfc6R__rNaL34RlAxhBOWE2BRpSE4YCvbWbH5TJP5uzOnsJ9h-DRxBgl3Xe3F5rjuhQ7tzMPTgPasKqpnia5oE6ASCL2fD81KiAwhhA_DWjQH1a9ZS9M_JG-Bi4JZf2a8g79UP1bXn_Om0CiR0PngFoSniRsVgVv644BYk",
+      description: "Anafe eléctrico de una placa de cocción de 1000W marca Hytoshy. Termostato ajustable, protección de sobrecalentamiento y recubrimiento antiadherente de fácil limpieza.",
+      variants: [
+        { name: "Color", options: ["Negro Original", "Blanco"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-mopa-duavf",
+      category: "hogar",
+      name: "Mopa Centrífuga Giratoria 360° Duavf con Balde",
+      price: 38500,
+      badge: "Hogar",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuD-4piwf9IDd3E-zGnO-AqJ6cPp6ES5-w9bgaw6CXOEOnPBeN8O7hG9HbA47hEdBx_6c0f-gMInwuxEldgTJAq0jFXFqecdDkWzyB4FEnbqc1FhjIFa86tt8WWWpkEnhhbCT3yh194UL0NZ6bO01h_SI_Z7p1TcrGVJYwqUEmsp_lSxVL53gzArclELhwqL_Op71pXcjZ52Y5drb7WfLRq13xOludtEMntsL4S2RrCfuKZHQOULd_8GE0a3B6iyv-1XbOM",
+      description: "Sistema de limpieza rotativa con escurridor centrífugo de acero inoxidable, cabezal giratorio de microfibra súper absorbente y balde con manija reforzada.",
+      variants: [
+        { name: "Color", options: ["Rojo / Negro", "Azul"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-bolso-matero",
+      category: "moda",
+      name: "Bolso Porta Térmico / Matero Cuero Ecológico Reforzado",
+      price: 18500,
+      badge: "Moda & Hogar",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDPELYxukBo_1NbEoY5pq8sXH3psDFcF6beabETHl1IZIs8ZlHM2AetGHaXIjKM6qcx_oLJWVdAwCHyuvatcKDBXW1aeNGf8G8UoRhDLiBZz76CjwRG3jwIszKlevCjrnvw8K9AFUVqM1M8xIqRgWJ-OG3yAT-MOZDXToYZjXbx6tISlOytpZIHz7hQPJf2hDmjrJQbaTcB-AbQr7bC3KlRm3h7ynz8T03DCPWAorKuVcu7Zl6ItXueABlMe6nMT8RQhdE",
+      description: "Organizador y bolso porta termo matero confeccionado con costuras reforzadas, interior semi-rígido y correa regulable para transporte cómodo y seguro.",
+      variants: [
+        { name: "Color", options: ["Marrón Suela", "Negro Clásico"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-licuadora-profile",
+      category: "hogar",
+      name: "Licuadora de Mano Profile KBM-500 500W con Vaso Medidor",
+      price: 30000,
+      badge: "500W Potente",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZCLP_cVu1uV_cvZ36PT5VVAvVW3ufhiHMUSMECW-bz3FANlZsZ9ifm3Ah68pFmyhEuzSf8bMqZOJKQuld_p_3Oc__rcEMciHpxZiaHbP8mAX5IrwWMFbi465-iXN2_ZT1AOLBpzNLH0JYW6AywsZpEaEbRh6MzE8kGth09B6kmLJ_uq5Cs5coPdXA9OX1SQDRt46UaF3q8nQyLDLeCov15L04fKfbi5fs0AYcN54vpNZzUrFMlVRNybaUkaZbCnj-jlU",
+      description: "Mixer de mano marca Profile KBM-500. Potente motor de 500W, 2 niveles de velocidad regulables, cuchillas de acero inoxidable y vaso graduado incluido.",
+      variants: [
+        { name: "Color", options: ["Blanco / Silver", "Negro"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-anafe-2h-1",
+      category: "hogar",
+      name: "Anafe Eléctrico Hytoshy Doble Hornalla HT-200A-1",
+      price: 36000,
+      badge: "Doble Hornalla",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCPAKezfenE62yEvTu8-Rot7UECxJlDx0g7uA2-N6YGLmBimfPEzqX0Qy-Jeli3wqY8ijzYADg_bU5EcfbqaK2LuS2M7DK387qbQehrphFWjjdXKtHWqU6vSaYShm43GDoNhuimzMXvUS1fbTqBXw9EfY5U59RFJl-X0WPZ-isVdHQWEYf6nBj2M-O_OQolyRU5OJpd29NbQdZzqrG3KPyoZ22d8-5acUvU8yC5MbWCDTL7p2c7_uyBDcvdPO5v2GBWk0M",
+      description: "Anafe eléctrico doble con placas independientes de cocción. Control de temperatura por perillas individuales, diseño compacto ideal para quinchos, departamentos u oficinas.",
+      variants: [
+        { name: "Color", options: ["Negro Original"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-estufa-magiclick",
+      category: "hogar",
+      name: "Estufa de Cuarzo Magiclick 1200W Anticaída",
+      price: 32000,
+      badge: "Climatización",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAPtvuaP8HLY-v5pShYGjQs1CgHu1dKKHucv8X-YV8-GK4KsHr0m7Q0ZMk6kOLLY6GKd55UyUy8MvNdcbbQslqczQr2e4mIlNWW4jhlnmMEpvd4txkrKyt1kz4uNcTxSTUiDSEzIYCAmJh_mN_65GnEYvR1Y7sszVStbDMTX78tOkTlTBx63VwJ2GIR-mK_l4J9FbosRwguzGXoM5NbWoTcqotBJcJnW8cGUd2ismmXOeSBsKd8mLIZrdtFj2N2hmBCpXk",
+      description: "Calefactor por radiación de cuarzo Magiclick 1200W con interruptor de corte automático por caída accidental, liviana y de rápida transmisión calórica.",
+      variants: [
+        { name: "Color", options: ["Gris / Negro", "Blanco"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-tender-arfa",
+      category: "hogar",
+      name: "Tender Vertical Plegable 3 Niveles Arfa 30KG",
+      price: 32000,
+      badge: "Capacidad 30kg",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuD1N8M2uJ9hqpNMoMoDrKZDkug7hux7aad7BQIznmqPsU9c9izc1p5jb36imT7DusfMpT-PhcaaIUJs3xFhSxitirG3SA_ca14yUjCKULgwG_LybNfkYyOV4n4cA9VwHFZx76HW8epaXbUXlbGHR99EAAI1oaERC_TC4wihnOS8KAeI-W1aXAvHz8a51oG9RmQqLZF4ujsyvsAnABt5WnE76BSRg5t5fqBwZrFThGvszGyou3WAC4zDAMoiExPcvYw_eGk",
+      description: "Tendedero vertical plegable de 3 niveles con perchas laterales articuladas y ruedas para traslado suave. Estructura tratada con protección antioxidante.",
+      variants: [
+        { name: "Color", options: ["Azul / Blanco"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-anafe-2h-2",
+      category: "hogar",
+      name: "Anafe Doble Hornalla Hytoshy Pasión por la Cocina",
+      price: 36000,
+      badge: "Más Vendido",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBfvwDT2EXwtnwFpsktSWxFUuD1F88d7JkgXcvPYOby-67LQTlTCPAhqJRjBubGu9ewrcva3QQonQ9iWk56KgW6YHffmzAkRMNoZRiw8iUG5IBrtj2Vr5FGE3QtpwoG6CA2bLbUkjVRL4_HQPkX-VmbNrlKTGB78TeeIVwwmQ0iTuI4dgpdzNLwQLTtFK7kWnsohp8LuOdfje7nwHLhAX0Pdb_OfVnovbMTadc6KeVYAl4zrhxiYC0XmUC9nR62OPeTKII",
+      description: "Versión de alto rendimiento del anafe eléctrico Hytoshy HT-200A-1 doble hornalla con doble selector giratorio y luces de actividad térmica.",
+      variants: [
+        { name: "Color", options: ["Negro"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-caloventor-oryx",
+      category: "hogar",
+      name: "Caloventor Oryx 2 Velocidades CAL-CH100",
+      price: 26000,
+      badge: "Calor Rápido",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDNwQ-px4upX-S3fE7nAoaAXpytM10_OIcjeJoP-tF3XiQNJX_W1Rtth_z0IZr9ZNF63-h8ggMx6Cb6UOsI42DQ5Of1v66iQxT2KvemtdCmv7AHz96E89fFHRZttBkBB0YcnGOElS8CeGjQhxtSvc73IrR-2W7c8p-nsZgKVUKjV-PRa1fST5pk3pinW_kfwGf0xD4n9NHakR3VbCof2ijzzz18bFQ3LvdFoEio42eK8-4utx0UyzPe3tP8dwAZdyFB7o4",
+      description: "Caloventor compacto y potente Oryx CAL-CH100. Posee función ventilación frío/calor, perilla selectora de 2 potencias y termostato regulable.",
+      variants: [
+        { name: "Color", options: ["Blanco"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-anafe-yelmo",
+      category: "hogar",
+      name: "Anafe Vitrocerámico Yelmo AN 9901 Panel Táctil Digital",
+      price: 75000,
+      badge: "Alta Gama",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAkMv_a0YX_5TW6m_v-kVd7SLlKw9phtE6ivtrC7bZrfzNdBqoCc19tHQzMmc7qM3xlrXuga9_87CbJZY6lW6wYUN--oWuY-ChY6GsIJ9pZSsJsegC9qh51ziGaZy7suwRydOYxdYfoQyMiPlfNVCfNt123kLm3erBRXdGKWfBMRF9fRI4inUs9_DjxL63cDDeZ7r4yJrUq9U0EUu1vjtoMf0DeDhEd05-H8EpyJP-ltfnmxHnEfrpE6oxfcEtclKCXpRs",
+      description: "Anafe vitrocerámico digital Yelmo AN 9901 con display táctil LED, múltiples niveles de cocción prefijados, temporizador inteligente y bloqueo para niños.",
+      variants: [
+        { name: "Color", options: ["Negro Glass"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-anafe-vitro-hytoshy",
+      category: "hogar",
+      name: "Anafe Vitrocerámico Infrarrojo Hytoshy 2000W HT-250A-4",
+      price: 60000,
+      badge: "2000W Infrarrojo",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVt0_lxce7wCormI47cS4qJ1O1jjei2dMC8U5JGe6Mo98WkySTHXRPLxlDUOr3_rMltM71x2VGZhxWZAAF_K3yGYXUQMxZsvu14pZ6RBFQikp38Y6fdjgSXZEwfx6kh9liI8OFa-NMHwRQSXYIoT-IzTyvDlOu-0QS-oAw79Xos0yw0vtjThnNtW5-Bvl1_EVOGi5mty-mFRB1pTikBJYWMoky4Fo09DSolv3Le78bwAb4XrgHpzBJkA57p1mOjWn-d0Y",
+      description: "Tecnología infrarroja ultra eficiente apta para cualquier tipo de vajilla y sartén. Panel digital de control táctil con display numérico y 6 funciones de cocción.",
+      variants: [
+        { name: "Color", options: ["Negro Vitro"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-batidora-bowl-kanji",
+      category: "hogar",
+      name: "Batidora con Bowl Giratorio Kanji Home 2L 300W",
+      price: 40000,
+      badge: "Garantía 2 Años",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDnQsII88KR1vlhdNP9nhMgFuSuPHYy2P5ZFP7lAflqw58YlJ8fCNGmpg97JOaXm9p9EqZFUBhMnrVlhHYK1d5KXoxBdgpmWn2XhJnJkz0kHYv3gDG51-M52NdWrpmXE_rc4I4FiwnAtWd4Qo435q0EOa7AOjTCvBObRSlBNjiog718rVx8LEOzbnDr93aG7-aMjF-U4CnfnnlQeKd8x4Cy4DdAhyZaGqrGytzigerivevfTL0m24aKEbm7mlK7CaQ0SFA",
+      description: "Batidora de pedestal con bowl desmontable de 2 litros de capacidad, batidores metálicos reforzados, ganchos para amasar y selector multiposición.",
+      variants: [
+        { name: "Color", options: ["Rojo Rubí", "Blanco"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-batidora-mano-profile",
+      category: "hogar",
+      name: "Batidora de Mano Profile LY-PR200 7 Velocidades 200W",
+      price: 25000,
+      badge: "7 Velocidades",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAphiupu5fCafjVD9kDNsh8g9hT2J90LO5T2Y7Uy8YoUUiOPc6gfNUpTJM_aJNWuZe-BK4usijjpgWmzPq1JSJrqp-HDF7xMkb3N6DLIbu-TBrqKyCQt-a61MXaVwUd_hbWnFQ0oBCsRjtUx93WL8xgiZosaUDw7Uwq4SIlm69hfVWzk_5s_20i2iKoEHFS6oDaIBuFrNR2c9Sx5vWr8298ldjkoOwEtJBOQU0o9njx78J1StNYZLTQyF2KihYes-t1zM4",
+      description: "Batidora eléctrica de mano marca Profile modelo LY-PR200. Incluye 2 varillas batidoras y 2 batidores de gancho para repostería, con eyector seguro.",
+      variants: [
+        { name: "Color", options: ["Blanco / Rojo"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-modulo-iphone",
+      category: "movil",
+      name: "Módulo Display OLED iPhone 13 / 14 Calidad Original FK",
+      price: 68500,
+      badge: "Laboratorio FK",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDW205OTkyOBi26xpArwqo7ELDOgVNBZVdpXt1eWkXwHPhMVZCwZpSf9NUuXvX_c9vSq4dXxmOJbuTX_JUekOdkoEPbMvw8MzLVRpoysqrgEWscxDyLU3xJv1jlvZspFPU1sAXXRqEq42sPrUuq833xpzYw39s3SraMFvXiedrgT7v5I1etPfSuuJD6tL9zlCSh-ixJ61aMKyF7crSE52rHiZJhiMtZKbK4IrseIGO2LdoSOg0ear8kaA",
+      description: "Pantalla OLED con brillo nativo, respuesta táctil táctica y calibración de color True Tone garantizada. Repuesto certificado en nuestro laboratorio de Las Heras 5267.",
+      variants: [
+        { name: "Modelo", options: ["iPhone 13", "iPhone 14", "iPhone 13 Pro"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-cargador-gan",
+      category: "tecnologia",
+      name: "Cargador GaN 65W Triple Puerto USB-C Power Delivery",
+      price: 28900,
+      badge: "Carga Rápida",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8GhWPZPPgzEy0ueuaAJ8GN1C5fdM9SxWi7max2L0XFRd2Q4C9Wn3gXA-R6k-w72c69heD1B_IEC0VzAIPDhInewCkSZAY-wuLIePnnmXQfr2HkdpdJ37Sr7GpItlWuT_r-HgN9kqku680lbDxxsTWIcSRkMw6wQx7jaMzclX29bH5y4YLfq95NW7ILdN2YSsEhMxshAtrlIqNnhbY9NwcfGh7fHdCXJuuGwEwDe1GokSPBmv87sLLobZEzFMjQOKhwDg",
+      description: "Tecnología de Nitruro de Galio (GaN) con 2 salidas USB-C Power Delivery y 1 USB-A. Carga simultánea y segura para notebooks, celulares y tablets.",
+      variants: [
+        { name: "Color", options: ["Negro Mate", "Blanco Glaciar"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-soporte-magsafe",
+      category: "accesorios",
+      name: "Soporte Magnético de Auto MagSafe con Carga Qi 15W",
+      price: 24300,
+      badge: "Accesorios",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBL4gOfKorlSrZ9yXO5Ii_Pl0Ujg5UMYXW3upeZPffOazFpfWlm31hjb2NH42dM60QQaqrhYugY342KhFtxqv5xEFc9FJZPfLRXXT-KG8OcivS7tw46UrUTq4tgj-dnst7KIWM2_NHjOj2f8Pkh3tcPCFMHZf-p14VN_hZWym8ShUg7tYnJrhQGMlsRoQW5gd0dr0vRm7HrgLAS-neQ-lSyrMCA16dfqS_KvuR4tAsLRwcIbIQJZ_DCnHOylH-PXqyy3ok",
+      description: "Soporte magnético para rejilla de ventilación de vehículo. Fuerte atracción magnética anti baches y sistema de carga rápida Qi compatible con iPhone y Android.",
+      variants: [
+        { name: "Color", options: ["Negro Stealth"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-auriculares-anc",
+      category: "tecnologia",
+      name: "Auriculares TWS ANC con Cancelación Activa de Ruido 35dB",
+      price: 38900,
+      badge: "Audio Pro",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAiwjoGFVtC26arsUgqkuz5mOlu8NOnWVWv-GYl74rKk6QPzcaQ2S0bQo3NP8py-Lun8Xx2tH3k1X0kt33MrA6oFB1IziOruYKkuWTFn-EnZfhEeuHYo1HuyXSGY8QqEJWxQmBUW5Lh7KVqYfCD6GfSAtiiSR4XO1HP8qCN6VlHtSXIYV9vYLSJIs-9piD6SpsP43VxBA497Yyy5uys5eYwBESLrF-1PFwPtQlycJn8Jze7D0o_CH88EJkIs7Iqgr9PW1w",
+      description: "Cancelación activa de ruido ambiente, micrófono con cancelación ENC para llamadas nítidas y hasta 30 horas de reproducción total con estuche.",
+      variants: [
+        { name: "Color", options: ["Negro Titanio", "Blanco"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-afeitadora-recortadora",
+      category: "cuidados",
+      name: "Afeitadora y Recortadora Corporal Waterproof 7000 RPM",
+      price: 34200,
+      badge: "Cuidado Personal",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBBIViRdswBGz8KwkM6UeU_x1kIpLxReyTKlQq-ASxhrJEBGH3z9oJpSRtr7GpTw8BXWABYV-OGoLF27riMMPu5Z4euve_7VwptujRzGFp_oiVnI5PoB9lr4zFA22xAzYuHz2t4l5QM5eZSSPx4BqpLf-vsg9lqyISi_4RiPkkKXy2yAwGqtRtxDny-FBwagMvnB5n9AlKMbOIlSejTUcVppzpBxARzMWXGGK6RnOyS_OU9mPfZqN1_AZ5mXwzAuUHSkvE",
+      description: "Cuchillas de cerámica lavables bajo el agua, batería recargable USB de larga duración con display digital de porcentaje y peine guía regulable.",
+      variants: [
+        { name: "Color", options: ["Negro Soft Touch"] }
+      ],
+      inStock: true
+    },
+    {
+      id: "prod-mini-consola-retro",
+      category: "juguetes",
+      name: "Consola Portátil Retro 400 Juegos Clásicos con Salida TV",
+      price: 22000,
+      badge: "Juguetes & Retro",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBQ8vY_KrcwHY44so4Utz3hmmIhBj2kDe-DmURKCC7GZxd8QDkGAdcC0z0iz5LgHe0txr-UJttz74GnBdo26viLSgZdjq1nHPNSf_xOQDAg85ZsyherAyg1AcK2u6fC-yOhsNWtAEaew7NwbB4ZkPVNYgV_kmeIx15hvEADQ0gEgiMB2z7HXN8sYX9GweK_cC933rDYrqxo1bpFCoxG08dzCtuKT_tcuT5Y2x992YfGdo3H728vwe_oMQgMG2p7cHjSSRU",
+      description: "Consola arcade de mano con pantalla LCD color de 3.0 pulgadas, batería recargable, cable AV para conectar al televisor y 400 títulos retro integrados.",
+      variants: [
+        { name: "Color", options: ["Rojo Arcade", "Negro"] }
+      ],
+      inStock: true
+    }
+  ];
+
+  // 2. SISTEMA DE CARRITO (PERSISTENCIA Y MÉTODOS)
+  const CART_STORAGE_KEY = 'fk_cart_v1';
+
+  function getCart() {
+    try {
+      const stored = localStorage.getItem(CART_STORAGE_KEY);
+      return stored ? JSON.parse(stored) : [];
+    } catch (e) {
+      console.error("Error al leer el carrito:", e);
+      return [];
+    }
+  }
+
+  function saveCart(cartItems) {
+    try {
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems));
+    } catch (e) {
+      console.error("Error al guardar el carrito:", e);
+    }
+    updateCartUI();
+    checkRecoveryBanner();
+  }
+
+  function addToCart(product, variant, qty = 1) {
+    let cart = getCart();
+    const variantKey = typeof variant === 'string' ? variant : (product.variants?.[0]?.options?.[0] || 'Estándar');
+    const existingIndex = cart.findIndex(item => item.productId === product.id && item.variantKey === variantKey);
+
+    if (existingIndex > -1) {
+      cart[existingIndex].quantity += qty;
+    } else {
+      cart.push({
+        productId: product.id,
+        variantKey: variantKey,
+        quantity: qty,
+        price: product.price,
+        name: product.name,
+        image: product.image
+      });
+    }
+
+    saveCart(cart);
+    showToast(`Se sumó "${product.name}" al carrito`);
+  }
+
+  function removeFromCart(productId, variantKey) {
+    let cart = getCart();
+    cart = cart.filter(item => !(item.productId === productId && item.variantKey === variantKey));
+    saveCart(cart);
+  }
+
+  function updateQuantity(productId, variantKey, delta) {
+    let cart = getCart();
+    const itemIndex = cart.findIndex(item => item.productId === productId && item.variantKey === variantKey);
+    if (itemIndex > -1) {
+      cart[itemIndex].quantity += delta;
+      if (cart[itemIndex].quantity <= 0) {
+        cart.splice(itemIndex, 1);
+      }
+      saveCart(cart);
+    }
+  }
+
+  function clearCart() {
+    saveCart([]);
+  }
+
+  function getCartTotals() {
+    const cart = getCart();
+    let subtotal = 0;
+    let count = 0;
+    cart.forEach(item => {
+      subtotal += item.price * item.quantity;
+      count += item.quantity;
+    });
+    return { subtotal, count, items: cart };
+  }
+
+  // 3. ESTADO GLOBAL DE APLICACIÓN
+  let currentCategory = "all";
+  let activeModalProduct = null;
+  let activeModalVariant = "";
+  let activeModalQty = 1;
+  let toastTimer = null;
+
+  function showToast(message, icon = "check_circle") {
+    const toast = document.getElementById("app-toast");
+    const msgElem = document.getElementById("toast-message");
+    const iconElem = document.getElementById("toast-icon");
+    if (!toast) return;
+
+    msgElem.textContent = message;
+    iconElem.textContent = icon;
+    toast.classList.remove("translate-y-24", "opacity-0");
+    toast.classList.add("translate-y-0", "opacity-100");
+
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.add("translate-y-24", "opacity-0");
+      toast.classList.remove("translate-y-0", "opacity-100");
+    }, 3200);
+  }
+
+  function toggleMobileMenu() {
+    const drawer = document.getElementById("mobile-menu-drawer");
+    const backdrop = document.getElementById("mobile-menu-backdrop");
+    if (drawer && backdrop) {
+      const isOpen = !drawer.classList.contains("-translate-x-full");
+      if (isOpen) {
+        drawer.classList.add("-translate-x-full");
+        backdrop.classList.add("hidden");
+      } else {
+        drawer.classList.remove("-translate-x-full");
+        backdrop.classList.remove("hidden");
+      }
+    }
+  }
+
+  function scrollToSection(sectionId) {
+    const target = document.getElementById(sectionId);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  function syncHeaderSearch(val) {
+    const catalogSearch = document.getElementById("product-search-input");
+    if (catalogSearch) {
+      catalogSearch.value = val;
+    }
+    handleSearch(val);
+    scrollToSection("catalogo");
+  }
+
+  function handleSearch(query) {
+    const clean = query.trim().toLowerCase();
+    const clearBtn = document.getElementById("search-clear-btn");
+    if (clean.length > 0) {
+      clearBtn.classList.remove("hidden");
+    } else {
+      clearBtn.classList.add("hidden");
+    }
+    renderProducts(clean);
+  }
+
+  function clearSearch() {
+    const input = document.getElementById("product-search-input");
+    const headerInput = document.getElementById("header-search-input");
+    if (input) input.value = "";
+    if (headerInput) headerInput.value = "";
+    document.getElementById("search-clear-btn").classList.add("hidden");
+    renderProducts();
+  }
+
+  function selectCategory(catKey, shouldScroll = false) {
+    currentCategory = catKey;
+
+    document.querySelectorAll(".cat-filter-btn").forEach(btn => {
+      if (btn.getAttribute("data-cat") === catKey) {
+        btn.className = "cat-filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md uppercase tracking-wider bg-primary-container text-on-primary-container font-bold whitespace-nowrap shadow-sm cursor-pointer";
+      } else {
+        btn.className = "cat-filter-btn px-space-md py-space-xs rounded-lg font-label-md text-label-md uppercase tracking-wider bg-surface-container text-secondary hover:text-on-surface whitespace-nowrap cursor-pointer";
+      }
+    });
+
+    document.querySelectorAll(".nav-cat-link").forEach(link => {
+      if (link.getAttribute("data-navcat") === catKey) {
+        link.className = "nav-cat-link font-label-md text-label-md uppercase tracking-wider text-primary-container font-bold whitespace-nowrap transition-colors";
+      } else {
+        link.className = "nav-cat-link font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors";
+      }
+    });
+
+    const info = CATEGORIES_DATA[catKey] || CATEGORIES_DATA.all;
+    document.getElementById("cat-desc-title").textContent = info.title;
+    document.getElementById("cat-desc-text").textContent = info.description;
+
+    const subPills = document.getElementById("cat-subcategories-pill");
+    if (info.subcategories && info.subcategories.length > 0) {
+      subPills.innerHTML = info.subcategories.map(sub => `<span class="px-space-xs py-0.5 bg-surface-container-highest rounded text-[11px] font-label-sm text-secondary">${sub}</span>`).join("");
+      subPills.classList.remove("hidden");
+    } else {
+      subPills.innerHTML = "";
+      subPills.classList.add("hidden");
+    }
+
+    renderProducts();
+
+    if (shouldScroll) {
+      scrollToSection("catalogo");
+    }
+  }
+
+  function renderProducts(searchFilter = "") {
+    const grid = document.getElementById("products-grid");
+    const emptyState = document.getElementById("empty-category-state");
+
+    let filtered = PRODUCTS;
+
+    if (currentCategory !== "all") {
+      filtered = filtered.filter(p => p.category === currentCategory);
+    }
+
+    if (searchFilter) {
+      filtered = filtered.filter(p => 
+        p.name.toLowerCase().includes(searchFilter) || 
+        p.description.toLowerCase().includes(searchFilter) ||
+        p.category.toLowerCase().includes(searchFilter) ||
+        (p.variants && p.variants.some(v => v.options.some(o => o.toLowerCase().includes(searchFilter))))
+      );
+    }
+
+    if (filtered.length === 0) {
+      grid.innerHTML = "";
+      emptyState.classList.remove("hidden");
+      return;
+    }
+
+    emptyState.classList.add("hidden");
+    grid.innerHTML = filtered.map(prod => {
+      const formattedPrice = "$" + prod.price.toLocaleString("es-AR");
+      const defaultVariant = prod.variants?.[0]?.options?.[0] || "Estándar";
+      const waConsultText = encodeURIComponent(`Hola 👋 Vi este producto en FK y quería consultar si está disponible y qué medios de pago tienen.\nProducto: ${prod.name}\nVariante: ${defaultVariant}\nPrecio: ${formattedPrice}`);
+
+      return `
+        <article class="bg-surface-container rounded-xl overflow-hidden shadow-md hover:shadow-xl flex flex-col justify-between group transition-all border border-surface-container-high/40 hover:border-primary-container/40">
+          <div class="relative w-full h-60 bg-[#141820] overflow-hidden cursor-pointer flex items-center justify-center p-3" onclick="openProductModal('${prod.id}')">
+            <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" />
+            <span class="absolute top-space-xs left-space-xs font-label-sm text-label-sm bg-surface-container-highest/90 text-primary-container px-space-xs py-0.5 rounded font-bold uppercase tracking-wider">${prod.badge}</span>
+            <button type="button" onclick="event.stopPropagation(); openProductModal('${prod.id}')" class="absolute bottom-space-xs right-space-xs px-space-xs py-1 bg-surface-container-lowest/80 backdrop-blur-sm rounded font-label-sm text-label-sm text-on-surface hover:text-primary-container flex items-center gap-1 cursor-pointer">
+              <span class="material-symbols-outlined text-[14px]">visibility</span> Ver detalle
+            </button>
+          </div>
+
+          <div class="p-space-md flex-1 flex flex-col justify-between space-y-space-sm bg-surface-container">
+            <div class="space-y-space-2xs cursor-pointer" onclick="openProductModal('${prod.id}')">
+              <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">${prod.category}</span>
+              <h3 class="font-headline-sm text-[16px] text-primary font-bold line-clamp-2 leading-snug">${prod.name}</h3>
+            </div>
+
+            <div class="space-y-space-xs">
+              <div class="flex items-center justify-between">
+                <span class="font-price-hero text-[22px] text-primary-container font-bold tracking-tight">${formattedPrice}</span>
+                <span class="font-label-sm text-[11px] text-tertiary-container font-bold flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-[14px]">bolt</span> Envíos en el día
+                </span>
+              </div>
+
+              <div class="grid grid-cols-2 gap-space-xs pt-space-2xs">
+                <button type="button" onclick="quickAddToCart('${prod.id}')" class="py-space-xs bg-primary-container hover:bg-primary-fixed text-on-primary-container font-label-sm text-label-sm font-bold rounded flex items-center justify-center gap-1 transition-all cursor-pointer shadow-sm">
+                  <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+                  Añadir
+                </button>
+                <a href="https://wa.me/${CONFIG.whatsappNumber}?text=${waConsultText}" target="_blank" rel="noopener" class="py-space-xs bg-surface-container-highest hover:bg-surface-bright text-tertiary-container font-label-sm text-label-sm font-bold rounded flex items-center justify-center gap-1 transition-colors">
+                  <span class="material-symbols-outlined text-[16px]">chat</span>
+                  Consultar
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join("");
+  }
+
+  function quickAddToCart(productId) {
+    const product = PRODUCTS.find(p => p.id === productId);
+    if (!product) return;
+    const defaultVariant = product.variants?.[0]?.options?.[0] || "Estándar";
+    addToCart(product, defaultVariant, 1);
+  }
+
+  // 4. ACTUALIZACIÓN DE UI DEL CARRITO Y DRAWER
+  function updateCartUI() {
+    const { subtotal, count, items } = getCartTotals();
+    const formattedSubtotal = "$" + subtotal.toLocaleString("es-AR");
+
+    // Badges en headers
+    document.querySelectorAll(".cart-badge-counter").forEach(badge => {
+      badge.textContent = count;
+    });
+
+    // Barra de progreso de envío gratis
+    const progressBar = document.getElementById("drawer-shipping-bar");
+    const progressText = document.getElementById("drawer-shipping-progress-text");
+    if (progressBar && progressText) {
+      if (subtotal >= CONFIG.freeShippingThreshold) {
+        progressBar.style.width = "100%";
+        progressText.textContent = "¡Felicitaciones! Tenés Envío Gratis prioritario.";
+      } else {
+        const pct = Math.min(100, Math.round((subtotal / CONFIG.freeShippingThreshold) * 100));
+        progressBar.style.width = pct + "%";
+        const falta = "$" + (CONFIG.freeShippingThreshold - subtotal).toLocaleString("es-AR");
+        progressText.textContent = `Sumá ${falta} más para Envío Gratis`;
+      }
+    }
+
+    // Lista del Drawer
+    const drawerList = document.getElementById("drawer-items-list");
+    if (drawerList) {
+      if (items.length === 0) {
+        drawerList.innerHTML = `
+          <div class="py-space-3xl text-center space-y-space-sm text-secondary">
+            <span class="material-symbols-outlined text-[48px] text-secondary/60">shopping_bag</span>
+            <p class="font-body-sm text-body-sm">Tu carrito está vacío actualmente.</p>
+            <button type="button" onclick="closeCartDrawer(); scrollToSection('catalogo');" class="px-space-md py-space-xs bg-surface-container-high rounded text-on-surface font-label-sm font-bold hover:bg-surface-bright transition-colors cursor-pointer">Ver Catálogo</button>
+          </div>
+        `;
+      } else {
+        drawerList.innerHTML = items.map((item) => `
+          <div class="flex gap-space-md p-space-sm bg-surface-container rounded-lg items-center border border-surface-container-high/40">
+            <div class="w-16 h-16 bg-[#141820] rounded overflow-hidden flex-shrink-0 flex items-center justify-center p-1">
+              <img src="${item.image}" alt="${item.name}" class="w-full h-full object-contain" />
+            </div>
+            <div class="flex-1 flex flex-col justify-between">
+              <div class="flex justify-between items-start gap-space-xs">
+                <div>
+                  <span class="font-label-md text-label-md text-on-surface font-bold block line-clamp-1">${item.name}</span>
+                  <span class="font-label-sm text-[11px] text-secondary">Var: ${item.variantKey}</span>
+                </div>
+                <span class="font-price-hero text-[15px] text-primary-container font-bold">$${(item.price * item.quantity).toLocaleString("es-AR")}</span>
+              </div>
+              <div class="flex items-center justify-between mt-space-xs">
+                <div class="flex items-center bg-surface-container-highest rounded px-space-xs py-0.5 gap-space-sm">
+                  <button type="button" onclick="updateQuantity('${item.productId}', '${item.variantKey}', -1)" class="text-secondary hover:text-on-surface text-sm font-bold w-5 h-5 flex items-center justify-center cursor-pointer">-</button>
+                  <span class="font-label-sm text-label-sm text-on-surface font-bold">${item.quantity}</span>
+                  <button type="button" onclick="updateQuantity('${item.productId}', '${item.variantKey}', 1)" class="text-secondary hover:text-on-surface text-sm font-bold w-5 h-5 flex items-center justify-center cursor-pointer">+</button>
+                </div>
+                <button type="button" onclick="removeFromCart('${item.productId}', '${item.variantKey}')" class="text-error hover:underline text-xs font-label-sm cursor-pointer flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-[14px]">delete</span> Quitar
+                </button>
+              </div>
+            </div>
+          </div>
+        `).join("");
+      }
+
+      const drawerSubtotal = document.getElementById("drawer-subtotal-val");
+      const drawerTotal = document.getElementById("drawer-total-val");
+      if (drawerSubtotal) drawerSubtotal.textContent = formattedSubtotal;
+      if (drawerTotal) drawerTotal.textContent = formattedSubtotal;
+
+      const waBtn = document.getElementById("drawer-wa-order-btn");
+      if (waBtn) {
+        waBtn.href = generateCartWhatsAppLink(subtotal, items);
+      }
+    }
+
+    // Actualización del Resumen en la sección Checkout
+    const chkOrderItems = document.getElementById("chk-order-items");
+    const chkItemsCount = document.getElementById("chk-items-count");
+    const chkSubtotal = document.getElementById("chk-subtotal-price");
+    const chkTotal = document.getElementById("chk-total-price");
+
+    if (chkOrderItems) {
+      if (items.length === 0) {
+        chkOrderItems.innerHTML = `<p class="font-body-sm text-secondary py-space-sm">No hay items en el carrito. Seleccioná soluciones del catálogo para continuar.</p>`;
+      } else {
+        chkOrderItems.innerHTML = items.map(item => `
+          <div class="flex justify-between items-center py-1.5 border-b border-surface-container-highest/50">
+            <div class="flex flex-col">
+              <span class="font-label-md text-label-md text-on-surface font-semibold">${item.name} <span class="text-primary-container font-bold">x${item.quantity}</span></span>
+              <span class="font-body-sm text-[11px] text-secondary">(${item.variantKey})</span>
+            </div>
+            <span class="font-price-hero text-[15px] text-primary-container font-bold">$${(item.price * item.quantity).toLocaleString("es-AR")}</span>
+          </div>
+        `).join("");
+      }
+
+      if (chkItemsCount) chkItemsCount.textContent = `${count} items`;
+      if (chkSubtotal) chkSubtotal.textContent = formattedSubtotal;
+      if (chkTotal) chkTotal.textContent = formattedSubtotal;
+    }
+  }
+
+  function generateCartWhatsAppLink(subtotal, items) {
+    if (items.length === 0) {
+      return `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent("Hola FK, tengo una consulta sobre sus productos")}`;
+    }
+
+    let msg = `Hola FK 👋 Quiero consultar por estos productos de mi carrito:\n\n`;
+    items.forEach(it => {
+      msg += `▪ ${it.name} (${it.variantKey}) x${it.quantity} -> $${(it.price * it.quantity).toLocaleString("es-AR")}\n`;
+    });
+    msg += `\n*TOTAL: $${subtotal.toLocaleString("es-AR")}*\n¿Tienen disponibilidad inmediata para coordinar retiro o entrega?`;
+
+    return `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(msg)}`;
+  }
+
+  function openCartDrawer() {
+    const drawer = document.getElementById("cart-drawer");
+    const backdrop = document.getElementById("cart-backdrop");
+    if (drawer && backdrop) {
+      drawer.classList.remove("translate-x-full");
+      backdrop.classList.remove("hidden");
+    }
+  }
+
+  function closeCartDrawer() {
+    const drawer = document.getElementById("cart-drawer");
+    const backdrop = document.getElementById("cart-backdrop");
+    if (drawer && backdrop) {
+      drawer.classList.add("translate-x-full");
+      backdrop.classList.add("hidden");
+    }
+  }
+
+  function checkRecoveryBanner() {
+    const banner = document.getElementById("cart-recovery-banner");
+    const dismissed = sessionStorage.getItem("fk_banner_dismissed_v1");
+    const cart = getCart();
+    if (cart.length > 0 && !dismissed) {
+      banner.classList.remove("hidden");
+    } else {
+      banner.classList.add("hidden");
+    }
+  }
+
+  function dismissRecoveryBanner() {
+    sessionStorage.setItem("fk_banner_dismissed_v1", "true");
+    document.getElementById("cart-recovery-banner").classList.add("hidden");
+  }
+
+  // 5. MODAL DE PRODUCTO Y VARIANTES
+  function openProductModal(productId) {
+    const product = PRODUCTS.find(p => p.id === productId);
+    if (!product) return;
+
+    activeModalProduct = product;
+    activeModalQty = 1;
+    const defaultOptions = product.variants?.[0]?.options || ["Estándar"];
+    activeModalVariant = defaultOptions[0];
+
+    document.getElementById("modal-category").textContent = product.category;
+    document.getElementById("modal-title").textContent = product.name;
+    document.getElementById("modal-desc").textContent = product.description;
+    document.getElementById("modal-price").textContent = "$" + product.price.toLocaleString("es-AR");
+    document.getElementById("modal-badge").textContent = product.badge;
+    document.getElementById("modal-qty-val").textContent = "1";
+
+    const mainImg = document.getElementById("modal-main-img");
+    mainImg.src = product.image;
+
+    // Miniaturas
+    const thumbs = document.getElementById("modal-thumbs-container");
+    thumbs.innerHTML = `
+      <div onclick="document.getElementById('modal-main-img').src='${product.image}'" class="w-12 h-12 rounded bg-surface-container cursor-pointer overflow-hidden border border-primary-container flex items-center justify-center p-1">
+        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-contain" />
+      </div>
+    `;
+
+    // Selector de variantes
+    const varsContainer = document.getElementById("modal-variants-container");
+    varsContainer.innerHTML = defaultOptions.map((opt, i) => `
+      <button type="button" onclick="selectModalVariant('${opt}', this)" class="modal-var-btn px-space-sm py-1 rounded font-label-sm text-label-sm cursor-pointer transition-colors ${i === 0 ? 'bg-primary-container text-on-primary-container font-bold' : 'bg-surface-container-highest text-on-surface'}">
+        ${opt}
+      </button>
+    `).join("");
+
+    updateModalWhatsAppLink();
+    document.getElementById("product-modal").classList.remove("hidden");
+  }
+
+  function selectModalVariant(variantName, btnElem) {
+    activeModalVariant = variantName;
+    document.querySelectorAll(".modal-var-btn").forEach(btn => {
+      btn.className = "modal-var-btn px-space-sm py-1 rounded font-label-sm text-label-sm bg-surface-container-highest text-on-surface transition-colors cursor-pointer";
+    });
+    btnElem.className = "modal-var-btn px-space-sm py-1 rounded font-label-sm text-label-sm bg-primary-container text-on-primary-container font-bold transition-colors cursor-pointer";
+    updateModalWhatsAppLink();
+  }
+
+  function updateModalWhatsAppLink() {
+    if (!activeModalProduct) return;
+    const priceFormatted = "$" + activeModalProduct.price.toLocaleString("es-AR");
+    const waText = `Hola 👋 Vi este producto en FK y quería consultar si está disponible y qué medios de pago tienen.\nProducto: ${activeModalProduct.name}\nVariante: ${activeModalVariant}\nPrecio: ${priceFormatted}`;
+    const waBtn = document.getElementById("modal-wa-btn");
+    if (waBtn) {
+      waBtn.href = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(waText)}`;
+    }
+  }
+
+  function adjustModalQty(delta) {
+    activeModalQty = Math.max(1, activeModalQty + delta);
+    document.getElementById("modal-qty-val").textContent = activeModalQty;
+  }
+
+  function addModalProductToCart() {
+    if (!activeModalProduct) return;
+    addToCart(activeModalProduct, activeModalVariant, activeModalQty);
+    closeProductModal();
+    openCartDrawer();
+  }
+
+  function buyModalProductNow() {
+    if (!activeModalProduct) return;
+    addToCart(activeModalProduct, activeModalVariant, activeModalQty);
+    closeProductModal();
+    scrollToSection("checkout-section");
+  }
+
+  function closeProductModal() {
+    document.getElementById("product-modal").classList.add("hidden");
+  }
+
+  function handleModalBackdropClick(e) {
+    if (e.target.id === "product-modal") {
+      closeProductModal();
+    }
+  }
+
+  // 6. CHECKOUT Y OPCIONES
+  function toggleShippingAddress(show) {
+    const container = document.getElementById("address-container");
+    const addressInput = document.getElementById("chk-address");
+    const shippingCostLabel = document.getElementById("chk-shipping-cost");
+
+    if (show) {
+      container.classList.remove("hidden");
+      addressInput.setAttribute("required", "true");
+      shippingCostLabel.textContent = "A coordinar por WhatsApp";
+      shippingCostLabel.className = "text-secondary font-label-sm";
+    } else {
+      container.classList.add("hidden");
+      addressInput.removeAttribute("required");
+      shippingCostLabel.textContent = "Gratis (Retiro en local)";
+      shippingCostLabel.className = "text-tertiary-container font-label-sm";
+    }
+  }
+
+  function togglePaymentNotice(mode) {
+    const notice = document.getElementById("transfer-notice");
+    if (mode === "transfer") {
+      notice.classList.remove("hidden");
+    } else {
+      notice.classList.add("hidden");
+    }
+  }
+
+  function handleCheckoutSubmit(e) {
+    e.preventDefault();
+    const cart = getCart();
+
+    if (cart.length === 0) {
+      showToast("Tu carrito está vacío. Sumá productos antes de confirmar.", "error");
+      scrollToSection("catalogo");
+      return;
+    }
+
+    const nameInput = document.getElementById("chk-name");
+    const phoneInput = document.getElementById("chk-phone");
+    const emailInput = document.getElementById("chk-email");
+    const addressInput = document.getElementById("chk-address");
+
+    const name = nameInput.value.trim();
+    const phone = phoneInput.value.trim();
+    const email = emailInput.value.trim();
+
+    if (!name || !phone) {
+      if (!name) nameInput.classList.add("border-error");
+      if (!phone) phoneInput.classList.add("border-error");
+      showToast("Por favor completá los campos obligatorios.", "error");
+      return;
+    }
+
+    nameInput.classList.remove("border-error");
+    phoneInput.classList.remove("border-error");
+
+    const shippingMethod = document.querySelector('input[name="shipping-method"]:checked').value;
+    const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+    const address = addressInput ? addressInput.value.trim() : "";
+
+    const { subtotal } = getCartTotals();
+
+    let orderMsg = `Hola FK 👋 Quiero confirmar mi pedido:\n`;
+    orderMsg += `Nombre: ${name}\n`;
+    orderMsg += `Teléfono: ${phone}\n`;
+    orderMsg += `Email: ${email}\n`;
+    orderMsg += `Modalidad: ${shippingMethod === 'retiro' ? 'Retiro en Tienda FK (Las Heras 5267)' : `Envío a Domicilio (${address})`}\n`;
+    orderMsg += `Método de pago: ${paymentMethod === 'transferencia' ? 'Transferencia Bancaria Inmediata' : paymentMethod === 'mercadopago' ? 'Mercado Pago' : 'Efectivo al retirar'}\n`;
+    orderMsg += `---\n`;
+    orderMsg += `Detalle del pedido:\n`;
+    cart.forEach(item => {
+      orderMsg += `- ${item.name} (${item.variantKey}) x${item.quantity} ($${(item.price * item.quantity).toLocaleString("es-AR")})\n`;
+    });
+    orderMsg += `Total: $${subtotal.toLocaleString("es-AR")}\n\n`;
+    orderMsg += `¡A la espera de confirmación y datos para finalizar!`;
+
+    window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(orderMsg)}`, "_blank");
+    showToast("¡Pedido armado! Redirigiendo a WhatsApp...");
+  }
+
+  // 7. FORMULARIO DE SERVICIO TÉCNICO OFICIAL
+  function handleTechServiceSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById("tech-client-name").value.trim();
+    const phone = document.getElementById("tech-client-phone").value.trim();
+    const brand = document.getElementById("tech-brand").value;
+    const model = document.getElementById("tech-model").value.trim();
+    const issue = document.getElementById("tech-issue").value.trim();
+
+    if (!name || !phone || !brand || !model || !issue) {
+      showToast("Por favor completá todos los datos del equipo.", "error");
+      return;
+    }
+
+    let msg = `¡Hola Laboratorio FK! Solicito turno para servicio técnico:\n\n`;
+    msg += `▪ *Cliente:* ${name}\n`;
+    msg += `▪ *WhatsApp:* ${phone}\n`;
+    msg += `▪ *Equipo:* ${brand} - ${model}\n`;
+    msg += `▪ *Falla/Motivo:* ${issue}\n\n`;
+    msg += `¿Tienen disponibilidad en el taller de Las Heras 5267 para coordinar el ingreso hoy?`;
+
+    window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(msg)}`, "_blank");
+    showToast("Solicitud de turno preparada para enviar.");
+  }
+
+  // 8. INICIALIZACIÓN
+  function initApp() {
+    renderProducts();
+    updateCartUI();
+    checkRecoveryBanner();
+  }
+
+  document.addEventListener("DOMContentLoaded", initApp);
+  initApp();
+</script></body></html>

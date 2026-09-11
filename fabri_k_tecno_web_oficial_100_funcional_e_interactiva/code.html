@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="es">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>FABRI K TECNO — Tu Tienda de Soluciones</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+@layer base {
+  html, body { margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+::-webkit-scrollbar { display: none; }
+.aspect-hero-card { aspect-ratio: 16/10; min-height: 220px; }
+.accordion-content { transition: max-height 0.35s ease-out, opacity 0.3s ease-out; overflow: hidden; }
+</style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "error": "#ffb4ab",
+        "tertiary-container": "#89f990",
+        "on-error-container": "#ffdad6",
+        "surface-container-lowest": "#0a0e14",
+        "on-tertiary-fixed": "#002106",
+        "surface-tint": "#acd60e",
+        "primary-fixed": "#c7f337",
+        "primary-container": "#c6f135",
+        "inverse-primary": "#516600",
+        "inverse-on-surface": "#2d3137",
+        "outline": "#8e937b",
+        "surface-container": "#1c2026",
+        "surface-variant": "#31353c",
+        "on-primary-fixed": "#161e00",
+        "on-surface-variant": "#c5c9ae",
+        "outline-variant": "#444934",
+        "on-tertiary": "#00390e",
+        "on-secondary": "#2f3131",
+        "surface-container-highest": "#31353c",
+        "tertiary-fixed-dim": "#6fdd78",
+        "secondary": "#c6c6c7",
+        "on-tertiary-fixed-variant": "#005319",
+        "error-container": "#93000a",
+        "surface": "#10141a",
+        "tertiary-fixed": "#8bfb91",
+        "on-primary-fixed-variant": "#3c4d00",
+        "on-primary": "#293500",
+        "on-secondary-fixed-variant": "#454747",
+        "secondary-container": "#454747",
+        "on-background": "#dfe2eb",
+        "on-tertiary-container": "#007426",
+        "primary": "#feffec",
+        "on-error": "#690005",
+        "surface-container-high": "#262a31",
+        "secondary-fixed": "#e2e2e2",
+        "primary-fixed-dim": "#acd60e",
+        "on-secondary-container": "#b4b5b5",
+        "tertiary": "#fbfff5",
+        "surface-container-low": "#181c22",
+        "background": "#10141a",
+        "on-primary-container": "#556b00",
+        "surface-bright": "#353940",
+        "secondary-fixed-dim": "#c6c6c7",
+        "on-secondary-fixed": "#1a1c1c",
+        "surface-dim": "#10141a",
+        "inverse-surface": "#dfe2eb",
+        "on-surface": "#dfe2eb"
+      },
+      borderRadius: {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      fontFamily: {
+        "label-md": ["Space Grotesk"],
+        "body-md": ["Inter"],
+        "body-sm": ["Inter"],
+        "label-sm": ["Space Grotesk"],
+        "headline-sm": ["Space Grotesk"],
+        "headline-lg": ["Space Grotesk"],
+        "price-hero": ["Space Grotesk"],
+        "display-lg": ["Space Grotesk"],
+        "headline-md": ["Space Grotesk"],
+        "label-lg": ["Space Grotesk"],
+        "body-lg": ["Inter"]
+      }
+    }
+  }
+};
+</script>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen relative">
+
+<!-- HEADER FIJO -->
+<header class="fixed top-0 left-0 w-full z-40 bg-surface-container-lowest/95 backdrop-blur-md border-b border-surface-container-high/40">
+  <div class="w-full bg-surface-container-low px-4 lg:px-6 py-1 flex items-center justify-center">
+    <p class="font-label-sm text-[11px] text-secondary uppercase tracking-widest flex items-center gap-1 text-center">
+      <span class="material-symbols-outlined text-[13px] text-tertiary-container">verified</span>
+      Atención directa por WhatsApp | Envíos en el día | Lunes a domingo: 09:00 — 21:00 hs.
+      <span class="material-symbols-outlined text-[13px] text-tertiary-container">bolt</span>
+    </p>
+  </div>
+  <div class="h-20 w-full px-4 lg:px-6 max-w-[1280px] mx-auto flex items-center justify-between gap-4">
+    <div class="flex items-center gap-4">
+      <button aria-label="Abrir Menú Móvil" class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors cursor-pointer" onclick="toggleMobileMenu()" type="button">
+        <span class="material-symbols-outlined text-[24px]">menu</span>
+      </button>
+      <a class="flex items-center gap-2 group cursor-pointer" href="#hero" onclick="navTo('hero'); return false;">
+        <div class="w-10 h-10 rounded-full bg-surface-container-lowest border border-surface-container-high/60 group-hover:border-primary-container/80 transition-colors flex items-center justify-center font-headline-sm font-bold text-primary-container text-lg">
+          FK
+        </div>
+        <div class="flex flex-col">
+          <span class="font-headline-md text-lg font-bold tracking-tight text-primary group-hover:text-primary-container transition-colors leading-none">FABRI K TECNO</span>
+          <span class="font-label-sm text-[11px] text-secondary uppercase font-semibold tracking-wider">tu tienda de soluciones</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- ENLACES ESCRITORIO -->
+    <nav class="hidden lg:flex items-center gap-6">
+      <a class="font-label-md text-[13px] uppercase text-on-surface hover:text-primary-container font-semibold transition-colors" href="#hero" onclick="navTo('hero'); return false;">Inicio</a>
+      <a class="font-label-md text-[13px] uppercase text-on-surface hover:text-primary-container font-semibold transition-colors" href="#catalogo" onclick="navCatalogAll(); return false;">Catálogo</a>
+      <a class="font-label-md text-[13px] uppercase text-on-surface hover:text-primary-container font-semibold transition-colors" href="#catalogo" onclick="selectCategory('OFERTAS', true); return false;">Ofertas</a>
+      <a class="font-label-md text-[13px] uppercase text-on-surface hover:text-primary-container font-semibold transition-colors" href="#catalogo" onclick="selectCategory('NOVEDADES', true); return false;">Novedades</a>
+      <a class="font-label-md text-[13px] uppercase text-on-surface hover:text-primary-container font-semibold transition-colors" href="#servicio-tecnico" onclick="navTo('servicio-tecnico'); return false;">Nosotros / Taller</a>
+    </nav>
+
+    <!-- ACCIONES HEADER -->
+    <div class="flex items-center gap-3">
+      <button aria-label="Buscar en el catálogo" class="flex items-center justify-center w-10 h-10 rounded-lg bg-surface-container hover:bg-surface-container-high text-secondary hover:text-primary-container transition-colors cursor-pointer" onclick="focusCatalogSearch()" type="button">
+        <span class="material-symbols-outlined text-[20px]">search</span>
+      </button>
+
+      <a aria-label="Abrir WhatsApp oficial" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors font-label-md text-[13px] text-tertiary-container" href="https://wa.me/5491168243265?text=Hola%20FABRI%20K%20TECNO%20%F0%9F%91%8B%20Quería%20consultar%20por%20un%20producto." rel="noopener" target="_blank">
+        <span class="material-symbols-outlined text-[18px]">chat</span>
+        <span class="hidden md:inline">WhatsApp</span>
+      </a>
+
+      <button aria-label="Abrir Carrito" class="relative flex items-center justify-center w-10 h-10 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer" onclick="openCartDrawer()" type="button">
+        <span class="material-symbols-outlined text-on-surface text-[20px]">shopping_bag</span>
+        <span class="cart-badge-counter absolute -top-1 -right-1 w-5 h-5 bg-primary-container text-black font-label-sm text-[10px] flex items-center justify-center rounded-full font-bold">0</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- BARRA TABS CATEGORÍAS HEADER -->
+  <div class="w-full bg-surface-container-lowest border-t border-surface-container-high/40">
+    <div class="max-w-[1280px] mx-auto px-4 lg:px-6">
+      <nav class="flex items-center gap-4 overflow-x-auto py-2" id="header-category-tabs">
+        <button class="header-navcat font-label-md text-[12px] uppercase tracking-wider text-primary-container font-bold whitespace-nowrap transition-colors cursor-pointer" onclick="selectCategory('TODOS', true)" type="button">TODOS</button>
+        <button class="header-navcat font-label-md text-[12px] uppercase tracking-wider text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors cursor-pointer" onclick="selectCategory('AUDIO', true)" type="button">AUDIO</button>
+        <button class="header-navcat font-label-md text-[12px] uppercase tracking-wider text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors cursor-pointer" onclick="selectCategory('TECNOLOGÍA', true)" type="button">TECNOLOGÍA</button>
+        <button class="header-navcat font-label-md text-[12px] uppercase tracking-wider text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors cursor-pointer" onclick="selectCategory('ACCESORIOS', true)" type="button">ACCESORIOS</button>
+        <button class="header-navcat font-label-md text-[12px] uppercase tracking-wider text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors cursor-pointer" onclick="selectCategory('SOPORTES', true)" type="button">SOPORTES</button>
+        <button class="header-navcat font-label-md text-[12px] uppercase tracking-wider text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors cursor-pointer" onclick="selectCategory('COCINA & ELECTRO', true)" type="button">COCINA & ELECTRO</button>
+        <button class="header-navcat font-label-md text-[12px] uppercase tracking-wider text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors cursor-pointer" onclick="selectCategory('OFERTAS', true)" type="button">OFERTAS</button>
+        <button class="header-navcat font-label-md text-[12px] uppercase tracking-wider text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors cursor-pointer" onclick="selectCategory('NOVEDADES', true)" type="button">NOVEDADES</button>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- MENÚ MOBILE DRAWER -->
+<div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-sm z-50 hidden transition-opacity" id="mobile-menu-backdrop" onclick="toggleMobileMenu()"></div>
+<aside class="fixed top-0 left-0 w-72 h-full bg-surface-container-low z-50 transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-6 border-r border-surface-container-high" id="mobile-menu-drawer">
+  <div class="space-y-6">
+    <div class="flex items-center justify-between border-b border-surface-container-high pb-3">
+      <div class="flex items-center gap-2">
+        <span class="font-headline-sm text-primary font-bold">FABRI K TECNO</span>
+      </div>
+      <button aria-label="Cerrar menú móvil" class="text-secondary hover:text-on-surface p-1 cursor-pointer" onclick="toggleMobileMenu()" type="button">
+        <span class="material-symbols-outlined text-[22px]">close</span>
+      </button>
+    </div>
+    <nav class="flex flex-col space-y-4">
+      <a class="font-label-md text-[14px] uppercase text-on-surface hover:text-primary-container font-semibold" href="#hero" onclick="navTo('hero'); toggleMobileMenu();">Inicio</a>
+      <a class="font-label-md text-[14px] uppercase text-on-surface hover:text-primary-container font-semibold" href="#catalogo" onclick="navCatalogAll(); toggleMobileMenu();">Catálogo Completo</a>
+      <a class="font-label-md text-[14px] uppercase text-on-surface hover:text-primary-container font-semibold" href="#catalogo" onclick="selectCategory('OFERTAS', true); toggleMobileMenu();">Ofertas Especiales</a>
+      <a class="font-label-md text-[14px] uppercase text-on-surface hover:text-primary-container font-semibold" href="#catalogo" onclick="selectCategory('NOVEDADES', true); toggleMobileMenu();">Novedades</a>
+      <a class="font-label-md text-[14px] uppercase text-on-surface hover:text-primary-container font-semibold" href="#servicio-tecnico" onclick="navTo('servicio-tecnico'); toggleMobileMenu();">Taller & Silvino</a>
+      <a class="font-label-md text-[14px] uppercase text-on-surface hover:text-primary-container font-semibold" href="#faq-section" onclick="navTo('faq-section'); toggleMobileMenu();">Preguntas Frecuentes</a>
+      <a class="font-label-md text-[14px] uppercase text-on-surface hover:text-primary-container font-semibold" href="#contacto-ubicacion" onclick="navTo('contacto-ubicacion'); toggleMobileMenu();">Ubicación y Mapas</a>
+    </nav>
+  </div>
+  <div class="space-y-3 border-t border-surface-container-high pt-4">
+    <a class="w-full py-2.5 bg-primary-container text-black font-label-md text-[13px] font-bold rounded-lg flex items-center justify-center gap-1.5" href="https://wa.me/5491168243265?text=Hola%20FABRI%20K%20TECNO%20%F0%9F%91%8B%20Quería%20consultar%20por%20un%20producto." rel="noopener" target="_blank">
+      <span class="material-symbols-outlined text-[18px]">chat</span>
+      WhatsApp Directo
+    </a>
+    <p class="font-body-sm text-[11px] text-secondary text-center">Gral. Juan Gregorio Las Heras 5265, Villa Martelli</p>
+  </div>
+</aside>
+
+<main class="w-full pt-32 sm:pt-36 bg-background min-h-screen">
+  <!-- BANNER RECUPERACIÓN DE CARRITO -->
+  <div class="hidden w-full bg-surface-container-high py-2 px-4 lg:px-6 transition-all border-b border-surface-container-highest" id="cart-recovery-banner">
+    <div class="max-w-[1280px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary-container text-[18px]">shopping_basket</span>
+        <p class="font-body-sm text-on-surface text-sm">¿Querés continuar con tu compra? Tenés productos guardados en tu carrito.</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <button class="font-label-sm text-xs font-bold text-black bg-primary-container hover:bg-primary-fixed px-3 py-1 rounded-lg uppercase transition-all cursor-pointer" onclick="openCartDrawer()" type="button">Continuar compra</button>
+        <button aria-label="Cerrar aviso" class="text-secondary hover:text-on-surface p-1 cursor-pointer" onclick="dismissRecoveryBanner()" type="button"><span class="material-symbols-outlined text-[16px]">close</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 1: HERO (CON DIMENSIONES FIJAS Y ASPECT RATIO ANTI-CLS) -->
+  <section class="relative w-full overflow-hidden bg-surface-container-lowest py-12 lg:py-16 px-4 lg:px-6" id="hero">
+    <div class="absolute inset-0 pointer-events-none bg-gradient-to-br from-primary-container/10 via-transparent to-surface-container-lowest opacity-70"></div>
+    <div class="max-w-[1280px] mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
+      
+      <!-- HERO TEXTO -->
+      <div class="flex-1 space-y-6 text-left">
+        <div class="space-y-1">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container font-label-sm text-[11px] text-tertiary-container uppercase tracking-wider border border-surface-container-high/60">
+            <span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+            Tienda Oficial · Laboratorio de Hardware · Villa Martelli
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display-lg text-4xl sm:text-5xl lg:text-6xl text-primary tracking-tighter leading-none select-none font-bold">FABRI K TECNO</span>
+            <span class="font-headline-sm text-sm sm:text-base text-secondary uppercase tracking-widest mt-1">tu tienda de soluciones</span>
+          </div>
+        </div>
+        
+        <h1 class="font-headline-lg text-2xl sm:text-3xl lg:text-4xl text-primary max-w-2xl font-bold tracking-tight">
+          Tecnología, electro y soluciones reales que encajan con tu día.
+        </h1>
+        <p class="font-body-lg text-base text-secondary max-w-xl">
+          Ecosistema integral de productos certificados, repuestos y laboratorio especializado con diagnóstico transparente a cargo de Silvino.
+        </p>
+
+        <!-- HERO CTAS -->
+        <div class="flex flex-wrap items-center gap-4 pt-1">
+          <button class="px-6 py-3 bg-primary-container text-black font-label-md text-sm font-bold rounded-lg flex items-center gap-2 hover:bg-primary-fixed shadow-md transition-all cursor-pointer" onclick="navTo('catalogo')" type="button">
+            <span class="material-symbols-outlined text-[20px]">grid_view</span>
+            Explorar Catálogo
+          </button>
+          <a class="px-6 py-3 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-sm font-bold rounded-lg flex items-center gap-2 transition-colors border border-surface-container-high/60" href="https://wa.me/5491168243265?text=Hola%20FABRI%20K%20TECNO%20%F0%9F%91%8B%20Quería%20consultar%20por%20un%20producto." rel="noopener" target="_blank">
+            <span class="material-symbols-outlined text-tertiary-container text-[20px]">chat</span>
+            Hablar por WhatsApp
+          </a>
+        </div>
+
+        <!-- 4 PILARES -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-4">
+          <div class="flex items-center gap-2.5 bg-surface-container-low p-3 rounded-lg border border-surface-container-high/30">
+            <span class="material-symbols-outlined text-primary-container text-[22px]">verified_user</span>
+            <div class="flex flex-col">
+              <span class="font-label-sm text-xs text-on-surface font-bold">Compra 100% Segura</span>
+              <span class="font-body-sm text-[11px] text-secondary">Transparencia total</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 bg-surface-container-low p-3 rounded-lg border border-surface-container-high/30">
+            <span class="material-symbols-outlined text-tertiary-container text-[22px]">local_shipping</span>
+            <div class="flex flex-col">
+              <span class="font-label-sm text-xs text-on-surface font-bold">Envíos en el Día</span>
+              <span class="font-body-sm text-[11px] text-secondary">Coordinación express</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 bg-surface-container-low p-3 rounded-lg border border-surface-container-high/30">
+            <span class="material-symbols-outlined text-tertiary-container text-[22px]">support_agent</span>
+            <div class="flex flex-col">
+              <span class="font-label-sm text-xs text-on-surface font-bold">Atención WhatsApp</span>
+              <span class="font-body-sm text-[11px] text-secondary">9 a 21 hs de corrido</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 bg-surface-container-low p-3 rounded-lg border border-surface-container-high/30">
+            <span class="material-symbols-outlined text-primary-container text-[22px]">build_circle</span>
+            <div class="flex flex-col">
+              <span class="font-label-sm text-xs text-on-surface font-bold">Garantía & Taller</span>
+              <span class="font-body-sm text-[11px] text-secondary">Silvino en laboratorio</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO VISUAL ANTI-CLS -->
+      <div class="w-full lg:w-[460px] flex-shrink-0 bg-surface-container p-6 rounded-xl shadow-xl border border-surface-container-high relative">
+        <div class="flex justify-between items-center pb-4">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-tertiary-container animate-pulse"></span>
+            <span class="font-label-sm text-xs text-tertiary-container font-bold uppercase">Estado Taller Silvino</span>
+          </div>
+          <span class="font-label-sm text-xs text-secondary">Las Heras 5265</span>
+        </div>
+        
+        <div class="relative w-full aspect-hero-card rounded-lg overflow-hidden bg-surface-container-high mb-4 border border-surface-container-highest/60">
+          <img alt="Laboratorio de microelectrónica y reparación de celulares FABRI K TECNO" class="w-full h-full object-cover transition-opacity duration-700 ease-out" height="280" loading="eager" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCIyad06uuvA-C9oGf_7jXlaUmoTbhl33lYwec92vi9l9u9tnzeFPvgy6_298HXoNSDQJFSU_0Y9IM-uA5BYvBPUlLGnD1ctHmPcGyKWntW48iw6axQmPdzSARs-S5-Al4Tqq3m5eRA3jwdqtyuegYJa1hT2PTBFAbU5eo8JiLsXBDZqU0meSIgAvCP8WKcB9cvqO4DaUih_r_bQbypLRsnWVVA2R0-i5if4n7zCfRM6l1wh0Ir-VjtAh11fyfYp1EcCo" width="460">
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/30 to-transparent flex items-end p-4">
+            <div>
+              <span class="font-headline-sm text-[16px] text-primary font-bold block">Laboratorio Hardware & Reparaciones</span>
+              <span class="font-body-sm text-[12px] text-on-surface-variant">Atendido por Silvino con piezas e instrumental de precisión.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="p-3 bg-surface-container-lowest rounded-lg border border-surface-container-high/40">
+            <span class="font-label-sm text-xs text-secondary uppercase block">SLA Diagnóstico</span>
+            <span class="font-price-hero text-xl text-primary-container font-bold">45 min</span>
+          </div>
+          <div class="p-3 bg-surface-container-lowest rounded-lg border border-surface-container-high/40">
+            <span class="font-label-sm text-xs text-secondary uppercase block">Garantía Escrita</span>
+            <span class="font-price-hero text-xl text-tertiary-container font-bold">90 Días</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: CATÁLOGO DE PRODUCTOS -->
+  <section class="w-full py-12 px-4 lg:px-6 max-w-[1280px] mx-auto space-y-8" id="catalogo">
+    
+    <div class="space-y-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="font-label-sm text-xs text-primary-container uppercase font-bold tracking-wider">Stock 100% Real y Actualizado</span>
+          <h2 class="font-headline-lg text-3xl text-primary font-bold">Catálogo de Soluciones</h2>
+        </div>
+
+        <!-- BUSCADOR INSTANTÁNEO -->
+        <div class="w-full md:w-80 flex items-center bg-surface-container px-3 py-2 rounded-lg shadow-sm border border-surface-container-high/60 focus-within:border-primary-container/70 transition-colors">
+          <span class="material-symbols-outlined text-secondary text-[20px] mr-2">search</span>
+          <input class="w-full bg-transparent font-body-sm text-sm text-on-surface placeholder:text-secondary focus:outline-none" id="product-search-input" oninput="handleSearchInput(this.value)" placeholder="Buscar por producto, marca..." type="text">
+          <button aria-label="Limpiar búsqueda" class="hidden text-secondary hover:text-on-surface text-[14px] cursor-pointer" id="search-clear-btn" onclick="clearSearch()" type="button">
+            <span class="material-symbols-outlined text-[18px]">close</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- TABS DE CATEGORÍAS -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-1" id="category-pills">
+        <button class="cat-pill-btn px-4 py-1.5 rounded-lg font-label-md text-xs uppercase tracking-wider bg-primary-container text-black font-bold whitespace-nowrap shadow-sm cursor-pointer" data-cat="TODOS" onclick="selectCategory('TODOS')">TODOS</button>
+        <button class="cat-pill-btn px-4 py-1.5 rounded-lg font-label-md text-xs uppercase tracking-wider bg-surface-container text-secondary hover:text-on-surface whitespace-nowrap cursor-pointer" data-cat="AUDIO" onclick="selectCategory('AUDIO')">AUDIO</button>
+        <button class="cat-pill-btn px-4 py-1.5 rounded-lg font-label-md text-xs uppercase tracking-wider bg-surface-container text-secondary hover:text-on-surface whitespace-nowrap cursor-pointer" data-cat="TECNOLOGÍA" onclick="selectCategory('TECNOLOGÍA')">TECNOLOGÍA</button>
+        <button class="cat-pill-btn px-4 py-1.5 rounded-lg font-label-md text-xs uppercase tracking-wider bg-surface-container text-secondary hover:text-on-surface whitespace-nowrap cursor-pointer" data-cat="ACCESORIOS" onclick="selectCategory('ACCESORIOS')">ACCESORIOS</button>
+        <button class="cat-pill-btn px-4 py-1.5 rounded-lg font-label-md text-xs uppercase tracking-wider bg-surface-container text-secondary hover:text-on-surface whitespace-nowrap cursor-pointer" data-cat="SOPORTES" onclick="selectCategory('SOPORTES')">SOPORTES</button>
+        <button class="cat-pill-btn px-4 py-1.5 rounded-lg font-label-md text-xs uppercase tracking-wider bg-surface-container text-secondary hover:text-on-surface whitespace-nowrap cursor-pointer" data-cat="COCINA & ELECTRO" onclick="selectCategory('COCINA & ELECTRO')">COCINA & ELECTRO</button>
+        <button class="cat-pill-btn px-4 py-1.5 rounded-lg font-label-md text-xs uppercase tracking-wider bg-surface-container text-secondary hover:text-on-surface whitespace-nowrap cursor-pointer" data-cat="OFERTAS" onclick="selectCategory('OFERTAS')">OFERTAS</button>
+        <button class="cat-pill-btn px-4 py-1.5 rounded-lg font-label-md text-xs uppercase tracking-wider bg-surface-container text-secondary hover:text-on-surface whitespace-nowrap cursor-pointer" data-cat="NOVEDADES" onclick="selectCategory('NOVEDADES')">NOVEDADES</button>
+      </div>
+
+      <!-- DESCRIPCIÓN DE CATEGORÍA -->
+      <div class="p-3 bg-surface-container-low rounded-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-2 border border-surface-container-high/40">
+        <div>
+          <span class="font-label-sm text-xs text-primary-container uppercase font-bold" id="cat-desc-title">Catálogo Completo FABRI K TECNO</span>
+          <p class="font-body-sm text-xs text-secondary" id="cat-desc-text">Mostrando todos los productos disponibles con entrega en el día o retiro en local.</p>
+        </div>
+        <div class="text-right">
+          <span class="font-label-sm text-xs text-secondary" id="products-counter-label">Cargando productos...</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRID DINÁMICO DE PRODUCTOS -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 min-h-[300px]" id="products-grid">
+      <!-- Inyectado por renderProductsList() -->
+    </div>
+
+    <!-- ESTADO VACÍO DE BÚSQUEDA -->
+    <div class="hidden w-full py-12 px-4 bg-surface-container text-center rounded-xl space-y-4 border border-surface-container-high" id="empty-products-state">
+      <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mx-auto text-secondary">
+        <span class="material-symbols-outlined text-[32px]">search_off</span>
+      </div>
+      <div class="space-y-1 max-w-md mx-auto">
+        <h3 class="font-headline-sm text-lg text-primary font-bold">No encontramos productos que coincidan con tu búsqueda.</h3>
+        <p class="font-body-sm text-sm text-secondary">Podés consultar disponibilidad inmediata de repuestos y productos específicos por WhatsApp.</p>
+      </div>
+      <button class="inline-flex items-center gap-2 px-4 py-2 bg-primary-container text-black font-label-md text-sm rounded-lg font-bold transition-colors cursor-pointer" onclick="resetSearchAndFilters()" type="button">
+        <span class="material-symbols-outlined text-[18px]">restart_alt</span>
+        Volver al catálogo
+      </button>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: SERVICIO TÉCNICO & NOSOTROS -->
+  <section class="w-full bg-surface-container-low py-12 px-4 lg:px-6 border-y border-surface-container-high/40" id="servicio-tecnico">
+    <div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-6 space-y-6">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest font-label-sm text-xs text-tertiary-container font-bold border border-surface-container-high">
+          <span class="material-symbols-outlined text-[16px]">precision_manufacturing</span>
+          LABORATORIO TÉCNICO OFICIAL SILVINO
+        </div>
+        <h2 class="font-headline-lg text-3xl text-primary font-bold">
+          Servicio Técnico Especializado en Celulares y Hardware
+        </h2>
+        <p class="font-body-lg text-secondary">
+          Silvino lidera nuestro laboratorio en Villa Martelli con diagnóstico honesto, módulos OLED calibrados, baterías de ciclo completo, pines de carga y microelectrónica de alta precisión para Apple, Samsung, Motorola y Xiaomi.
+        </p>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="p-4 bg-surface-container rounded-lg space-y-1 border border-surface-container-high/40">
+            <span class="material-symbols-outlined text-primary-container text-[24px]">phonelink_setup</span>
+            <h3 class="font-label-md text-sm text-primary font-bold">Módulos & Displays</h3>
+            <p class="font-body-sm text-xs text-secondary">Instalación calibrada con sellado hidrófugo y garantía escrita de 90 días.</p>
+          </div>
+          <div class="p-4 bg-surface-container rounded-lg space-y-1 border border-surface-container-high/40">
+            <span class="material-symbols-outlined text-tertiary-container text-[24px]">battery_charging_full</span>
+            <h3 class="font-label-md text-sm text-primary font-bold">Baterías Originales</h3>
+            <p class="font-body-sm text-xs text-secondary">Reemplazo con verificación de salud del 100% y cero ciclos.</p>
+          </div>
+        </div>
+
+        <div class="p-4 bg-surface-container-lowest rounded-lg flex items-center justify-between border border-surface-container-high/40">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary-container text-[24px]">pin_drop</span>
+            <div>
+              <span class="font-label-md text-sm text-on-surface font-bold block">Gral. Juan Gregorio Las Heras 5265, Villa Martelli</span>
+              <span class="font-body-sm text-xs text-secondary">Horario de atención: Lunes a domingo: 09:00 — 21:00 hs.</span>
+            </div>
+          </div>
+          <span class="font-label-sm text-xs text-tertiary-container font-bold uppercase">En el día</span>
+        </div>
+      </div>
+
+      <!-- FORMULARIO DIRECTO SILVINO -->
+      <div class="lg:col-span-6 bg-surface-container p-6 sm:p-8 rounded-xl shadow-xl space-y-4 border border-surface-container-high">
+        <div class="border-b border-surface-container-highest pb-3">
+          <h3 class="font-headline-sm text-xl text-primary font-bold">Solicitar Turno Técnico Rápido</h3>
+          <p class="font-body-sm text-xs text-secondary">Completá los datos para coordinar el ingreso con Silvino por WhatsApp.</p>
+        </div>
+        <form class="space-y-3" id="tech-service-form" onsubmit="handleTechServiceSubmit(event)">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block font-label-sm text-[11px] text-secondary uppercase mb-1">Tu Nombre Completo *</label>
+              <input class="w-full bg-surface-container-low px-3 py-2 rounded-lg font-body-sm text-sm text-on-surface placeholder:text-secondary focus:outline-none border border-surface-container-high/40 focus:border-primary-container" id="tech-client-name" placeholder="Ej. Martín Gómez" required="" type="text">
+            </div>
+            <div>
+              <label class="block font-label-sm text-[11px] text-secondary uppercase mb-1">Tu WhatsApp *</label>
+              <input class="w-full bg-surface-container-low px-3 py-2 rounded-lg font-body-sm text-sm text-on-surface placeholder:text-secondary focus:outline-none border border-surface-container-high/40 focus:border-primary-container" id="tech-client-phone" placeholder="Ej. 11 6824 3265" required="" type="tel">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block font-label-sm text-[11px] text-secondary uppercase mb-1">Marca del Equipo *</label>
+              <select class="w-full bg-surface-container-low px-3 py-2 rounded-lg font-body-sm text-sm text-on-surface focus:outline-none border border-surface-container-high/40 focus:border-primary-container" id="tech-brand" required="">
+                <option value="">Seleccionar marca</option>
+                <option value="iPhone (Apple)">iPhone (Apple)</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Motorola">Motorola</option>
+                <option value="Xiaomi">Xiaomi</option>
+                <option value="Otra Marca">Otra Marca</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-label-sm text-[11px] text-secondary uppercase mb-1">Modelo Exacto *</label>
+              <input class="w-full bg-surface-container-low px-3 py-2 rounded-lg font-body-sm text-sm text-on-surface placeholder:text-secondary focus:outline-none border border-surface-container-high/40 focus:border-primary-container" id="tech-model" placeholder="Ej. iPhone 13 / Galaxy A54" required="" type="text">
+            </div>
+          </div>
+          <div>
+            <label class="block font-label-sm text-[11px] text-secondary uppercase mb-1">Tipo de Falla o Reparación Requerida *</label>
+            <textarea class="w-full bg-surface-container-low px-3 py-2 rounded-lg font-body-sm text-sm text-on-surface placeholder:text-secondary focus:outline-none resize-none border border-surface-container-high/40 focus:border-primary-container" id="tech-issue" placeholder="Describí qué le sucede al equipo (pantalla rota, batería hinchada, no carga, mojado, etc.)..." required="" rows="3"></textarea>
+          </div>
+          <button class="w-full py-3 bg-tertiary-container hover:bg-tertiary-fixed text-black font-label-md text-sm font-bold rounded-lg flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer" type="submit">
+            <span class="material-symbols-outlined text-[20px]">chat</span>
+            Solicitar Turno a Silvino por WhatsApp
+          </button>
+          <span class="block text-center font-label-sm text-[11px] text-secondary">
+            Te responderemos con presupuesto previo de piezas y disponibilidad de slot en taller.
+          </span>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: CHECKOUT ONE-STEP -->
+  <section class="w-full py-12 px-4 lg:px-6 max-w-[1280px] mx-auto space-y-8" id="checkout-section">
+    <div class="text-left space-y-1">
+      <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded bg-surface-container font-label-sm text-xs text-primary-container uppercase font-bold border border-surface-container-high">
+        <span class="material-symbols-outlined text-[14px]">lock</span>
+        Checkout Rápido Sin Contraseñas
+      </div>
+      <h2 class="font-headline-lg text-3xl text-primary font-bold">Finalizar Pedido en Un Solo Paso</h2>
+      <p class="font-body-md text-secondary">Confirmación inmediata vía WhatsApp Business con reserva de 24 horas.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <!-- FORMULARIO CHECKOUT -->
+      <div class="lg:col-span-7 bg-surface-container p-6 sm:p-8 rounded-xl space-y-6 shadow-md border border-surface-container-high">
+        <form class="space-y-6" id="checkout-form" onsubmit="handleCheckoutSubmit(event)">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-primary-container text-black font-label-sm text-xs font-bold flex items-center justify-center">1</span>
+              <h3 class="font-label-lg text-sm text-primary font-bold uppercase">Datos de Contacto</h3>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block font-label-sm text-[11px] text-secondary uppercase mb-1">Nombre y Apellido *</label>
+                <input class="w-full bg-surface-container-low px-3 py-2 rounded-lg font-body-sm text-sm text-on-surface placeholder:text-secondary focus:outline-none border border-surface-container-high/40 focus:border-primary-container" id="chk-name" placeholder="Tu nombre completo" required="" type="text">
+              </div>
+              <div>
+                <label class="block font-label-sm text-[11px] text-secondary uppercase mb-1">WhatsApp / Teléfono *</label>
+                <input class="w-full bg-surface-container-low px-3 py-2 rounded-lg font-body-sm text-sm text-on-surface placeholder:text-secondary focus:outline-none border border-surface-container-high/40 focus:border-primary-container" id="chk-phone" placeholder="Ej. 11 6824 3265" required="" type="tel">
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block font-label-sm text-[11px] text-secondary uppercase mb-1">Correo Electrónico (Para comprobante) *</label>
+                <input class="w-full bg-surface-container-low px-3 py-2 rounded-lg font-body-sm text-sm text-on-surface placeholder:text-secondary focus:outline-none border border-surface-container-high/40 focus:border-primary-container" id="chk-email" placeholder="tucorreo@ejemplo.com" required="" type="email">
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-primary-container text-black font-label-sm text-xs font-bold flex items-center justify-center">2</span>
+              <h3 class="font-label-lg text-sm text-primary font-bold uppercase">Modalidad de Entrega</h3>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <label class="flex items-start gap-3 p-4 bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors border border-surface-container-high/40">
+                <input checked="" class="mt-1 text-primary-container focus:ring-0" name="shipping-method" onchange="toggleShippingAddress(false)" type="radio" value="retiro">
+                <div class="space-y-0.5">
+                  <span class="font-label-md text-sm text-primary font-bold block">Retiro en Local</span>
+                  <span class="font-body-sm text-xs text-secondary block">Las Heras 5265, Villa Martelli</span>
+                  <span class="font-label-sm text-xs text-tertiary-container font-bold block">GRATIS (09 a 21 hs)</span>
+                </div>
+              </label>
+              <label class="flex items-start gap-3 p-4 bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors border border-surface-container-high/40">
+                <input class="mt-1 text-primary-container focus:ring-0" name="shipping-method" onchange="toggleShippingAddress(true)" type="radio" value="envio">
+                <div class="space-y-0.5">
+                  <span class="font-label-md text-sm text-primary font-bold block">Envío en el Día</span>
+                  <span class="font-body-sm text-xs text-secondary block">Mensajería coordinada</span>
+                  <span class="font-label-sm text-xs text-secondary font-bold block">A coordinar por WhatsApp</span>
+                </div>
+              </label>
+            </div>
+            <div class="hidden pt-1" id="address-container">
+              <label class="block font-label-sm text-[11px] text-secondary uppercase mb-1">Dirección de Entrega y Localidad *</label>
+              <input class="w-full bg-surface-container-low px-3 py-2 rounded-lg font-body-sm text-sm text-on-surface placeholder:text-secondary focus:outline-none border border-surface-container-high/40 focus:border-primary-container" id="chk-address" placeholder="Calle, número, piso, dpto y localidad..." type="text">
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-primary-container text-black font-label-sm text-xs font-bold flex items-center justify-center">3</span>
+              <h3 class="font-label-lg text-sm text-primary font-bold uppercase">Método de Pago</h3>
+            </div>
+            <div class="space-y-2">
+              <label class="flex items-center justify-between p-4 bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors border border-surface-container-high/40">
+                <div class="flex items-center gap-3">
+                  <input checked="" class="text-primary-container focus:ring-0" name="payment-method" onchange="togglePaymentNotice('transfer')" type="radio" value="transferencia">
+                  <div class="flex flex-col">
+                    <span class="font-label-md text-sm text-primary font-bold">Transferencia Bancaria Inmediata</span>
+                    <span class="font-body-sm text-xs text-secondary">Alias oficial y CBU sin intermediarios</span>
+                  </div>
+                </div>
+                <span class="font-label-sm text-xs text-primary-container bg-surface-container px-2 py-0.5 rounded">Recomendado</span>
+              </label>
+
+              <div class="p-3 bg-surface-container-lowest rounded-lg space-y-1 text-secondary font-body-sm text-xs border border-surface-container-high/40" id="transfer-notice">
+                <div class="flex items-center gap-1.5 text-primary-container font-label-sm text-xs font-bold uppercase">
+                  <span class="material-symbols-outlined text-[16px]">verified</span>
+                  Alias Mercado Pago / Bancario: <strong class="text-white ml-1 font-mono">LF2024.MP</strong>
+                </div>
+                <p>Al confirmar el pedido por WhatsApp se adjuntan los datos completos para tu comprobante inmediato.</p>
+              </div>
+
+              <label class="flex items-center justify-between p-4 bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors border border-surface-container-high/40">
+                <div class="flex items-center gap-3">
+                  <input class="text-primary-container focus:ring-0" name="payment-method" onchange="togglePaymentNotice('mp')" type="radio" value="mercadopago">
+                  <div class="flex flex-col">
+                    <span class="font-label-md text-sm text-primary font-bold">Mercado Pago (Link o QR)</span>
+                    <span class="font-body-sm text-xs text-secondary">Acreditación instantánea</span>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-secondary">credit_card</span>
+              </label>
+            </div>
+          </div>
+
+          <button class="w-full py-3 bg-primary-container hover:bg-primary-fixed text-black font-label-md text-sm font-bold rounded-lg flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer" type="submit">
+            <span class="material-symbols-outlined text-[20px]">chat</span>
+            CONFIRMAR Y ENVIAR PEDIDO POR WHATSAPP
+          </button>
+        </form>
+      </div>
+
+      <!-- RESUMEN CHECKOUT -->
+      <div class="lg:col-span-5 bg-surface-container p-6 sm:p-8 rounded-xl space-y-4 h-fit shadow-md border border-surface-container-high">
+        <div class="flex justify-between items-center pb-3 border-b border-surface-container-highest">
+          <h3 class="font-headline-sm text-lg text-primary font-bold">Resumen de Compra</h3>
+          <span class="font-label-sm text-xs text-secondary" id="chk-items-count">0 items</span>
+        </div>
+        <div class="space-y-2 max-h-72 overflow-y-auto pr-1" id="chk-order-items">
+          <p class="font-body-sm text-xs text-secondary py-3">No hay items en el carrito. Seleccioná productos del catálogo para continuar.</p>
+        </div>
+        <div class="pt-3 space-y-1.5 border-t border-surface-container-highest">
+          <div class="flex justify-between font-body-sm text-xs text-secondary">
+            <span>Subtotal</span>
+            <span id="chk-subtotal-price">$0</span>
+          </div>
+          <div class="flex justify-between font-body-sm text-xs text-secondary">
+            <span>Modalidad de entrega</span>
+            <span class="text-tertiary-container font-label-sm text-xs" id="chk-shipping-cost">Gratis (Retiro en local)</span>
+          </div>
+          <div class="flex justify-between font-headline-md text-base text-primary font-bold pt-1">
+            <span>Total Final</span>
+            <span class="text-primary-container font-price-hero font-bold text-xl" id="chk-total-price">$0</span>
+          </div>
+        </div>
+        <div class="p-3 bg-surface-container-lowest rounded-lg flex items-center gap-2 text-secondary font-body-sm text-[12px] border border-surface-container-high/40">
+          <span class="material-symbols-outlined text-tertiary-container text-[18px]">verified</span>
+          Tu orden se reserva automáticamente por 24hs.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: PREGUNTAS FRECUENTES -->
+  <section class="w-full bg-surface-container-lowest py-12 px-4 lg:px-6 border-t border-surface-container-high/40" id="faq-section">
+    <div class="max-w-[800px] mx-auto space-y-6">
+      <div class="text-center space-y-1">
+        <span class="font-label-sm text-xs text-primary-container uppercase font-bold tracking-wider">Dudas Frecuentes</span>
+        <h2 class="font-headline-lg text-3xl text-primary font-bold">Preguntas Frecuentes</h2>
+        <p class="font-body-md text-sm text-secondary">Transparencia, garantías y coordinación rápida para tu tranquilidad.</p>
+      </div>
+
+      <div class="space-y-3" id="faq-accordion-list">
+        <div class="bg-surface-container rounded-lg border border-surface-container-high overflow-hidden">
+          <button class="w-full p-4 text-left flex justify-between items-center text-primary font-label-md text-[14px] font-bold focus:outline-none cursor-pointer" onclick="toggleFaq(0)" type="button">
+            <span>¿Dónde está ubicado el local y en qué horarios atienden?</span>
+            <span class="material-symbols-outlined text-secondary transform transition-transform duration-300 faq-chevron">expand_more</span>
+          </button>
+          <div class="accordion-content max-h-0 opacity-0 px-4 pb-0 text-secondary font-body-sm text-xs leading-relaxed border-t border-transparent" id="faq-answer-0">
+            <div class="pb-4 pt-2">
+              Estamos en <strong>Gral. Juan Gregorio Las Heras 5265, B1603 Villa Martelli, Provincia de Buenos Aires</strong>. Atendemos todos los días de <strong>Lunes a domingo de 09:00 a 21:00 hs de corrido</strong>.
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-surface-container rounded-lg border border-surface-container-high overflow-hidden">
+          <button class="w-full p-4 text-left flex justify-between items-center text-primary font-label-md text-[14px] font-bold focus:outline-none cursor-pointer" onclick="toggleFaq(1)" type="button">
+            <span>¿Cómo se coordinan los envíos en el día?</span>
+            <span class="material-symbols-outlined text-secondary transform transition-transform duration-300 faq-chevron">expand_more</span>
+          </button>
+          <div class="accordion-content max-h-0 opacity-0 px-4 pb-0 text-secondary font-body-sm text-xs leading-relaxed border-t border-transparent" id="faq-answer-1">
+            <div class="pb-4 pt-2">
+              Una vez que confirmás tu pedido a través de WhatsApp, coordinamos la franja horaria más conveniente. Despachamos mediante mensajería express en el día para compras acordadas durante el horario comercial.
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-surface-container rounded-lg border border-surface-container-high overflow-hidden">
+          <button class="w-full p-4 text-left flex justify-between items-center text-primary font-label-md text-[14px] font-bold focus:outline-none cursor-pointer" onclick="toggleFaq(2)" type="button">
+            <span>¿Qué garantía tienen los productos y reparaciones?</span>
+            <span class="material-symbols-outlined text-secondary transform transition-transform duration-300 faq-chevron">expand_more</span>
+          </button>
+          <div class="accordion-content max-h-0 opacity-0 px-4 pb-0 text-secondary font-body-sm text-xs leading-relaxed border-t border-transparent" id="faq-answer-2">
+            <div class="pb-4 pt-2">
+              Todos los productos nuevos cuentan con su garantía oficial correspondiente. Los cambios de módulos, baterías y reparaciones efectuadas por Silvino en nuestro laboratorio tienen garantía escrita de 90 días.
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-surface-container rounded-lg border border-surface-container-high overflow-hidden">
+          <button class="w-full p-4 text-left flex justify-between items-center text-primary font-label-md text-[14px] font-bold focus:outline-none cursor-pointer" onclick="toggleFaq(3)" type="button">
+            <span>¿Qué medios de pago aceptan?</span>
+            <span class="material-symbols-outlined text-secondary transform transition-transform duration-300 faq-chevron">expand_more</span>
+          </button>
+          <div class="accordion-content max-h-0 opacity-0 px-4 pb-0 text-secondary font-body-sm text-xs leading-relaxed border-t border-transparent" id="faq-answer-3">
+            <div class="pb-4 pt-2">
+              Aceptamos Transferencia Bancaria directa inmediata (Alias: <strong class="text-white font-mono">LF2024.MP</strong>), Mercado Pago (QR o link de pago) y efectivo al retirar personalmente en el local.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 6: UBICACIÓN Y GOOGLE MAPS -->
+  <section class="w-full bg-surface-container-low py-12 px-4 lg:px-6 border-t border-surface-container-high/40" id="contacto-ubicacion">
+    <div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      
+      <div class="lg:col-span-5 space-y-4">
+        <span class="font-label-sm text-xs text-primary-container uppercase font-bold tracking-wider">Ubicación Estratégica</span>
+        <h2 class="font-headline-lg text-3xl text-primary font-bold">Vení a Nuestro Local</h2>
+        <p class="font-body-md text-secondary">
+          Atención al público, asesoramiento técnico personalizado y entrega inmediata en Villa Martelli.
+        </p>
+
+        <div class="space-y-3 pt-1">
+          <div class="flex items-start gap-3 p-3 bg-surface-container rounded-lg border border-surface-container-high/30">
+            <span class="material-symbols-outlined text-primary-container text-[22px]">location_on</span>
+            <div>
+              <span class="font-label-md text-sm text-primary font-bold block">Dirección</span>
+              <span class="font-body-sm text-xs text-secondary">Gral. Juan Gregorio Las Heras 5265, B1603 Villa Martelli, Prov. de Buenos Aires</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-3 bg-surface-container rounded-lg border border-surface-container-high/30">
+            <span class="material-symbols-outlined text-tertiary-container text-[22px]">schedule</span>
+            <div>
+              <span class="font-label-md text-sm text-primary font-bold block">Horario de Atención</span>
+              <span class="font-body-sm text-xs text-secondary">Lunes a domingo: 09:00 — 21:00 hs. (De corrido)</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-3 bg-surface-container rounded-lg border border-surface-container-high/30">
+            <span class="material-symbols-outlined text-tertiary-container text-[22px]">chat</span>
+            <div>
+              <span class="font-label-md text-sm text-primary font-bold block">Línea Oficial WhatsApp</span>
+              <span class="font-body-sm text-xs text-secondary">+54 9 11 6824-3265</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 pt-2">
+          <a class="px-4 py-2 bg-primary-container text-black font-label-md text-xs font-bold rounded-lg flex items-center gap-1.5 hover:bg-primary-fixed transition-colors" href="https://www.google.com/maps/search/?api=1&query=Gral.+Juan+Gregorio+Las+Heras+5265,+Villa+Martelli" rel="noopener" target="_blank">
+            <span class="material-symbols-outlined text-[18px]">map</span>
+            Ver en Google Maps
+          </a>
+          <a class="px-4 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-xs font-bold rounded-lg flex items-center gap-1.5 transition-colors border border-surface-container-high/50" href="https://www.google.com/maps/dir/?api=1&destination=Gral.+Juan+Gregorio+Las+Heras+5265,+Villa+Martelli" rel="noopener" target="_blank">
+            <span class="material-symbols-outlined text-[18px]">directions</span>
+            Cómo llegar
+          </a>
+          <a class="px-4 py-2 bg-surface-container hover:bg-surface-container-high text-primary-container font-label-md text-xs font-bold rounded-lg flex items-center gap-1.5 transition-colors border border-surface-container-high/50" href="https://instagram.com/fabricktecno" rel="noopener" target="_blank">
+            <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+            Instagram
+          </a>
+        </div>
+      </div>
+
+      <!-- MAPA EMBEBIDO -->
+      <div class="lg:col-span-7 h-[360px] rounded-xl overflow-hidden shadow-xl border border-surface-container-high relative bg-surface-container">
+        <iframe allowfullscreen="" class="w-full h-full border-0 filter grayscale invert contrast-125 opacity-80 hover:opacity-100 transition-opacity" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Gral.+Juan+Gregorio+Las+Heras+5265,+Villa+Martelli,+Provincia+de+Buenos+Aires&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Ubicación FABRI K TECNO"></iframe>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- MODAL DE DETALLE DE PRODUCTO -->
+<div aria-modal="true" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-surface-container-lowest/85 backdrop-blur-sm" id="product-modal" role="dialog">
+  <div class="bg-surface-container rounded-xl w-full max-w-3xl overflow-hidden shadow-2xl max-h-[92vh] flex flex-col md:flex-row relative border border-surface-container-high" onclick="event.stopPropagation()">
+    <button aria-label="Cerrar detalle de producto" class="absolute top-3 right-3 z-10 w-9 h-9 bg-surface-container-highest/90 hover:bg-surface-bright rounded-full flex items-center justify-center text-on-surface cursor-pointer transition-colors" onclick="closeProductModal()" type="button">
+      <span class="material-symbols-outlined text-[20px]">close</span>
+    </button>
+    
+    <div class="w-full md:w-1/2 p-6 bg-[#141820] flex flex-col justify-center items-center relative border-b md:border-b-0 md:border-r border-surface-container-high/40">
+      <div class="relative w-full h-64 sm:h-80 rounded-lg overflow-hidden flex items-center justify-center">
+        <img alt="Producto" class="w-full h-full object-contain p-2" height="320" id="modal-img" src="" width="320">
+        <span class="absolute top-2 left-2 font-label-sm text-xs bg-primary-container text-black px-2 py-0.5 rounded font-bold uppercase" id="modal-badge">Producto</span>
+      </div>
+    </div>
+
+    <div class="w-full md:w-1/2 p-6 sm:p-8 flex flex-col justify-between overflow-y-auto space-y-4 bg-surface-container">
+      <div class="space-y-2">
+        <span class="font-label-sm text-xs text-primary-container font-bold uppercase" id="modal-category">CATEGORÍA</span>
+        <h3 class="font-headline-sm text-xl text-primary font-bold leading-tight" id="modal-title">Nombre del Producto</h3>
+        <p class="font-body-sm text-xs text-secondary leading-relaxed" id="modal-desc">Descripción técnica del producto.</p>
+        
+        <div class="pt-2 flex items-baseline gap-3">
+          <span class="font-price-hero text-2xl text-primary-container font-bold" id="modal-price">$0</span>
+          <span class="font-label-md text-xs text-secondary line-through hidden" id="modal-oldprice">$0</span>
+        </div>
+
+        <div class="pt-1">
+          <span class="inline-flex items-center gap-1 font-label-sm text-xs text-tertiary-container font-bold">
+            <span class="material-symbols-outlined text-[16px]">check_circle</span>
+            En Stock / Disponible para entrega
+          </span>
+        </div>
+      </div>
+
+      <div class="space-y-2 pt-4 border-t border-surface-container-high/60">
+        <button class="w-full py-3 bg-tertiary-container hover:bg-tertiary-fixed text-black font-label-md text-xs font-bold rounded-lg flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer" id="modal-wa-btn" type="button">
+          <span class="material-symbols-outlined text-[20px]">chat</span>
+          CONSULTAR POR WHATSAPP
+        </button>
+
+        <button class="w-full py-2.5 bg-primary-container hover:bg-primary-fixed text-black font-label-md text-xs font-bold rounded-lg flex items-center justify-center gap-2 transition-colors cursor-pointer" id="modal-add-btn" type="button">
+          <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+          Añadir al Carrito
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BACKDROP CARRITO DRAWER -->
+<div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-sm z-50 hidden transition-opacity" id="cart-backdrop" onclick="closeCartDrawer()"></div>
+
+<!-- CARRITO DRAWER -->
+<aside class="fixed top-0 right-0 w-full sm:w-[440px] h-full bg-surface-container-low z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col shadow-2xl border-l border-surface-container-high" id="cart-drawer">
+  <div class="p-6 flex items-center justify-between bg-surface-container-lowest border-b border-surface-container-high/60">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-primary-container text-[24px]">shopping_bag</span>
+      <h2 class="font-headline-sm text-lg text-primary font-bold">Tu Carrito</h2>
+    </div>
+    <button aria-label="Cerrar carrito" class="text-secondary hover:text-on-surface p-1 cursor-pointer" onclick="closeCartDrawer()" type="button">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+  
+  <div class="p-4 bg-surface-container border-b border-surface-container-high/40">
+    <div class="flex justify-between items-center mb-1">
+      <span class="font-label-sm text-xs text-secondary uppercase tracking-wider">Atención y Retiro</span>
+      <span class="font-label-sm text-xs text-primary-container font-bold">Villa Martelli</span>
+    </div>
+    <div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+      <div class="w-full h-full bg-primary-container"></div>
+    </div>
+  </div>
+
+  <div class="flex-1 overflow-y-auto p-6 space-y-3" id="drawer-items-list">
+    <!-- Items inyectados -->
+  </div>
+
+  <div class="p-6 bg-surface-container-lowest space-y-4 border-t border-surface-container-high/60">
+    <div class="space-y-1">
+      <div class="flex justify-between font-body-sm text-xs text-secondary">
+        <span>Subtotal estimado</span>
+        <span class="font-price-hero font-bold text-on-surface text-sm" id="drawer-subtotal-val">$0</span>
+      </div>
+      <div class="flex justify-between font-headline-sm text-base text-primary font-bold">
+        <span>Total</span>
+        <span class="text-primary-container font-price-hero text-xl" id="drawer-total-val">$0</span>
+      </div>
+    </div>
+    <div class="space-y-2">
+      <button class="w-full py-2.5 bg-primary-container hover:bg-primary-fixed text-black font-label-md text-xs font-bold rounded-lg flex items-center justify-center gap-1.5 transition-colors cursor-pointer" onclick="closeCartDrawer(); navTo('checkout-section');" type="button">
+        <span class="material-symbols-outlined text-[18px]">credit_card</span>
+        Finalizar Pedido (Checkout)
+      </button>
+      <a class="w-full py-2.5 bg-surface-container hover:bg-surface-container-high text-tertiary-container font-label-md text-xs font-bold rounded-lg flex items-center justify-center gap-1.5 transition-colors" href="#" id="drawer-wa-order-btn" rel="noopener" target="_blank">
+        <span class="material-symbols-outlined text-[18px]">chat</span>
+        Comprar por WhatsApp
+      </a>
+    </div>
+  </div>
+</aside>
+
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 pointer-events-none">
+  <a aria-label="Chat directo de WhatsApp con FABRI K TECNO" class="pointer-events-auto w-14 h-14 rounded-full bg-[#25D366] text-black hover:scale-110 shadow-2xl flex items-center justify-center transition-transform cursor-pointer" href="https://wa.me/5491168243265?text=Hola%20FABRI%20K%20TECNO%20%F0%9F%91%8B%20Quería%20consultar%20por%20un%20producto." rel="noopener" target="_blank">
+    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.18-.544-1.898-.787-3.125-2.73-3.22-2.857-.095-.128-.772-1.028-.772-1.959 0-.93.488-1.385.661-1.574.174-.189.381-.237.508-.237.127 0 .254.002.365.008.118.006.277-.045.433.332.162.392.553 1.35.602 1.45.049.1.082.217.016.347-.066.13-.1.211-.198.326-.098.115-.207.257-.296.345-.1.099-.204.207-.088.406.116.199.516.852 1.107 1.378.761.677 1.402.887 1.601.986.199.099.316.088.432-.046.117-.133.502-.584.636-.784.133-.2.268-.166.451-.099.183.066 1.161.547 1.36.646.199.099.332.148.381.232.049.083.049.48-.095.885zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.178L2 22l4.957-1.399C8.423 21.498 10.15 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"></path></svg>
+  </a>
+</div>
+
+<!-- FOOTER OFICIAL -->
+<footer class="w-full bg-surface-container-lowest pt-12 pb-8 border-t border-surface-container-high/40">
+  <div class="max-w-[1280px] mx-auto px-4 lg:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    
+    <div class="space-y-4">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-full bg-primary-container text-black font-bold flex items-center justify-center text-sm">FK</div>
+        <div class="flex flex-col">
+          <span class="font-headline-md text-base font-bold tracking-tight text-primary leading-none">FABRI K TECNO</span>
+          <span class="font-label-sm text-[11px] text-secondary uppercase font-semibold">tu tienda de soluciones</span>
+        </div>
+      </div>
+      <p class="font-body-sm text-xs text-secondary">
+        Equipamiento, repuestos certificados y servicio técnico de alta complejidad a cargo de Silvino.
+      </p>
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+        <span class="font-label-sm text-xs text-on-surface">Laboratorio Técnico Operativo</span>
+      </div>
+    </div>
+
+    <div class="space-y-3">
+      <h4 class="font-label-lg text-xs text-primary uppercase font-bold">Ubicación y Horarios</h4>
+      <ul class="space-y-2 font-body-sm text-xs text-secondary">
+        <li class="flex items-start gap-2">
+          <span class="material-symbols-outlined text-primary-container text-[18px]">store</span>
+          <span>Gral. Juan Gregorio Las Heras 5265, Villa Martelli</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="material-symbols-outlined text-secondary text-[18px]">schedule</span>
+          <span>Lunes a domingo: 09:00 — 21:00 hs.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="material-symbols-outlined text-secondary text-[18px]">local_shipping</span>
+          <span>Envíos en el día coordinados por WhatsApp</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="space-y-3">
+      <h4 class="font-label-lg text-xs text-primary uppercase font-bold">Contacto Directo</h4>
+      <ul class="space-y-2 font-body-sm text-xs text-secondary">
+        <li>
+          <a class="flex items-center gap-2 text-tertiary-container hover:underline" href="https://wa.me/5491168243265?text=Hola%20FABRI%20K%20TECNO%20%F0%9F%91%8B%20Quería%20consultar%20por%20un%20producto." rel="noopener" target="_blank">
+            <span class="material-symbols-outlined text-[18px]">chat</span>
+            WhatsApp: +54 9 11 6824-3265
+          </a>
+        </li>
+        <li>
+          <a class="flex items-center gap-2 hover:text-on-surface transition-colors" href="#servicio-tecnico" onclick="navTo('servicio-tecnico'); return false;">
+            <span class="material-symbols-outlined text-[18px]">build</span>
+            Turnos Servicio Técnico con Silvino
+          </a>
+        </li>
+        <li>
+          <a class="flex items-center gap-2 hover:text-on-surface transition-colors" href="https://instagram.com/fabricktecno" rel="noopener" target="_blank">
+            <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+            Instagram Oficial
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="space-y-3">
+      <h4 class="font-label-lg text-xs text-primary uppercase font-bold">Medios de Pago</h4>
+      <p class="font-body-sm text-xs text-secondary">Procesamiento transparente y directo:</p>
+      <div class="flex flex-wrap gap-2 pt-1">
+        <span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-xs text-on-surface border border-surface-container-high/40">Mercado Pago</span>
+        <span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-xs text-on-surface border border-surface-container-high/40">Transferencia (LF2024.MP)</span>
+        <span class="px-2.5 py-1 bg-surface-container rounded font-label-sm text-xs text-on-surface border border-surface-container-high/40">Efectivo en Tienda</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="max-w-[1280px] mx-auto px-4 lg:px-6 mt-8 pt-4 flex flex-col sm:flex-row justify-between items-center gap-4 border-t border-surface-container-high/30">
+    <span class="font-body-sm text-xs text-secondary">© 2024 FABRI K TECNO — Tu Tienda de Soluciones. Todos los derechos reservados.</span>
+    <div class="flex items-center gap-4 font-label-sm text-xs text-secondary">
+      <a class="hover:text-on-surface transition-colors" href="#contacto-ubicacion" onclick="navTo('contacto-ubicacion'); return false;">Cómo llegar</a>
+      <a class="hover:text-on-surface transition-colors" href="https://www.google.com/maps/search/?api=1&query=Gral.+Juan+Gregorio+Las+Heras+5265,+Villa+Martelli" rel="noopener" target="_blank">Google Maps</a>
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIPT CENTRALIZADO Y MODULAR -->
+<script>
+  const APP_CONFIG = {
+    brandName: "FABRI K TECNO",
+    whatsappNumber: "5491168243265",
+    whatsappDisplay: "+54 9 11 6824-3265",
+    address: "Gral. Juan Gregorio Las Heras 5265, B1603 Villa Martelli, Provincia de Buenos Aires",
+    businessHours: "Lunes a domingo: 09:00 — 21:00 hs.",
+    instagramUrl: "https://instagram.com/fabricktecno",
+    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Gral.+Juan+Gregorio+Las+Heras+5265,+Villa+Martelli",
+    howToArriveUrl: "https://www.google.com/maps/dir/?api=1&destination=Gral.+Juan+Gregorio+Las+Heras+5265,+Villa+Martelli",
+    aliasMercadoPago: "LF2024.MP"
+  };
+
+  const CATEGORIES_METADATA = {
+    "TODOS": {
+      title: "Catálogo Completo FABRI K TECNO",
+      desc: "Mostrando todos los productos disponibles con entrega en el día o retiro en local."
+    },
+    "AUDIO": {
+      title: "Audio & Auriculares",
+      desc: "Auriculares inalámbricos, TWS ANC, parlantes y vinchas de alta fidelidad acústica."
+    },
+    "TECNOLOGÍA": {
+      title: "Tecnología & Hardware",
+      desc: "Baterías magnéticas, cargadores de alta potencia y periféricos certificados."
+    },
+    "ACCESORIOS": {
+      title: "Accesorios & Cables",
+      desc: "Cables reforzados Lightning/USB-C, adaptadores y accesorios esenciales."
+    },
+    "SOPORTES": {
+      title: "Soportes & Cargadores de Auto",
+      desc: "Cargadores vehiculares de carga ultra rápida y fijaciones resistentes."
+    },
+    "COCINA & ELECTRO": {
+      title: "Cocina & Electrodomésticos",
+      desc: "Waffleras, tostadoras, licuadoras, mixers, cafeteras italianas y afiladores."
+    },
+    "OFERTAS": {
+      title: "Ofertas Especiales",
+      desc: "Precios de liquidación y descuentos imperdibles en stock seleccionado."
+    },
+    "NOVEDADES": {
+      title: "Novedades & Últimos Ingresos",
+      desc: "Lo más nuevo ingresado al taller y catálogo de FABRI K TECNO."
+    }
+  };
+
+  const products = [
+    {
+      id: "prod-wafflera-oryx",
+      name: "Wafflera Eléctrica Oryx S1813",
+      category: "COCINA & ELECTRO",
+      price: 28000,
+      oldPrice: null,
+      offer: false,
+      isNew: true,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDZIg8XllXNKUTqfnjrIOKxpQcAxVcE83jnHyGSwMZ0O4wkDn5AKuvvnNQwyjxYhydMxpE4Dqz_MHM504FgWUB3fowyFA0RGlemvr08isSTS5d83eTp7cNlTPuJaM90H877W_uawZzpLHJhB5fjaFgmSbNtVLfjYZQ_Qyv840kMdG2Iz47oYN4HwmhfnF1jW5NdHi_tXmOkVeEqzsrRSUUjZUPv8RVkAIyowgXxsscedChutbAOFIrv3FU0eVHfTkX-xf8",
+      description: "Placas antiadherentes de calentamiento parejo, luces LED de encendido y temperatura ideal con traba de seguridad.",
+      available: true
+    },
+    {
+      id: "prod-tostadora-yelmo",
+      name: "Tostadora Eléctrica Yelmo TO 3006 700W",
+      category: "COCINA & ELECTRO",
+      price: 32000,
+      oldPrice: 38000,
+      offer: true,
+      isNew: false,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDYdhP-lR_uiD4RRbIdyjPlDX8HaxHUa6MbYuivOEIyDDCDvlTmWNjd2TZRgYERKJO1iIcIeEQDLX0DtGUBffyO3eOkx6jOu1PNTRm8jiiKlSlSN6AMx7SgCbTvDmxOpYuouiPTYLXCwCfaSM0CiYkAPMPveo_r91Xh-_YdpXjT5xZw7OslqyRTVJ212_CT5ePs3KAeMPK7FXL-tOO6JD2ywVG8yYdciG93rJwL_wI7BgDFE8-x2DjgDABvxqbGuEqgKNQ",
+      description: "Tostadora de diseño vintage militar con 6 niveles de potencia, botón cancel y ranura ancha para panificados.",
+      available: true
+    },
+    {
+      id: "prod-afilador-sharpener",
+      name: "Afilador de Cuchillos Manual 3 Niveles RS-168",
+      category: "COCINA & ELECTRO",
+      price: 6000,
+      oldPrice: null,
+      offer: false,
+      isNew: false,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB9YSkKwHaWULtG-nlERLFp_KlOqKfj5caPFSygiOLGdoey0zQ3dmrTfapw4QgQb0Ij-Andp95GIyzD47Kd6vpY6egMtlT6fvwzOck-In9Jr-NGpsi9cWH3a9C75e7-ACv6DEF_rkLdd62TpXCM1j67XMQ6zhElflTtoTCgtrN1yI3K2-VAFZIv5fR92y4085fUJ5RZL41GhUGdeRuc5-wwXvAtZr3VF8iG04UDQpdbqHcJLfnpYF1A01bUhWEzqmbtYDE",
+      description: "Base antideslizante con 3 etapas de afilado cerámico y tungsteno para devolver el filo en segundos.",
+      available: true
+    },
+    {
+      id: "prod-licuadora-profile",
+      name: "Licuadora de Vidrio Profile PR-600 Pica Hielo",
+      category: "COCINA & ELECTRO",
+      price: 55000,
+      oldPrice: 65000,
+      offer: true,
+      isNew: true,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCtkdC8BFGgkVtlLmWjjjU4tmAufb9cObmthOP-RdbzdKYBOuDkr5MlSsl4Gp_2RqEnkl8Gc0wde6Vy9hwnLwjCPRM0yex8bHjL9syfx2U6yNP2agZ4H7HTFHAbTz4PF5ZPxXKVTPK5nuUXFK2hnpqGW_rr9J-cZkEd_AajOC4l0gbe3RSuG1vC2nvvhgtRxIWVlMpWFlxtFTLzbllpUDBsmlS__Mp2f4edELF-fgTrTyPr_L4zq_lUMnisuNWAje9i3OU",
+      description: "Jarra de vidrio templado de 1.5L, cuchillas de acero inoxidable reforzadas aptas para picar hielo.",
+      available: true
+    },
+    {
+      id: "prod-plancha-profile",
+      name: "Plancha a Vapor Profile PR578-22B 2200W",
+      category: "COCINA & ELECTRO",
+      price: 30000,
+      oldPrice: null,
+      offer: false,
+      isNew: false,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAq1ievFl0ThKb7LPv38cMOA3cmVALl008LUilrGWGhethwoM45ouNzOjz3lX8PNQmusRYazP3-CgZa687Ha27G0cuv_Oy0jjwBPq1GIixltbi6Azyq6GJsk4wsfVyRFVDW26vsmbrnL8BfAg7dJM-ISOs8bxcRyCXbn34eNHVWYYpbsNRdEhvW4q8Ku-0tSa0svqnsTGxYmB5kJPIIZOHMe1zJQrkve1D6GwULaF063GWTAIUYV_9CuKjHlXVYrNjWptM",
+      description: "Suela cerámica autolimpiante, vapor vertical para prendas colgadas y selector de temperatura preciso.",
+      available: true
+    },
+    {
+      id: "prod-mixer-startrak",
+      name: "Mixer de Acero Star Trak 1000W con Accesorios STMA-1000A",
+      category: "COCINA & ELECTRO",
+      price: 55000,
+      oldPrice: null,
+      offer: false,
+      isNew: true,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBey0QJPSn5rvKj1v0V_uBYHIpuWhpwTu8XWdqD5Ld4kKO7Y9ej13yECU6COYVUn8mxj1X6UykNEPmJdeZBlSHqQe1Grsj1U1m0ynDY7dwvUGV1EuGOg7uMSZ3FnyAwAxhF3q26097H2Dl02N2ItjC4M2ic0QVV4z46gPDF4wYZmgrDZ9xijV54HA8SsE4Y5Oy1XWOL8aEvm-_oOVgKoxI0maW5CpO-pO8ML1O4BJjXyadC8p5NOt6-P-rLEshqUAVWHtk",
+      description: "Potencia de 1000 Watts con brazo de acero inoxidable, vaso medidor graduado, picador y batidor de alambre.",
+      available: true
+    },
+    {
+      id: "prod-maquina-cupcakes",
+      name: "Máquina de Cupcakes Oryx OR-C 02",
+      category: "COCINA & ELECTRO",
+      price: 38000,
+      oldPrice: 45000,
+      offer: true,
+      isNew: false,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA0q3dIO_xZl8LkiDiJ7pAg2kBcCmmPq4qTxGjcdLzOgf71p-P41JQtxeB0x_F72gvTAB9vU7Dio19M70a-rO7wHhQOEjp4q8B0polWUnVpd-VchKaXf1_KuXvvNFz3WKzlWrKwWfLrElsyGov4jwHO_Ap1LuQ5QkL2LZcafbtw8SXdxKVnPWfYlA7kOPiLN2g5ddXPLH43MwHgXkOtd-nHN8jPqxh9qa_AU3KXLydW96OixYInJ6OhN8t2VaM2kjkNevg",
+      description: "Cocina mini tortitas y cupcakes esponjosos en menos de 10 minutos con placas antiadherentes y corte térmico.",
+      available: true
+    },
+    {
+      id: "prod-cafetera-gentil",
+      name: "Cafetera Italiana Gentil 9 Tazas GN-078",
+      category: "COCINA & ELECTRO",
+      price: 22000,
+      oldPrice: null,
+      offer: false,
+      isNew: false,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBd7q19R1GUky3xFR-HadH9Ca-0p0umaPgXiw4CtbIwcezaKRY4MNCaAZAWTP7YkZqyFOunjja-rWVNDX4x2uzxNMenCAqQOEUM1HH-Z2gqjyqVxbN1wYnGY2NcIxi6Gz1IWll5YTA4_worA3fpvP1hE5TaLw4asTDxzlzsorBamhFIM9DWBLgHBnGZCrw-N9nO3w6nfOQ5Rs3AkzUNHY2rXzGwCsTLN4DkRTYvx4qMSYH7l2jtmDsdIcOgNkqG-p3u8Sg",
+      description: "Cafetera moka tradicional en aluminio pulido de alto grosor con válvula de seguridad y capacidad para 9 tazas.",
+      available: true
+    },
+    {
+      id: "prod-jbl-tune520",
+      name: "Auriculares Bluetooth JBL Tune 520BT Noise Free",
+      category: "AUDIO",
+      price: 25000,
+      oldPrice: 32000,
+      offer: true,
+      isNew: true,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuD7kFP4R4EL5gtM5E-5hJ6tUhbaXrGmf_hT8sR6Rd1J4VoDcC2t2eEI-XvW9k03qLAm7yUMD16uAT_xi209eax9fgGGEqGT_fZktUZmMzlGVMLDfFSmVjtTrNYJ_f9wMb99BJCZekWDAZauYBN9XFdSw4gdn6R4IgY4wCiG1Kevqs4xV9MZKOPVxzgAYw5DiUoGdA1MKKgzHvnebAFM7QkZhoVdeMVqU1SypygGgxuDLh27Qi3gJEbqUYzJwTrUecOfAMI",
+      description: "Sonido JBL Pure Bass, hasta 26 horas de batería continua, llamadas manos libres y emparejamiento rápido.",
+      available: true
+    },
+    {
+      id: "prod-auricular-gamer-capitan",
+      name: "Auricular Gamer Inalámbrico Capitán 806-45 Bass",
+      category: "AUDIO",
+      price: 18500,
+      oldPrice: null,
+      offer: false,
+      isNew: true,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBRoKRafMGTKu_PxvVs_n5w265tkUlzk7PMyolcnhAJL4VcdEnQnBx51nMBPwFw273gFkbJOApjpfpTa0sYBFxCA9CnxnOdgKjFTKq77bYjpDHkGS1WZMh7rG9oNFPs7om-fKOJLShdp4O6elNzvwBb50US1Ze5cLEFuFYYWSW4ImGQFPDPgSX1pPPRW08G8dGjgIcybXCT7lgwxs8q6X3N0tTuXBdZTVee5UZUlDHQt6U1NhSKSbGkldN3-Pfa-rejaHg",
+      description: "Conexión Wireless 5.0, vincha ergonómica acolchada, diseño temático y sonido estéreo envolvente.",
+      available: true
+    },
+    {
+      id: "prod-auriculares-soul-chillout",
+      name: "Auriculares Soul Chillout BT 300 Wireless",
+      category: "AUDIO",
+      price: 25000,
+      oldPrice: null,
+      offer: false,
+      isNew: false,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBeB0ZGDrSG4WxQ5WF6-ztWnFrSBBxRb25zO60NP1FPYZrWpFmaDOM4tmubMQxnJAgyN03hu12Vhz5VBTRDhVVJrFusGbpRdaM1ETdIl4AldYdn9ZyptFFPotS1Xvadp9_RzRkDZxbeapzJaq4CF2cca4gFeWR1IZJ2AtIxFoLYCrTFfoeQ3dgCRVqdfPLOAE7U_U8SnGIohcQd3DPleVzG4oVGyX5AUYdTUGkdLWH-7nrjk52OsKqyw4kgqkE-V97kpVU",
+      description: "Diadema con malla respirable tipo pro, micrófono integrado, graves profundos y almohadillas soft touch.",
+      available: true
+    },
+    {
+      id: "prod-sandwichera-onica",
+      name: "Sandwichera Eléctrica Onica OA-ED001 con Luz Indicadora",
+      category: "COCINA & ELECTRO",
+      price: 25000,
+      oldPrice: 29000,
+      offer: true,
+      isNew: false,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCnGOrkpou9l6tDCxPTmdOOxzJeKnHYviFZL0Xw7lytWmG-DHF6dPFd9dFX-HhlGD9faIGGetuFb2w3UrmJIYoVTtFZKL5Qa_EZ-e4iFlX-ZRYxI5iG4Wu3CjLXfQaWXgi2Xpc3rCXtLHlZw3_qoABI1zgvN8-9NWrWh6C911NOLqMtdpHqBZ6bD8ALfVuS7qVG-UbCjb-YhuirgR7LzIQK1nHo3jOeqzFgPJLyHzYVLa3JNfCxppwUUiklkLRK-Bdh9Aw",
+      description: "Sellado triangular perfecto para tostados, antiadherente ultra resistente y rápida temperatura de cocción.",
+      available: true
+    },
+    {
+      id: "prod-magsafe-battery",
+      name: "Battery Pack MagSafe Apple Compatible",
+      category: "TECNOLOGÍA",
+      price: 28500,
+      oldPrice: null,
+      offer: false,
+      isNew: true,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCmfY6DUCoQMWh-3_WSH3jZ3gQFJRsUFL_X6WcD8-uVJ71LqU_pmcA6juMMEJ0WCVB9UlQvNsMNuYGn-zzeoZ82IRwqYMtcr91jMk08Nxfo8Mc5cnTpCMXEj4YFVa4WSgIi1MdLdwjjMhwMSSfpB1lOiOWgqZrzTe9lGAswe_8ia-LYLi1tkF-m8zmP0tMizH-ywMKN4uFE723UeM1fSYM6MhDJZwmUJ9NvZ6BELoKRjokFr0WHpMvPPf4b-zjRfu8CjHk",
+      description: "Batería magnética portátil de carga por inducción inalámbrica. Se acopla de manera firme sin cables.",
+      available: true
+    },
+    {
+      id: "prod-cable-lightning",
+      name: "Cable Lightning a USB (1m) Original Calidad FK",
+      category: "ACCESORIOS",
+      price: 9500,
+      oldPrice: null,
+      offer: false,
+      isNew: false,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBX1rwvcbzfEE2kN5flFtXAgcJqyU2qpT0QjIN5MU4eBwQOVVf-CxJr6zJ-_KGuI3MM5Srqo0z1nvFwxoW-9EvxEjea6FMgu0sPZEzSlnXzBhD0aPef-VpAtgNX5PCxWAQfmJ7reGLYbv5Vvf76eSQEKLOTK0iNSSKDy8gXasYa4_bqvIny8qeb4LB1stOhJu3nN-WjqEqLPjHwN8ao4ECFzr4jUPRIxeXFKnOudhajjQvAnJDsrswZrumoC4yooYLnJPQ",
+      description: "Cable de transferencia de datos y carga segura con conectores reforzados contra quiebres accidentales.",
+      available: true
+    },
+    {
+      id: "prod-cargador-auto-pro21",
+      name: "Cargador de Auto Rápido Pro21 3.4A Dual USB + Type-C",
+      category: "SOPORTES",
+      price: 12500,
+      oldPrice: 15000,
+      offer: true,
+      isNew: true,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDakTkKPBPzTI-wz3eib9hIju6-9r4RswRMYIflb6DAXFUBMr9xH4KjbEMiBJyspYGsP6hRPiUzz_yarr9vzBNaz-QpeJUnEDIQDziNnWb3AhAQ56of34sc_FdppCuri2biS5QXoLbcwic-foEEHc-G9cbkAG6n7Zv50CoEQnGQRnSUzuejlLL5FmHryDdi9wq4Doc9mfiAMkxSFfcmMvbjxkcWqrgtuMqjL9RUyVGl6B--JQmhL7B6J4hWe4VyEqI2A1w",
+      description: "Doble puerto inteligente con protección de sobretensión para cargar simultáneamente dos dispositivos en el auto.",
+      available: true
+    },
+    {
+      id: "prod-humidificador-flor",
+      name: "Humidificador Difusor Aromático Simil Madera Ébano",
+      category: "TECNOLOGÍA",
+      price: 16000,
+      oldPrice: null,
+      offer: false,
+      isNew: false,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBAy4pVpcSTqSsviqt9QmVz9lM-pz6vbQLnBwKBh4jY3HTg7FoEx5YN42UcGHhKJt0aXl8pY1AFfusnsmhoUfn2wN8VOq6DsUldlybpuamJtbsgxPPSDRL4B0CSdKd-VVkv7OawpNDRdRC8tVpxGXjnG7XhgLR-5MWNu4IT0QPj2pZJ8Yn5zEXLaS9uiwdXFuUPQtqYZqKpcUv8UqwYeD2KtpWP8YVHoGCS27HNxGmw3VCPLs9x-8brNmYlKjhRp_i0jGw",
+      description: "Difusor de niebla ultrasónica con botón táctil iluminado, diseño de gota elegante y conexión USB.",
+      available: true
+    },
+    {
+      id: "prod-humidificador-volcan",
+      name: "Humidificador Volcán Fogata Ultrasónico Madera",
+      category: "TECNOLOGÍA",
+      price: 17500,
+      oldPrice: null,
+      offer: false,
+      isNew: true,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuADyKpKQ5P2ytkXQhzExQPXk2JsAzhnPeWazOAKB0B9KpIDo_ylEhEJQYscdp13Ek1a3J8lIM6lYlTAfg480ZVeqDRtCgoYDgKhl7VkJs4YnvfeIeK_swu8XZRCh8iSz2j7b2fAe_2dqX_eSIvKEucLq1zvTWMDJiBhKdf3QD25wIBovcg8EU2_5mD_qm1J7LluTJo760I4-y3tnWnQcINbDP_iJ4V359g26Dphg0T_GONPQIZtYhS4WMxvVCpxJKjRzwg",
+      description: "Efecto volcánico con piedras decorativas superiores, niebla continua y funcionamiento ultra silencioso.",
+      available: true
+    },
+    {
+      id: "prod-humidificador-esfera",
+      name: "Humidificador Esfera Luz Cálida Roble Claro USB",
+      category: "TECNOLOGÍA",
+      price: 14500,
+      oldPrice: 18000,
+      offer: true,
+      isNew: false,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCtXz5ZDCVSE-nLakyfSvCwslJbO4-qO88ALWfOBY7VJgUzky-KPHURDJl7IdJvPlJhJ0HH34DTojNBlFdx55-Uuj6h5HZDcNHDiXzkn1z2DUjcOLGWaTa7tayPqMx24MoJQjPrAGFmhFIjWUBWLAK9frRWPaBm7IHuch0zfKUzBpWFqlQP-lfBBm3RdFUzaPnlNzucBGTHo1sQCCSfpb41j3jD7T5xfvaGNx7Dg9rCdd5mOpsk4cR_NjFhA3j-mXnw9cg",
+      description: "Diseño esférico minimalista con anillo LED intermedio, ideal para escritorios de trabajo y mesas de noche.",
+      available: true
+    }
+  ];
+
+  let cart = [];
+  let currentFilter = "TODOS";
+  let activeSearchQuery = "";
+  let activeDetailProduct = null;
+
+  function initStore() {
+    loadCart();
+    renderProductsList();
+    updateCartUI();
+    checkCartRecoveryBanner();
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeProductModal();
+        closeCartDrawer();
+      }
+    });
+
+    const modal = document.getElementById("product-modal");
+    if (modal) {
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeProductModal();
+      });
+    }
+  }
+
+  function loadCart() {
+    try {
+      const saved = localStorage.getItem("fk_cart_items_live");
+      if (saved) cart = JSON.parse(saved);
+    } catch (e) {
+      cart = [];
+    }
+  }
+
+  function saveCart() {
+    try {
+      localStorage.setItem("fk_cart_items_live", JSON.stringify(cart));
+    } catch (e) {}
+    checkCartRecoveryBanner();
+  }
+
+  function checkCartRecoveryBanner() {
+    const banner = document.getElementById("cart-recovery-banner");
+    const dismissed = sessionStorage.getItem("fk_banner_dismissed");
+    if (banner) {
+      if (cart.length > 0 && !dismissed) {
+        banner.classList.remove("hidden");
+      } else {
+        banner.classList.add("hidden");
+      }
+    }
+  }
+
+  function dismissRecoveryBanner() {
+    sessionStorage.setItem("fk_banner_dismissed", "true");
+    const banner = document.getElementById("cart-recovery-banner");
+    if (banner) banner.classList.add("hidden");
+  }
+
+  function navTo(elementId) {
+    const el = document.getElementById(elementId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  function navCatalogAll() {
+    selectCategory("TODOS");
+    navTo("catalogo");
+  }
+
+  function focusCatalogSearch() {
+    navTo("catalogo");
+    setTimeout(() => {
+      const inp = document.getElementById("product-search-input");
+      if (inp) {
+        inp.focus();
+        inp.select();
+      }
+    }, 450);
+  }
+
+  function selectCategory(categoryKey, scrollDown = false) {
+    currentFilter = categoryKey;
+
+    document.querySelectorAll(".cat-pill-btn").forEach(btn => {
+      if (btn.getAttribute("data-cat") === categoryKey) {
+        btn.className = "cat-pill-btn px-4 py-1.5 rounded-lg font-label-md text-xs uppercase tracking-wider bg-primary-container text-black font-bold whitespace-nowrap shadow-sm cursor-pointer";
+      } else {
+        btn.className = "cat-pill-btn px-4 py-1.5 rounded-lg font-label-md text-xs uppercase tracking-wider bg-surface-container text-secondary hover:text-on-surface whitespace-nowrap cursor-pointer";
+      }
+    });
+
+    document.querySelectorAll(".header-navcat").forEach(tab => {
+      if (tab.textContent.trim() === categoryKey) {
+        tab.className = "header-navcat font-label-md text-[12px] uppercase tracking-wider text-primary-container font-bold whitespace-nowrap transition-colors cursor-pointer";
+      } else {
+        tab.className = "header-navcat font-label-md text-[12px] uppercase tracking-wider text-on-surface-variant hover:text-on-surface whitespace-nowrap transition-colors cursor-pointer";
+      }
+    });
+
+    const meta = CATEGORIES_METADATA[categoryKey] || CATEGORIES_METADATA["TODOS"];
+    const titleEl = document.getElementById("cat-desc-title");
+    const descEl = document.getElementById("cat-desc-text");
+    if (titleEl) titleEl.textContent = meta.title;
+    if (descEl) descEl.textContent = meta.desc;
+
+    renderProductsList();
+
+    if (scrollDown) {
+      navTo("catalogo");
+    }
+  }
+
+  function handleSearchInput(query) {
+    activeSearchQuery = query.trim().toLowerCase();
+    const clearBtn = document.getElementById("search-clear-btn");
+    if (clearBtn) {
+      if (activeSearchQuery.length > 0) clearBtn.classList.remove("hidden");
+      else clearBtn.classList.add("hidden");
+    }
+    renderProductsList();
+  }
+
+  function clearSearch() {
+    const inp = document.getElementById("product-search-input");
+    if (inp) inp.value = "";
+    activeSearchQuery = "";
+    const clearBtn = document.getElementById("search-clear-btn");
+    if (clearBtn) clearBtn.classList.add("hidden");
+    renderProductsList();
+  }
+
+  function resetSearchAndFilters() {
+    clearSearch();
+    selectCategory("TODOS", false);
+  }
+
+  function renderProductsList() {
+    const grid = document.getElementById("products-grid");
+    const emptyState = document.getElementById("empty-products-state");
+    const counterLabel = document.getElementById("products-counter-label");
+
+    if (!grid) return;
+
+    let filtered = products;
+
+    if (currentFilter === "OFERTAS") {
+      filtered = filtered.filter(p => p.offer === true);
+    } else if (currentFilter === "NOVEDADES") {
+      filtered = filtered.filter(p => p.isNew === true);
+    } else if (currentFilter !== "TODOS") {
+      filtered = filtered.filter(p => p.category === currentFilter);
+    }
+
+    if (activeSearchQuery.length > 0) {
+      filtered = filtered.filter(p => 
+        p.name.toLowerCase().includes(activeSearchQuery) ||
+        p.category.toLowerCase().includes(activeSearchQuery) ||
+        p.description.toLowerCase().includes(activeSearchQuery)
+      );
+    }
+
+    if (counterLabel) {
+      counterLabel.textContent = `${filtered.length} producto${filtered.length === 1 ? '' : 's'} disponible${filtered.length === 1 ? '' : 's'}`;
+    }
+
+    if (filtered.length === 0) {
+      grid.innerHTML = "";
+      if (emptyState) emptyState.classList.remove("hidden");
+      return;
+    }
+
+    if (emptyState) emptyState.classList.add("hidden");
+
+    grid.innerHTML = filtered.map(prod => {
+      const formattedPrice = "$" + prod.price.toLocaleString("es-AR");
+      const formattedOldPrice = prod.oldPrice ? "$" + prod.oldPrice.toLocaleString("es-AR") : null;
+      const waMsg = encodeURIComponent(`Hola FABRI K TECNO 👋 Quería consultar por el producto: ${prod.name} (${formattedPrice}). ¿Está disponible?`);
+      const waUrl = `https://wa.me/${APP_CONFIG.whatsappNumber}?text=${waMsg}`;
+
+      let badgeHtml = `<span class="absolute top-2 left-2 font-label-sm text-[10px] bg-surface-container-highest/90 text-primary-container px-2 py-0.5 rounded font-bold uppercase tracking-wider">${prod.category}</span>`;
+      if (prod.offer) {
+        badgeHtml = `<span class="absolute top-2 left-2 font-label-sm text-[10px] bg-primary-container text-black px-2 py-0.5 rounded font-bold uppercase tracking-wider">¡OFERTA!</span>`;
+      } else if (prod.isNew) {
+        badgeHtml = `<span class="absolute top-2 left-2 font-label-sm text-[10px] bg-tertiary-container text-black px-2 py-0.5 rounded font-bold uppercase tracking-wider">NUEVO</span>`;
+      }
+
+      return `
+        <article class="bg-surface-container rounded-xl overflow-hidden shadow-md hover:shadow-xl flex flex-col justify-between group transition-all border border-surface-container-high/40 hover:border-primary-container/40">
+          <div class="relative w-full h-60 bg-[#141820] overflow-hidden cursor-pointer flex items-center justify-center p-3" onclick="openProductModal('${prod.id}')">
+            <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            ${badgeHtml}
+            <button type="button" aria-label="Ver detalle de ${prod.name}" onclick="event.stopPropagation(); openProductModal('${prod.id}')" class="absolute bottom-2 right-2 px-2 py-1 bg-surface-container-lowest/80 backdrop-blur-sm rounded font-label-sm text-[11px] text-on-surface hover:text-primary-container flex items-center gap-1 cursor-pointer">
+              <span class="material-symbols-outlined text-[14px]">visibility</span> Ver detalle
+            </button>
+          </div>
+
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3 bg-surface-container">
+            <div class="space-y-1 cursor-pointer" onclick="openProductModal('${prod.id}')">
+              <span class="font-label-sm text-[11px] text-secondary uppercase tracking-wider">${prod.category}</span>
+              <h3 class="font-headline-sm text-sm text-primary font-bold line-clamp-2 leading-snug">${prod.name}</h3>
+            </div>
+
+            <div class="space-y-2">
+              <div class="flex items-baseline justify-between">
+                <div class="flex items-baseline gap-2">
+                  <span class="font-price-hero text-lg text-primary-container font-bold tracking-tight">${formattedPrice}</span>
+                  ${formattedOldPrice ? `<span class="font-label-sm text-xs text-secondary line-through">${formattedOldPrice}</span>` : ''}
+                </div>
+                <span class="font-label-sm text-[11px] text-tertiary-container font-bold flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-[14px]">bolt</span> En el día
+                </span>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2 pt-1">
+                <button type="button" onclick="addToCartById('${prod.id}')" class="py-1.5 bg-primary-container hover:bg-primary-fixed text-black font-label-sm text-xs font-bold rounded flex items-center justify-center gap-1 transition-all cursor-pointer shadow-sm">
+                  <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+                  Añadir
+                </button>
+                <a href="${waUrl}" target="_blank" rel="noopener" class="py-1.5 bg-surface-container-highest hover:bg-surface-bright text-tertiary-container font-label-sm text-xs font-bold rounded flex items-center justify-center gap-1 transition-colors">
+                  <span class="material-symbols-outlined text-[16px]">chat</span>
+                  Consultar
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join("");
+  }
+
+  function openProductModal(productId) {
+    const prod = products.find(p => p.id === productId);
+    if (!prod) return;
+
+    activeDetailProduct = prod;
+
+    const modal = document.getElementById("product-modal");
+    const img = document.getElementById("modal-img");
+    const title = document.getElementById("modal-title");
+    const cat = document.getElementById("modal-category");
+    const desc = document.getElementById("modal-desc");
+    const price = document.getElementById("modal-price");
+    const oldPrice = document.getElementById("modal-oldprice");
+    const badge = document.getElementById("modal-badge");
+    const waBtn = document.getElementById("modal-wa-btn");
+    const addBtn = document.getElementById("modal-add-btn");
+
+    img.src = prod.image;
+    img.alt = prod.name;
+    title.textContent = prod.name;
+    cat.textContent = prod.category;
+    desc.textContent = prod.description;
+    price.textContent = "$" + prod.price.toLocaleString("es-AR");
+
+    if (prod.oldPrice) {
+      oldPrice.textContent = "$" + prod.oldPrice.toLocaleString("es-AR");
+      oldPrice.classList.remove("hidden");
+    } else {
+      oldPrice.classList.add("hidden");
+    }
+
+    if (prod.offer) {
+      badge.textContent = "OFERTA ESPECIAL";
+      badge.className = "absolute top-2 left-2 font-label-sm text-xs bg-primary-container text-black px-2 py-0.5 rounded font-bold uppercase";
+    } else if (prod.isNew) {
+      badge.textContent = "NOVEDAD";
+      badge.className = "absolute top-2 left-2 font-label-sm text-xs bg-tertiary-container text-black px-2 py-0.5 rounded font-bold uppercase";
+    } else {
+      badge.textContent = "DISPONIBLE";
+      badge.className = "absolute top-2 left-2 font-label-sm text-xs bg-surface-container-highest text-primary px-2 py-0.5 rounded font-bold uppercase";
+    }
+
+    waBtn.onclick = () => {
+      const waMsg = encodeURIComponent(`Hola FABRI K TECNO 👋 Quería consultar por el producto: ${prod.name}. ¿Está disponible?`);
+      window.open(`https://wa.me/${APP_CONFIG.whatsappNumber}?text=${waMsg}`, '_blank');
+    };
+
+    addBtn.onclick = () => {
+      addToCartById(prod.id);
+      closeProductModal();
+      openCartDrawer();
+    };
+
+    modal.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeProductModal() {
+    const modal = document.getElementById("product-modal");
+    if (modal) modal.classList.add("hidden");
+    document.body.style.overflow = "";
+    activeDetailProduct = null;
+  }
+
+  function addToCartById(productId) {
+    const prod = products.find(p => p.id === productId);
+    if (!prod) return;
+
+    const existing = cart.find(item => item.id === prod.id);
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push({
+        id: prod.id,
+        name: prod.name,
+        price: prod.price,
+        image: prod.image,
+        quantity: 1
+      });
+    }
+
+    saveCart();
+    updateCartUI();
+  }
+
+  function changeCartQty(index, delta) {
+    if (cart[index]) {
+      cart[index].quantity += delta;
+      if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+      }
+      saveCart();
+      updateCartUI();
+    }
+  }
+
+  function removeCartItem(index) {
+    if (cart[index]) {
+      cart.splice(index, 1);
+      saveCart();
+      updateCartUI();
+    }
+  }
+
+  function updateCartUI() {
+    const listContainer = document.getElementById("drawer-items-list");
+    const badgeCounters = document.querySelectorAll(".cart-badge-counter");
+    const drawerSubtotal = document.getElementById("drawer-subtotal-val");
+    const drawerTotal = document.getElementById("drawer-total-val");
+    const drawerWaBtn = document.getElementById("drawer-wa-order-btn");
+
+    const chkItemsContainer = document.getElementById("chk-order-items");
+    const chkCount = document.getElementById("chk-items-count");
+    const chkSubtotal = document.getElementById("chk-subtotal-price");
+    const chkTotal = document.getElementById("chk-total-price");
+
+    let subtotal = 0;
+    let totalCount = 0;
+
+    cart.forEach(item => {
+      subtotal += item.price * item.quantity;
+      totalCount += item.quantity;
+    });
+
+    const formattedSubtotal = "$" + subtotal.toLocaleString("es-AR");
+
+    badgeCounters.forEach(b => b.textContent = totalCount);
+
+    if (drawerSubtotal) drawerSubtotal.textContent = formattedSubtotal;
+    if (drawerTotal) drawerTotal.textContent = formattedSubtotal;
+
+    if (listContainer) {
+      if (cart.length === 0) {
+        listContainer.innerHTML = `
+          <div class="py-12 text-center space-y-3 text-secondary">
+            <span class="material-symbols-outlined text-[48px] text-secondary/60">shopping_bag</span>
+            <p class="font-body-sm text-sm">Tu carrito está vacío actualmente.</p>
+            <button type="button" onclick="closeCartDrawer(); navTo('catalogo');" class="px-4 py-1.5 bg-surface-container-high rounded text-on-surface font-label-sm font-bold hover:bg-surface-bright transition-colors cursor-pointer text-xs">Ver Catálogo</button>
+          </div>
+        `;
+      } else {
+        listContainer.innerHTML = cart.map((item, idx) => `
+          <div class="flex gap-3 p-3 bg-surface-container rounded-lg items-center border border-surface-container-high/40">
+            <div class="w-14 h-14 bg-[#141820] rounded overflow-hidden flex-shrink-0 flex items-center justify-center p-1">
+              <img src="${item.image}" alt="${item.name}" class="w-full h-full object-contain" />
+            </div>
+            <div class="flex-1 flex flex-col justify-between">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-label-md text-xs text-on-surface font-bold line-clamp-1">${item.name}</span>
+                <span class="font-price-hero text-sm text-primary-container font-bold">$${(item.price * item.quantity).toLocaleString("es-AR")}</span>
+              </div>
+              <div class="flex items-center justify-between mt-2">
+                <div class="flex items-center bg-surface-container-highest rounded px-2 py-0.5 gap-2">
+                  <button type="button" aria-label="Disminuir cantidad" onclick="changeCartQty(${idx}, -1)" class="text-secondary hover:text-on-surface text-sm font-bold w-5 h-5 flex items-center justify-center cursor-pointer">-</button>
+                  <span class="font-label-sm text-xs text-on-surface font-bold">${item.quantity}</span>
+                  <button type="button" aria-label="Aumentar cantidad" onclick="changeCartQty(${idx}, 1)" class="text-secondary hover:text-on-surface text-sm font-bold w-5 h-5 flex items-center justify-center cursor-pointer">+</button>
+                </div>
+                <button type="button" onclick="removeCartItem(${idx})" class="text-error hover:underline text-xs font-label-sm cursor-pointer">Quitar</button>
+              </div>
+            </div>
+          </div>
+        `).join("");
+      }
+    }
+
+    if (drawerWaBtn) {
+      if (cart.length === 0) {
+        drawerWaBtn.href = `https://wa.me/${APP_CONFIG.whatsappNumber}?text=Hola%20FABRI%20K%20TECNO%20%F0%9F%91%8B%20Quería%20consultar%20por%20un%20producto.`;
+      } else {
+        let msg = "¡Hola FABRI K TECNO! 👋 Quiero coordinar esta compra desde la tienda online:%0A%0A";
+        cart.forEach(it => {
+          msg += `▪ ${encodeURIComponent(it.name)} x${it.quantity} -> $${(it.price * it.quantity).toLocaleString("es-AR")}%0A`;
+        });
+        msg += `%0A*TOTAL: ${formattedSubtotal}*%0A¿Tienen disponibilidad para coordinar la entrega o retiro en Las Heras 5265?`;
+        drawerWaBtn.href = `https://wa.me/${APP_CONFIG.whatsappNumber}?text=${msg}`;
+      }
+    }
+
+    if (chkCount) chkCount.textContent = `${totalCount} item${totalCount === 1 ? '' : 's'}`;
+    if (chkSubtotal) chkSubtotal.textContent = formattedSubtotal;
+    if (chkTotal) chkTotal.textContent = formattedSubtotal;
+
+    if (chkItemsContainer) {
+      if (cart.length === 0) {
+        chkItemsContainer.innerHTML = `<p class="font-body-sm text-xs text-secondary py-3">No hay items en el carrito. Seleccioná productos del catálogo para continuar.</p>`;
+      } else {
+        chkItemsContainer.innerHTML = cart.map(it => `
+          <div class="flex justify-between items-center py-1.5 border-b border-surface-container-highest/50">
+            <div class="flex flex-col">
+              <span class="font-label-md text-xs text-on-surface font-semibold">${it.name} <span class="text-primary-container font-bold">x${it.quantity}</span></span>
+            </div>
+            <span class="font-price-hero text-sm text-primary-container font-bold">$${(it.price * it.quantity).toLocaleString("es-AR")}</span>
+          </div>
+        `).join("");
+      }
+    }
+  }
+
+  function openCartDrawer() {
+    const drawer = document.getElementById("cart-drawer");
+    const backdrop = document.getElementById("cart-backdrop");
+    if (drawer && backdrop) {
+      drawer.classList.remove("translate-x-full");
+      backdrop.classList.remove("hidden");
+    }
+  }
+
+  function closeCartDrawer() {
+    const drawer = document.getElementById("cart-drawer");
+    const backdrop = document.getElementById("cart-backdrop");
+    if (drawer && backdrop) {
+      drawer.classList.add("translate-x-full");
+      backdrop.classList.add("hidden");
+    }
+  }
+
+  function toggleMobileMenu() {
+    const menu = document.getElementById("mobile-menu-drawer");
+    const backdrop = document.getElementById("mobile-menu-backdrop");
+    if (menu && backdrop) {
+      if (menu.classList.contains("-translate-x-full")) {
+        menu.classList.remove("-translate-x-full");
+        backdrop.classList.remove("hidden");
+      } else {
+        menu.classList.add("-translate-x-full");
+        backdrop.classList.add("hidden");
+      }
+    }
+  }
+
+  function toggleFaq(index) {
+    const allAnswers = document.querySelectorAll("#faq-accordion-list .accordion-content");
+    const allChevrons = document.querySelectorAll("#faq-accordion-list .faq-chevron");
+    const target = document.getElementById(`faq-answer-${index}`);
+    const isOpen = target && target.style.maxHeight && target.style.maxHeight !== "0px";
+
+    allAnswers.forEach(ans => {
+      ans.style.maxHeight = "0px";
+      ans.style.opacity = "0";
+    });
+    allChevrons.forEach(ch => {
+      ch.style.transform = "rotate(0deg)";
+    });
+
+    if (!isOpen && target) {
+      target.style.maxHeight = target.scrollHeight + 30 + "px";
+      target.style.opacity = "1";
+      if (allChevrons[index]) {
+        allChevrons[index].style.transform = "rotate(180deg)";
+      }
+    }
+  }
+
+  function toggleShippingAddress(show) {
+    const container = document.getElementById("address-container");
+    const addressInput = document.getElementById("chk-address");
+    const costLabel = document.getElementById("chk-shipping-cost");
+
+    if (show) {
+      container.classList.remove("hidden");
+      addressInput.setAttribute("required", "true");
+      costLabel.textContent = "A coordinar por WhatsApp";
+      costLabel.className = "text-secondary font-label-sm text-xs";
+    } else {
+      container.classList.add("hidden");
+      addressInput.removeAttribute("required");
+      costLabel.textContent = "Gratis (Retiro en local)";
+      costLabel.className = "text-tertiary-container font-label-sm text-xs";
+    }
+  }
+
+  function togglePaymentNotice(mode) {
+    const notice = document.getElementById("transfer-notice");
+    if (notice) {
+      if (mode === "transfer") notice.classList.remove("hidden");
+      else notice.classList.add("hidden");
+    }
+  }
+
+  function handleTechServiceSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById("tech-client-name").value.trim();
+    const phone = document.getElementById("tech-client-phone").value.trim();
+    const brand = document.getElementById("tech-brand").value;
+    const model = document.getElementById("tech-model").value.trim();
+    const issue = document.getElementById("tech-issue").value.trim();
+
+    let msg = `Hola Silvino / FABRI K TECNO 👋 Solicito turno técnico:%0A%0A`;
+    msg += `👤 *Cliente:* ${encodeURIComponent(name)}%0A`;
+    msg += `📱 *WhatsApp:* ${encodeURIComponent(phone)}%0A`;
+    msg += `🔧 *Equipo:* ${encodeURIComponent(brand)} ${encodeURIComponent(model)}%0A`;
+    msg += `⚠️ *Falla detectada:* ${encodeURIComponent(issue)}%0A%0A`;
+    msg += `¿Cuándo puedo acercarme a Las Heras 5265 para el diagnóstico?`;
+
+    window.open(`https://wa.me/${APP_CONFIG.whatsappNumber}?text=${msg}`, '_blank');
+  }
+
+  function handleCheckoutSubmit(e) {
+    e.preventDefault();
+    if (cart.length === 0) {
+      alert("Tu carrito está vacío. Seleccioná productos del catálogo para confirmar.");
+      navTo("catalogo");
+      return;
+    }
+
+    const name = document.getElementById("chk-name").value.trim();
+    const phone = document.getElementById("chk-phone").value.trim();
+    const email = document.getElementById("chk-email").value.trim();
+    const shippingMethod = document.querySelector('input[name="shipping-method"]:checked').value;
+    const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+    const address = document.getElementById("chk-address").value.trim();
+
+    let subtotal = 0;
+    cart.forEach(item => { subtotal += item.price * item.quantity; });
+
+    let orderMsg = `¡Hola FABRI K TECNO! 👋 Deseo confirmar mi pedido:%0A%0A`;
+    orderMsg += `👤 *Cliente:* ${encodeURIComponent(name)}%0A`;
+    orderMsg += `📱 *Teléfono:* ${encodeURIComponent(phone)}%0A`;
+    orderMsg += `✉️ *Email:* ${encodeURIComponent(email)}%0A`;
+    orderMsg += `📦 *Entrega:* ${shippingMethod === 'retiro' ? 'Retiro en Local (Las Heras 5265)' : 'Envío en el Día a coordinar'}%0A`;
+    if (shippingMethod === 'envio' && address) {
+      orderMsg += `📍 *Dirección:* ${encodeURIComponent(address)}%0A`;
+    }
+    orderMsg += `💳 *Medio de pago:* ${paymentMethod === 'transferencia' ? 'Transferencia Bancaria (LF2024.MP)' : 'Mercado Pago (Link / QR)'}%0A%0A`;
+    orderMsg += `🛒 *Detalle de productos:*%0A`;
+    cart.forEach(it => {
+      orderMsg += `▪ ${encodeURIComponent(it.name)} x${it.quantity} -> $${(it.price * it.quantity).toLocaleString("es-AR")}%0A`;
+    });
+    orderMsg += `%0A💰 *TOTAL A PAGAR: $${subtotal.toLocaleString("es-AR")}*%0A`;
+    orderMsg += `¿Podemos coordinar los detalles de la entrega? ¡Muchas gracias!`;
+
+    window.open(`https://wa.me/${APP_CONFIG.whatsappNumber}?text=${orderMsg}`, '_blank');
+  }
+
+  window.addEventListener("DOMContentLoaded", initStore);
+  initStore();
+</script>
+</body>
+</html>

@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FK — Tu tienda de soluciones | Tecnología &amp; Hogar</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#10141a",
+            "background": "#10141a",
+            "surface-dim": "#0c1015",
+            "surface-container-lowest": "#070a0e",
+            "surface-container-low": "#13171f",
+            "surface-container": "#191e27",
+            "surface-container-high": "#232935",
+            "surface-container-highest": "#2e3646",
+            "primary": "#feffec",
+            "primary-container": "#c6f135",
+            "on-primary-container": "#273300",
+            "primary-fixed": "#c7f337",
+            "primary-fixed-dim": "#acd60e",
+            "secondary": "#a2a8b8",
+            "on-surface": "#dfe2eb",
+            "tertiary": "#8bfb91",
+            "tertiary-container": "#89f990",
+            "on-tertiary": "#00390e",
+            "error": "#ffb4ab",
+            "error-container": "#93000a"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            headline: ["Space Grotesk", "sans-serif"],
+            display: ["Space Grotesk", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    /* Absolute clean native scrolling without any pointer traps */
+    html {
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      height: auto !important;
+      scroll-behavior: smooth !important;
+    }
+    body {
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      height: auto !important;
+      min-height: 100vh !important;
+      position: static !important;
+      -webkit-font-smoothing: antialiased;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    @keyframes toastIn {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .animate-toast {
+      animation: toastIn 0.25s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-sans selection:bg-primary-container selection:text-on-primary-container min-h-screen relative">
+<!-- TOP TICKER / ANNOUNCEMENT BAR -->
+<aside class="w-full bg-surface-container-lowest border-b border-surface-container-high py-1.5 px-4 text-xs font-mono text-secondary z-30 relative">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span><strong class="text-on-surface">Taller central:</strong> Las Heras 5267</span>
+</div>
+<div class="hidden sm:flex items-center gap-3">
+<span class="text-tertiary flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[15px]">bolt</span> Envíos en el día coordinados por WhatsApp
+</span>
+<span class="text-surface-container-highest">|</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span> Todos los días · 09:00 a 21:00 hs</span>
+</div>
+<div class="flex items-center gap-3">
+<a class="text-tertiary hover:underline font-bold flex items-center gap-1 cursor-pointer text-xs" href="https://chat.whatsapp.com/CAb21t8pVcg9uBDIRGW3AJ" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[14px]">groups</span> Comunidad VIP
+</a>
+<span class="text-surface-container-highest">|</span>
+<a class="text-primary-container hover:underline font-bold flex items-center gap-1 cursor-pointer text-xs" href="https://wa.me/5491168243265?text=Hola%20FK,%20tengo%20una%20consulta" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span> WhatsApp Oficial
+</a>
+</div>
+</div>
+</aside>
+<!-- HEADER -->
+<header class="sticky top-0 z-40 bg-surface/95 backdrop-blur-md border-b border-surface-container-high transition-shadow">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+<!-- LOGO -->
+<a class="flex items-center gap-2.5 flex-shrink-0 group cursor-pointer" href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center font-headline font-extrabold text-xl shadow group-hover:scale-105 transition-transform">
+        FK
+      </div>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-lg text-primary tracking-tight leading-none group-hover:text-primary-container transition-colors">FK Soluciones</span>
+<span class="text-[10px] uppercase font-mono tracking-widest text-secondary mt-0.5">Tienda &amp; Laboratorio</span>
+</div>
+</a>
+<!-- SEARCH BAR (DESKTOP) -->
+<div class="flex-1 max-w-xl hidden md:block">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-secondary text-[20px] pointer-events-none">search</span>
+<input class="w-full bg-surface-container-low border border-surface-container-high hover:border-surface-container-highest focus:border-primary-container focus:ring-1 focus:ring-primary-container rounded-xl pl-11 pr-10 py-2 text-sm text-on-surface placeholder:text-secondary focus:outline-none transition-all" id="buscar-input" oninput="handleSearch(this.value)" placeholder="Buscar productos (ej. anafe, caloventor, batidora, mopa...)" type="text"/>
+<button class="hidden absolute right-3 text-secondary hover:text-on-surface p-1 cursor-pointer" id="search-clear-btn" onclick="clearSearch()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- NAV ACTIONS -->
+<div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+<a class="cursor-pointer flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-secondary hover:text-primary hover:bg-surface-container transition-colors" href="#catalogo" onclick="smoothNavTo('catalogo', event)">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+<span>Catálogo</span>
+</a>
+<a class="cursor-pointer flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-on-surface bg-surface-container hover:bg-surface-container-high border border-surface-container-highest transition-colors" href="#servicio-tecnico-section" onclick="smoothNavTo('servicio-tecnico-section', event)">
+<span class="material-symbols-outlined text-primary-container text-[18px]">build</span>
+<span class="hidden sm:inline">Servicio</span> Técnico
+      </a>
+<a class="hidden lg:flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-tertiary bg-surface-container hover:bg-surface-bright border border-surface-container-highest transition-colors cursor-pointer" href="https://wa.me/5491168243265?text=Hola%20FK,%20quiero%20hacer%20una%20consulta" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Chat Directo</span>
+</a>
+<!-- CART TRIGGER BUTTON -->
+<button aria-label="Ver carrito" class="relative flex items-center gap-2 px-3.5 py-2 rounded-xl bg-primary-container hover:bg-primary-fixed text-on-primary-container font-headline font-bold text-xs shadow hover:scale-[1.02] active:scale-95 transition-all cursor-pointer" id="cart-btn" onclick="openCartDrawer()" type="button">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="hidden sm:inline">Carrito</span>
+<span class="min-w-[20px] h-5 px-1.5 rounded-full bg-surface-container-lowest text-primary-container font-mono text-[11px] font-extrabold flex items-center justify-center border border-surface-container-high" id="cart-badge">
+          0
+        </span>
+</button>
+</div>
+</div>
+<!-- MOBILE SEARCH -->
+<div class="md:hidden px-4 pb-2.5 pt-1">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[18px] pointer-events-none">search</span>
+<input class="w-full bg-surface-container-low border border-surface-container-high rounded-xl pl-9 pr-9 py-2 text-xs text-on-surface placeholder:text-secondary focus:border-primary-container focus:outline-none" id="mobile-search-input" oninput="handleSearch(this.value)" placeholder="Buscar producto, marca o modelo..." type="text"/>
+<button class="hidden absolute right-2.5 text-secondary hover:text-on-surface p-1 cursor-pointer" id="mobile-search-clear-btn" onclick="clearSearch()" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+</header>
+<!-- MAIN CONTENT CONTAINER -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-10">
+<!-- HERO SECTION -->
+<section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-surface-container to-surface-container-low border border-surface-container-high p-6 sm:p-10 shadow-2xl">
+<div class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="max-w-3xl relative z-10 space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-lowest/80 border border-primary-container/30 text-xs font-bold text-primary-container">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span>Tienda Oficial FK • Laboratorio Certificado</span>
+</div>
+<h1 class="font-headline font-bold text-2xl sm:text-4xl lg:text-5xl text-primary tracking-tight leading-tight">
+        Tecnología, equipamiento y soluciones que encajan con tu día.
+      </h1>
+<p class="text-secondary text-sm sm:text-base leading-relaxed max-w-2xl">
+        Catálogo con entregas en el día coordinadas por WhatsApp y laboratorio técnico especializado en microelectrónica y reparación de smartphones con diagnóstico en 45 minutos.
+      </p>
+<!-- HERO CTAS -->
+<div class="pt-2 flex flex-wrap items-center gap-3">
+<a class="px-6 py-3 rounded-xl bg-primary-container hover:bg-primary-fixed text-on-primary-container font-headline font-bold text-sm flex items-center gap-2 shadow-lg hover:shadow-primary-container/20 active:scale-95 transition-all cursor-pointer" href="#catalogo" onclick="smoothNavTo('catalogo', event)">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+<span>Explorar Catálogo</span>
+</a>
+<a class="px-5 py-3 rounded-xl bg-surface-container-high hover:bg-surface-bright text-tertiary font-headline font-bold text-sm border border-surface-container-highest flex items-center gap-2 active:scale-95 transition-all cursor-pointer" href="https://wa.me/5491168243265?text=Hola%20FK,%20quiero%20hacer%20una%20consulta%20directa" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Hablar por WhatsApp</span>
+</a>
+<a class="px-5 py-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface font-headline font-semibold text-sm border border-surface-container-high flex items-center gap-2 transition-all cursor-pointer" href="#servicio-tecnico-section" onclick="smoothNavTo('servicio-tecnico-section', event)">
+<span class="material-symbols-outlined text-primary-container text-[20px]">precision_manufacturing</span>
+<span>Pedir Turno Taller</span>
+</a>
+</div>
+<!-- 4 PILLARS -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-6 border-t border-surface-container-high/60">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[22px]">verified_user</span>
+<div>
+<span class="text-xs font-bold text-primary block">Garantía Directa</span>
+<span class="text-[11px] text-secondary">Cambio asegurado</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[22px]">local_shipping</span>
+<div>
+<span class="text-xs font-bold text-primary block">Envíos en el Día</span>
+<span class="text-[11px] text-secondary">Mensajería exprés</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[22px]">store</span>
+<div>
+<span class="text-xs font-bold text-primary block">Retiro Las Heras 5267</span>
+<span class="text-[11px] text-secondary">Todos los días 09-21 hs</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[22px]">support_agent</span>
+<div>
+<span class="text-xs font-bold text-primary block">Atención Personal</span>
+<span class="text-[11px] text-secondary">Soporte WhatsApp</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CATALOG FILTER & PRODUCTS SECTION -->
+<section class="space-y-6 pt-2 scroll-mt-20" id="catalogo">
+<!-- HEADING & CATEGORY PILLS -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-2 border-b border-surface-container-high">
+<div>
+<h2 class="font-headline font-bold text-2xl text-primary flex items-center gap-2">
+          Catálogo de Productos
+          <span class="text-xs font-mono font-normal text-secondary bg-surface-container-high px-2.5 py-0.5 rounded-full" id="active-count-label">
+            14 artículos
+          </span>
+</h2>
+<p class="text-xs text-secondary mt-0.5" id="active-cat-label">Todos los productos seleccionados y testeados</p>
+</div>
+<!-- CATEGORY PILLS -->
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1">
+<button class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap bg-primary-container text-on-primary-container shadow transition-all cursor-pointer" data-cat="all" onclick="selectCategory('all')" type="button">
+          Todos
+        </button>
+<button class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface hover:bg-surface-container-high transition-all cursor-pointer" data-cat="hogar" onclick="selectCategory('hogar')" type="button">
+          Hogar
+        </button>
+<button class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface hover:bg-surface-container-high transition-all cursor-pointer" data-cat="tecnologia" onclick="selectCategory('tecnologia')" type="button">
+          Tecnología
+        </button>
+<button class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface hover:bg-surface-container-high transition-all cursor-pointer" data-cat="climatizacion" onclick="selectCategory('climatizacion')" type="button">
+          Climatización
+        </button>
+<button class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface hover:bg-surface-container-high transition-all cursor-pointer" data-cat="cocina" onclick="selectCategory('cocina')" type="button">
+          Cocina
+        </button>
+<button class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface hover:bg-surface-container-high transition-all cursor-pointer" data-cat="accesorios" onclick="selectCategory('accesorios')" type="button">
+          Accesorios
+        </button>
+</div>
+</div>
+<!-- PRODUCTS GRID -->
+<div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="products-grid">
+<!-- Rendered dynamically by JavaScript -->
+</div>
+<!-- EMPTY SEARCH STATE -->
+<div class="hidden py-16 px-4 text-center bg-surface-container rounded-3xl border border-surface-container-high space-y-3" id="empty-state">
+<span class="material-symbols-outlined text-5xl text-secondary">search_off</span>
+<h3 class="text-base font-headline font-bold text-primary">No encontramos coincidencias</h3>
+<p class="text-xs text-secondary max-w-md mx-auto">Revisá la ortografía o consultanos directamente por WhatsApp por stock y disponibilidad de otros modelos.</p>
+<button class="px-4 py-2 rounded-xl bg-surface-container-highest text-primary-container font-bold text-xs hover:bg-surface-bright transition-colors cursor-pointer" onclick="clearSearch()" type="button">
+        Restablecer Filtros
+      </button>
+</div>
+</section>
+<!-- SECTION: SERVICIO TÉCNICO & LABORATORIO MÓVIL -->
+<section class="rounded-3xl bg-surface-container border border-surface-container-high p-6 sm:p-10 shadow-xl space-y-6 scroll-mt-20" id="servicio-tecnico-section">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-container/10 border border-tertiary-container/20 text-tertiary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">precision_manufacturing</span>
+</div>
+<div>
+<span class="text-[11px] uppercase font-mono font-bold text-tertiary tracking-wider">Laboratorio Técnico FK</span>
+<h2 class="font-headline font-bold text-xl sm:text-2xl text-primary leading-tight">Servicio Técnico Especializado</h2>
+</div>
+</div>
+<div class="flex items-center gap-2 text-xs font-mono text-secondary">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-lowest border border-surface-container-high">Diagnóstico: 45 min</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-lowest border border-surface-container-high">Garantía: 90 días</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-5 space-y-4 text-xs text-secondary leading-relaxed">
+<p>
+          En nuestro taller de <strong class="text-on-surface">Las Heras 5267</strong> realizamos diagnósticos de microelectrónica de alta precisión para todas las marcas (iPhone, Samsung, Motorola, Xiaomi).
+        </p>
+<ul class="space-y-2 border-y border-surface-container-high py-3">
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span>Cambio de módulo display OLED &amp; IPS</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span>Reemplazo de batería testeada con ciclos certificados</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span>Pin de carga, micrófonos y cámaras</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+<span>Microsoldadura de placa y recuperación de fallas de carga</span>
+</li>
+</ul>
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-surface-container-high">
+<span class="text-primary-container font-bold text-xs block">¿Querés un turno inmediato?</span>
+<span class="text-[11px] text-secondary">Completá los datos del equipo y abrí el chat preformateado para coordinar recepción.</span>
+</div>
+</div>
+<!-- REPAIR FORM -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-2xl p-5 sm:p-6 border border-surface-container-high">
+<form class="space-y-3.5" onsubmit="handleTechServiceSubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div>
+<label class="text-[11px] font-bold text-secondary uppercase tracking-wider block mb-1">Tu Nombre *</label>
+<input class="w-full bg-surface-container border border-surface-container-high rounded-xl px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none" id="tech-name" placeholder="Ej: Mariano López" required="" type="text"/>
+</div>
+<div>
+<label class="text-[11px] font-bold text-secondary uppercase tracking-wider block mb-1">WhatsApp / Teléfono *</label>
+<input class="w-full bg-surface-container border border-surface-container-high rounded-xl px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none" id="tech-phone" placeholder="Ej: 11 4050 6070" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div>
+<label class="text-[11px] font-bold text-secondary uppercase tracking-wider block mb-1">Marca del Celular *</label>
+<select class="w-full bg-surface-container border border-surface-container-high rounded-xl px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none" id="tech-brand">
+<option value="iPhone (Apple)">iPhone (Apple)</option>
+<option value="Samsung">Samsung Galaxy</option>
+<option value="Motorola">Motorola</option>
+<option value="Xiaomi">Xiaomi / Redmi</option>
+<option value="Otra Marca">Otra Marca</option>
+</select>
+</div>
+<div>
+<label class="text-[11px] font-bold text-secondary uppercase tracking-wider block mb-1">Modelo Exacto *</label>
+<input class="w-full bg-surface-container border border-surface-container-high rounded-xl px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none" id="tech-model" placeholder="Ej: iPhone 13 / Samsung A54" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="text-[11px] font-bold text-secondary uppercase tracking-wider block mb-1">Detalle de la Falla *</label>
+<textarea class="w-full bg-surface-container border border-surface-container-high rounded-xl px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none resize-none" id="tech-issue" placeholder="Pantalla rota, no levanta carga, se reinicia solo, etc." required="" rows="2"></textarea>
+</div>
+<button class="w-full py-3 rounded-xl bg-tertiary text-on-tertiary hover:bg-tertiary-container font-headline font-bold text-xs flex items-center justify-center gap-2 shadow-md active:scale-95 transition-transform cursor-pointer" type="submit">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Solicitar Turno y Diagnóstico por WhatsApp</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+<!-- SECTION: ONE-PAGE GUEST CHECKOUT & PAYMENT -->
+<section class="rounded-3xl bg-surface-container border border-surface-container-high p-6 sm:p-8 shadow-xl space-y-6 scroll-mt-20" id="checkout-section">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-surface-container-high">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container font-bold text-xs flex items-center justify-center">
+          ✓
+        </div>
+<div>
+<h2 class="font-headline font-bold text-lg text-primary">Finalizar Pedido Express</h2>
+<span class="text-xs text-secondary">Sin registro previo • Envío y confirmación directa por WhatsApp (5491168243265)</span>
+</div>
+</div>
+<span class="text-xs font-mono text-primary-container bg-surface-container-lowest px-3 py-1 rounded-full border border-surface-container-high self-start sm:self-auto">
+        Paso 1 de 1
+      </span>
+</div>
+<form class="space-y-6" id="checkout-form" onsubmit="handleCheckoutSubmit(event)">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- STEP 1: CONTACT -->
+<div class="space-y-3 bg-surface-container-lowest p-4 rounded-2xl border border-surface-container-high">
+<span class="text-xs font-bold font-headline uppercase tracking-wider text-primary-container flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">person</span> 1. Tus Datos
+          </span>
+<div class="space-y-2.5">
+<div>
+<label class="text-[10px] text-secondary uppercase font-bold block mb-1">Nombre Completo *</label>
+<input class="w-full bg-surface-container border border-surface-container-high rounded-xl px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none" id="chk-name" placeholder="Ej: Santiago Fernandez" required="" type="text"/>
+</div>
+<div>
+<label class="text-[10px] text-secondary uppercase font-bold block mb-1">WhatsApp / Teléfono *</label>
+<input class="w-full bg-surface-container border border-surface-container-high rounded-xl px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none" id="chk-phone" placeholder="Ej: 11 9876 5432" required="" type="tel"/>
+</div>
+<div>
+<label class="text-[10px] text-secondary uppercase font-bold block mb-1">Email de Contacto *</label>
+<input class="w-full bg-surface-container border border-surface-container-high rounded-xl px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none" id="chk-email" placeholder="ejemplo@correo.com" required="" type="email"/>
+</div>
+</div>
+</div>
+<!-- STEP 2: DELIVERY -->
+<div class="space-y-3 bg-surface-container-lowest p-4 rounded-2xl border border-surface-container-high">
+<span class="text-xs font-bold font-headline uppercase tracking-wider text-primary-container flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span> 2. Forma de Entrega
+          </span>
+<div class="space-y-2">
+<label class="flex items-start gap-2.5 p-3 rounded-xl border border-surface-container-high bg-surface-container cursor-pointer hover:border-surface-container-highest transition-colors">
+<input checked="" class="mt-0.5 text-primary-container focus:ring-0 cursor-pointer" name="chk-shipping" onchange="toggleShippingField(false)" type="radio" value="retiro"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold text-primary">Retiro en Taller FK</span>
+<span class="text-[10px] font-bold text-tertiary uppercase">Gratis</span>
+</div>
+<p class="text-[11px] text-secondary mt-0.5">Las Heras 5267 (Todos los días 09-21 hs)</p>
+</div>
+</label>
+<label class="flex items-start gap-2.5 p-3 rounded-xl border border-surface-container-high bg-surface-container cursor-pointer hover:border-surface-container-highest transition-colors">
+<input class="mt-0.5 text-primary-container focus:ring-0 cursor-pointer" name="chk-shipping" onchange="toggleShippingField(true)" type="radio" value="envio"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold text-primary">Envío en el Día</span>
+<span class="text-[10px] font-mono text-secondary">Moto mensajería</span>
+</div>
+<p class="text-[11px] text-secondary mt-0.5">Coordinación de costo exacto al confirmar</p>
+</div>
+</label>
+</div>
+<div class="hidden pt-1" id="chk-address-box">
+<label class="text-[10px] text-secondary uppercase font-bold block mb-1">Dirección de entrega *</label>
+<input class="w-full bg-surface-container border border-surface-container-high rounded-xl px-3 py-2 text-xs text-on-surface focus:border-primary-container focus:outline-none" id="chk-address" placeholder="Calle, número, piso/dpto, localidad..." type="text"/>
+</div>
+</div>
+<!-- STEP 3: PAYMENT & CONFIRMATION (MERCADO PAGO + QR) -->
+<div class="space-y-3 bg-surface-container-lowest p-4 rounded-2xl border border-surface-container-high flex flex-col justify-between">
+<div class="space-y-2.5">
+<span class="text-xs font-bold font-headline uppercase tracking-wider text-primary-container flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">payments</span> 3. Medio de Pago
+</span>
+<div class="space-y-1.5">
+<!-- MERCADO PAGO / QR DESTACADO -->
+<label class="block p-2.5 rounded-xl bg-surface-container border-2 border-primary-container/60 cursor-pointer transition-all">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<input checked="" class="text-primary-container focus:ring-0 cursor-pointer" name="chk-payment" onchange="handlePaymentChange(this.value)" type="radio" value="mercadopago"/>
+<span class="text-xs font-bold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary-container">qr_code_scanner</span>
+                        Mercado Pago (Alias / QR)
+                      </span>
+</div>
+<span class="text-[10px] bg-primary-container text-on-primary-container font-mono font-bold px-1.5 py-0.5 rounded">Recomendado</span>
+</div>
+<!-- QR & ALIAS CARD -->
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-surface-container-high space-y-2.5" id="mp-info-box">
+<div class="flex items-center justify-between gap-2 p-2 bg-surface-container rounded-lg border border-surface-container-high">
+<div class="min-w-0">
+<span class="text-[10px] text-secondary block font-mono uppercase tracking-wider">Alias Mercado Pago:</span>
+<span class="text-xs font-mono font-bold text-primary-container" id="mp-alias-text">LF2024.MP</span>
+</div>
+<button class="px-2.5 py-1 rounded bg-primary-container hover:bg-primary-fixed text-on-primary-container font-headline font-bold text-[10px] flex items-center gap-1 transition-all active:scale-95 cursor-pointer flex-shrink-0" onclick="copyMpAlias(event)" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span id="copy-btn-label">Copiar</span>
+</button>
+</div>
+<!-- QR VISUAL DE MERCADO PAGO -->
+<div class="flex items-center gap-3 pt-1">
+<div class="w-20 h-20 bg-white p-1.5 rounded-lg flex-shrink-0 flex items-center justify-center shadow">
+<!-- Clean, precise QR code SVG for 'LF2024.MP' -->
+<svg class="w-full h-full" shape-rendering="crispEdges" viewbox="0 0 29 29">
+<rect fill="#ffffff" height="29" width="29" x="0" y="0"></rect>
+<!-- Corner 1 -->
+<rect fill="#000000" height="7" width="7" x="2" y="2"></rect>
+<rect fill="#ffffff" height="5" width="5" x="3" y="3"></rect>
+<rect fill="#000000" height="3" width="3" x="4" y="4"></rect>
+<!-- Corner 2 -->
+<rect fill="#000000" height="7" width="7" x="20" y="2"></rect>
+<rect fill="#ffffff" height="5" width="5" x="21" y="3"></rect>
+<rect fill="#000000" height="3" width="3" x="22" y="4"></rect>
+<!-- Corner 3 -->
+<rect fill="#000000" height="7" width="7" x="2" y="20"></rect>
+<rect fill="#ffffff" height="5" width="5" x="3" y="21"></rect>
+<rect fill="#000000" height="3" width="3" x="4" y="22"></rect>
+<!-- Data pattern for LF2024.MP -->
+<rect fill="#000000" height="1" width="1" x="10" y="2"></rect>
+<rect fill="#000000" height="1" width="1" x="12" y="2"></rect>
+<rect fill="#000000" height="1" width="1" x="14" y="2"></rect>
+<rect fill="#000000" height="1" width="1" x="16" y="2"></rect>
+<rect fill="#000000" height="1" width="1" x="10" y="4"></rect>
+<rect fill="#000000" height="1" width="1" x="13" y="4"></rect>
+<rect fill="#000000" height="1" width="1" x="15" y="4"></rect>
+<rect fill="#000000" height="1" width="1" x="18" y="4"></rect>
+<rect fill="#000000" height="1" width="1" x="11" y="6"></rect>
+<rect fill="#000000" height="1" width="1" x="14" y="6"></rect>
+<rect fill="#000000" height="1" width="1" x="17" y="6"></rect>
+<rect fill="#000000" height="1" width="1" x="2" y="10"></rect>
+<rect fill="#000000" height="1" width="1" x="5" y="10"></rect>
+<rect fill="#000000" height="1" width="1" x="7" y="10"></rect>
+<rect fill="#000000" height="1" width="1" x="11" y="10"></rect>
+<rect fill="#000000" height="1" width="1" x="13" y="10"></rect>
+<rect fill="#000000" height="1" width="1" x="19" y="10"></rect>
+<rect fill="#000000" height="1" width="1" x="23" y="10"></rect>
+<rect fill="#000000" height="1" width="1" x="26" y="10"></rect>
+<rect fill="#000000" height="1" width="1" x="4" y="12"></rect>
+<rect fill="#000000" height="1" width="1" x="8" y="12"></rect>
+<rect fill="#000000" height="1" width="1" x="12" y="12"></rect>
+<rect fill="#000000" height="1" width="1" x="15" y="12"></rect>
+<rect fill="#000000" height="1" width="1" x="21" y="12"></rect>
+<rect fill="#000000" height="1" width="1" x="24" y="12"></rect>
+<rect fill="#000000" height="1" width="1" x="3" y="14"></rect>
+<rect fill="#000000" height="1" width="1" x="7" y="14"></rect>
+<rect fill="#000000" height="1" width="1" x="10" y="14"></rect>
+<rect fill="#000000" height="1" width="1" x="14" y="14"></rect>
+<rect fill="#000000" height="1" width="1" x="18" y="14"></rect>
+<rect fill="#000000" height="1" width="1" x="25" y="14"></rect>
+<rect fill="#000000" height="1" width="1" x="2" y="16"></rect>
+<rect fill="#000000" height="1" width="1" x="6" y="16"></rect>
+<rect fill="#000000" height="1" width="1" x="9" y="16"></rect>
+<rect fill="#000000" height="1" width="1" x="13" y="16"></rect>
+<rect fill="#000000" height="1" width="1" x="17" y="16"></rect>
+<rect fill="#000000" height="1" width="1" x="22" y="16"></rect>
+<rect fill="#000000" height="1" width="1" x="26" y="16"></rect>
+<rect fill="#000000" height="1" width="1" x="5" y="18"></rect>
+<rect fill="#000000" height="1" width="1" x="11" y="18"></rect>
+<rect fill="#000000" height="1" width="1" x="15" y="18"></rect>
+<rect fill="#000000" height="1" width="1" x="20" y="18"></rect>
+<rect fill="#000000" height="1" width="1" x="24" y="18"></rect>
+<rect fill="#000000" height="1" width="1" x="10" y="20"></rect>
+<rect fill="#000000" height="1" width="1" x="14" y="20"></rect>
+<rect fill="#000000" height="1" width="1" x="18" y="20"></rect>
+<rect fill="#000000" height="1" width="1" x="23" y="20"></rect>
+<rect fill="#000000" height="1" width="1" x="12" y="22"></rect>
+<rect fill="#000000" height="1" width="1" x="16" y="22"></rect>
+<rect fill="#000000" height="1" width="1" x="20" y="22"></rect>
+<rect fill="#000000" height="1" width="1" x="25" y="22"></rect>
+<rect fill="#000000" height="1" width="1" x="11" y="24"></rect>
+<rect fill="#000000" height="1" width="1" x="15" y="24"></rect>
+<rect fill="#000000" height="1" width="1" x="19" y="24"></rect>
+<rect fill="#000000" height="1" width="1" x="22" y="24"></rect>
+<rect fill="#000000" height="1" width="1" x="13" y="26"></rect>
+<rect fill="#000000" height="1" width="1" x="17" y="26"></rect>
+<rect fill="#000000" height="1" width="1" x="21" y="26"></rect>
+<rect fill="#000000" height="1" width="1" x="26" y="26"></rect>
+</svg>
+</div>
+<div class="text-[11px] text-secondary leading-snug space-y-1">
+<p class="text-on-surface font-semibold">Escaneá el código o utilizá el alias para realizar el pago.</p>
+<p class="text-[10px] text-secondary/80">El pago se realiza mediante transferencia o escaneo directo con la app de Mercado Pago.</p>
+</div>
+</div>
+<p class="text-[10px] text-secondary/90 bg-surface-container/60 p-2 rounded border border-surface-container-high">
+                      Una vez enviado el pedido por WhatsApp, podés adjuntar el comprobante para coordinar el despacho o retiro inmediato.
+                    </p>
+</div>
+</label>
+<!-- EFECTIVO EN TALLER -->
+<label class="flex items-center justify-between p-2 rounded-xl bg-surface-container border border-surface-container-high cursor-pointer hover:border-surface-container-highest transition-colors">
+<div class="flex items-center gap-2">
+<input class="text-primary-container focus:ring-0 cursor-pointer" name="chk-payment" onchange="handlePaymentChange(this.value)" type="radio" value="efectivo"/>
+<span class="text-xs text-on-surface">Efectivo al retirar en taller</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-secondary">payments</span>
+</label>
+</div>
+</div>
+<!-- LIVE TOTAL RESUME -->
+<div class="pt-3 border-t border-surface-container-high space-y-2">
+<div class="flex items-center justify-between text-xs text-secondary">
+<span>Items agregados:</span>
+<span class="font-bold text-on-surface" id="chk-total-items-badge">0 artículos</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="text-xs font-bold text-primary uppercase">Total a Pagar:</span>
+<span class="text-xl font-headline font-extrabold text-primary-container" id="chk-total-amount">$0</span>
+</div>
+<button class="w-full py-3 rounded-xl bg-primary-container hover:bg-primary-fixed text-on-primary-container font-headline font-bold text-xs flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-all cursor-pointer" type="submit">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>CONFIRMAR PEDIDO POR WHATSAPP</span>
+</button>
+</div>
+</div>
+</div>
+</form>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="w-full bg-surface-container-lowest border-t border-surface-container-high mt-16 py-10 px-4 sm:px-6 text-secondary text-xs">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-headline font-bold text-base">
+          FK
+        </div>
+<span class="font-headline font-bold text-base text-primary">FK Soluciones</span>
+</div>
+<p class="text-xs leading-relaxed text-secondary">
+        FK — Tu tienda de soluciones. Tecnología, equipamiento para el hogar y laboratorio técnico de microelectrónica de celulares.
+      </p>
+<div class="pt-1">
+<a class="text-xs text-tertiary hover:underline flex items-center gap-1 font-semibold" href="https://chat.whatsapp.com/CAb21t8pVcg9uBDIRGW3AJ" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[16px]">groups</span> Unirme al Grupo VIP de Clientes
+      </a>
+</div>
+</div>
+<div>
+<h4 class="font-headline font-bold text-primary text-xs uppercase tracking-wider mb-3">Taller Central</h4>
+<p class="flex items-center gap-2 mb-1 text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-[16px]">pin_drop</span>
+        Las Heras 5267
+      </p>
+<p class="text-[11px] text-secondary">Horario de atención:<br/>Todos los días · 09:00 a 21:00 hs</p>
+</div>
+<div>
+<h4 class="font-headline font-bold text-primary text-xs uppercase tracking-wider mb-3">Medios de Pago</h4>
+<p class="text-on-surface font-semibold mb-1">Mercado Pago (Alias: LF2024.MP)</p>
+<p class="text-[11px] text-secondary leading-relaxed">
+        Transferencia o escaneo con app de Mercado Pago. Efectivo al retirar en taller. Confirmación y comprobantes por WhatsApp.
+      </p>
+</div>
+<div>
+<h4 class="font-headline font-bold text-primary text-xs uppercase tracking-wider mb-3">Contacto Rápido</h4>
+<a class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-tertiary border border-surface-container-highest font-bold text-xs transition-colors cursor-pointer" href="https://wa.me/5491168243265?text=Hola%20FK,%20quiero%20hacer%20una%20consulta" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span> WhatsApp 11 6824-3265
+      </a>
+<p class="text-[11px] text-secondary mt-2">Atención diaria de 09:00 a 21:00 hs.</p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-8 mt-8 border-t border-surface-container-high flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px]">
+<span>© 2024 FK — Tu tienda de soluciones. Todos los derechos reservados.</span>
+<div class="flex items-center gap-4">
+<a class="hover:text-primary transition-colors cursor-pointer" href="#catalogo" onclick="smoothNavTo('catalogo', event)">Catálogo</a>
+<a class="hover:text-primary transition-colors cursor-pointer" href="#servicio-tecnico-section" onclick="smoothNavTo('servicio-tecnico-section', event)">Laboratorio Técnico</a>
+<a class="hover:text-primary transition-colors cursor-pointer" href="#checkout-section" onclick="smoothNavTo('checkout-section', event)">Checkout</a>
+</div>
+</div>
+</footer>
+<!-- ==================== PRODUCT DETAIL MODAL ==================== -->
+<div class="hidden fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-sm z-50 transition-opacity" id="modal-backdrop" onclick="closeProductModal()"></div>
+<div class="hidden fixed inset-x-4 top-1/2 -translate-y-1/2 max-w-xl mx-auto bg-surface-container border border-surface-container-high rounded-3xl z-50 shadow-2xl overflow-hidden flex-col max-h-[90vh]" id="product-modal">
+<!-- Modal Header -->
+<div class="px-5 py-3.5 border-b border-surface-container-high flex items-center justify-between">
+<span class="text-[10px] uppercase font-mono font-bold text-primary-container tracking-wider" id="modal-category-tag">
+      Categoría
+    </span>
+<button aria-label="Cerrar modal" class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-highest text-secondary hover:text-on-surface flex items-center justify-center transition-colors cursor-pointer" onclick="closeProductModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-5 overflow-y-auto space-y-4 flex-1">
+<div class="relative w-full aspect-square max-h-64 sm:max-h-80 mx-auto bg-surface-container-lowest rounded-2xl overflow-hidden p-3 flex items-center justify-center border border-surface-container-high">
+<img alt="Producto FK" class="w-full h-full object-contain" id="modal-image" src=""/>
+<span class="absolute top-3 left-3 bg-surface-container-highest text-primary-container text-[10px] font-bold px-2 py-0.5 rounded-md uppercase" id="modal-badge-tag">
+        Destacado
+      </span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg sm:text-xl text-primary leading-tight" id="modal-title">
+        Nombre de producto
+      </h3>
+<div class="flex items-center justify-between mt-2">
+<span class="text-2xl font-headline font-extrabold text-primary-container" id="modal-price">$0</span>
+<span class="text-xs font-semibold text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Stock Disponible
+        </span>
+</div>
+</div>
+<p class="text-xs text-secondary leading-relaxed border-t border-surface-container-high pt-3" id="modal-desc">
+      Descripción del producto.
+    </p>
+<div class="space-y-1.5">
+<label class="text-[10px] font-bold uppercase tracking-wider text-secondary">Opciones / Modelo:</label>
+<div class="flex flex-wrap gap-2" id="modal-variants-list">
+<!-- Dynamic variants -->
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<label class="text-[10px] font-bold uppercase tracking-wider text-secondary">Cantidad:</label>
+<div class="flex items-center bg-surface-container-lowest rounded-xl border border-surface-container-high p-1">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-primary font-bold text-base cursor-pointer" onclick="adjustModalQty(-1)" type="button">-</button>
+<span class="w-8 text-center text-xs font-bold font-mono text-on-surface" id="modal-qty-text">1</span>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-primary font-bold text-base cursor-pointer" onclick="adjustModalQty(1)" type="button">+</button>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-4 bg-surface-container-lowest border-t border-surface-container-high grid grid-cols-2 gap-3">
+<button class="py-3 rounded-xl bg-primary-container hover:bg-primary-fixed text-on-primary-container font-headline font-bold text-xs flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all cursor-pointer" onclick="addModalItemToCart()" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span>Añadir al Carrito</span>
+</button>
+<a class="py-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-tertiary border border-surface-container-highest font-headline font-bold text-xs flex items-center justify-center gap-1.5 active:scale-95 transition-all cursor-pointer" href="#" id="modal-whatsapp-link" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Consultar WhatsApp</span>
+</a>
+</div>
+</div>
+<!-- ==================== SLIDE-OVER SHOPPING CART DRAWER ==================== -->
+<div class="hidden fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-sm z-50 transition-opacity" id="cart-drawer-backdrop" onclick="closeCartDrawer()"></div>
+<aside class="hidden fixed top-0 right-0 h-full w-full sm:w-[420px] bg-surface-container border-l border-surface-container-high z-50 flex-col shadow-2xl" id="cart-drawer">
+<!-- Drawer Header -->
+<div class="p-4 border-b border-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[22px]">shopping_bag</span>
+<h3 class="font-headline font-bold text-base text-primary">Tu Carrito FK</h3>
+<span class="text-xs font-mono px-2 py-0.5 rounded-full bg-surface-container-high text-secondary" id="drawer-items-count">
+        0
+      </span>
+</div>
+<button aria-label="Cerrar carrito" class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-highest text-secondary hover:text-on-surface flex items-center justify-center cursor-pointer" onclick="closeCartDrawer()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest px-4 py-2 text-[11px] text-secondary border-b border-surface-container-high flex items-center justify-between">
+<span class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[15px]">bolt</span> Entregas en el día
+    </span>
+<span>Retiro Las Heras 5267 (09-21 hs)</span>
+</div>
+<div class="flex-1 overflow-y-auto p-4 space-y-3" id="drawer-items-list">
+<!-- Dynamic Cart Items -->
+</div>
+<div class="p-4 bg-surface-container-lowest border-t border-surface-container-high space-y-3">
+<div class="flex items-baseline justify-between">
+<span class="text-xs uppercase font-bold text-secondary">Total a Pagar:</span>
+<span class="text-2xl font-headline font-extrabold text-primary-container" id="drawer-total-price">$0</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-3 rounded-xl bg-primary-container hover:bg-primary-fixed text-on-primary-container font-headline font-bold text-xs flex items-center justify-center gap-1 shadow-md active:scale-95 transition-all cursor-pointer" onclick="goToCheckout()" type="button">
+<span class="material-symbols-outlined text-[18px]">credit_card</span>
+<span>Ir a Checkout</span>
+</button>
+<a class="py-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-tertiary border border-surface-container-highest font-headline font-bold text-xs flex items-center justify-center gap-1 active:scale-95 transition-all cursor-pointer" href="#" id="drawer-whatsapp-btn" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>WhatsApp Directo</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- TOAST NOTIFICATION -->
+<div class="hidden fixed bottom-5 right-5 z-50 bg-surface-container-highest border border-primary-container/40 text-on-surface px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-3 animate-toast pointer-events-none" id="toast">
+<span class="material-symbols-outlined text-primary-container text-[20px]">check_circle</span>
+<span class="text-xs font-bold text-primary" id="toast-text">Producto añadido al carrito</span>
+</div>
+<!-- ROBUST JAVASCRIPT ENGINE -->
+<script>
+  // 1. CONFIGURACIÓN CENTRAL EXACTA
+  const FK_CONFIG = {
+    brand: "FK",
+    fullName: "FK — Tu tienda de soluciones",
+    whatsapp: "5491168243265",
+    whatsappGroup: "https://chat.whatsapp.com/CAb21t8pVcg9uBDIRGW3AJ",
+    openingHours: "Todos los días · 09:00 a 21:00 hs",
+    payment: {
+      mercadoPago: true,
+      mercadoPagoAlias: "LF2024.MP",
+      qrFile: "/assets/payment/qr-lf2024-mp.png"
+    }
+  };
+
+  // Complete catalog mapped directly to real DataStore photos & prices
+  const PRODUCTS = [
+    {
+      id: "prod-wafflera",
+      category: "hogar",
+      name: "Waflera Eléctrica Oryx S1813",
+      price: 28000,
+      badge: "Destacado",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuATYClV1z9BiWtmkkbM0RfRmC46Gd5DbLemhxu5TNqDIuUEWOPc3dJtLho_s3iBJu_IUZHNhxDYBksWuscOZIGqDfgG2M_-RmCFMJh06SKfM8cWInmn_jyMp_cyKAA5OxQS2NZ32ALlfhn5gpBZeOII17ys8YbgzvGgfmJrQWHyRQz3691YF38diiN5ZE2FRT6OWWikonoMh7llH6LJYS78dJkf-3eZKRCdwfPsqKua2FOt9HhkmAYtT5SGZbk4kM8dvb0",
+      description: "Superficie antiadherente de calentamiento parejo, luces LED indicadoras de temperatura y cierre hermético con traba de seguridad. Ideal para desayunos y meriendas rápidas.",
+      variants: ["Estándar Inox"]
+    },
+    {
+      id: "prod-anafe-1",
+      category: "cocina",
+      name: "Anafe Eléctrico Hytoshy 1 Hornalla HT-100A-1",
+      price: 25000,
+      badge: "Más Vendido",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCrTvyW8Uz9e0CbFrNRcI84LNQQ2MZ7n9HhgU6qORzbyzapnoIfppzBYh617GBXuR1iH8l22mKXGHzsNsbbv87ceaMgOz3Wu11MxRY4N7JSkIcdaWQHIhggK5hZaIGUhW1sxNbivCrARfx3WKaivP_ur02iGqdXu9vC-rf9nlVobA-nx8nlrEmp-HC7ydBDkwRuF-iNSysH3zshD4D0zO8RmORVlrQj5uZyrFJAHX6w6-s51YzT8KVoaH1DOcArrF9W9oY",
+      description: "Potencia 1000W con termostato regulable de 5 temperaturas. Base antideslizante compacta, recubrimiento antiadherente fácil de limpiar. Apto para cualquier olla o sartén.",
+      variants: ["1000W Negro"]
+    },
+    {
+      id: "prod-mopa",
+      category: "hogar",
+      name: "Mopa Centrífuga Giratoria 360° Duavf con Balde",
+      price: 38500,
+      badge: "Limpieza",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB-QEqWZtEJkEvgWrq9ymKpgaCffsEmmIdKwhcrjCVxRCsvyEOlhcpk2btOAg_nbBPW9RxsZD5LGnP0s3PrhqTRlnVKzbEBtFSDySl3tbPZRsIXzsQN8xn3uyBqpGl4EZcg4IS60wdoA0ufkzafmc-DnsNkNNNPfHXCgIh8hoIKEkmrzjB7WuROUwnDPmMiD2nGD6hiRKkmserR8TCi7buTrALc6g5rAfqjy89vE7Y6Hi4Vu3JHV8CoSCK35pF_x_DbQ3o",
+      description: "Balde escurridor con canasto de acero reforzado de centrifugado veloz. Cabo extensible regulable y repuesto de microfibra de alta absorción.",
+      variants: ["Rojo & Negro"]
+    },
+    {
+      id: "prod-organizador",
+      category: "accesorios",
+      name: "Organizador Bolso Porta Térmico / Matero Cuero Ecológico",
+      price: 18500,
+      badge: "Tendencia",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB7wawz4OsTqulWzhp8eIlRFIWC0nxqf53Ax5tgpwqkORFVN5UcnaJRNoN26ltDt_AgUXbyGMDAs9TCycfEXpPluyz4aM3vmiFrfUJpb-zNuUPRJdVPDuLIEZ4HguiFsc11XY4w0O79dZuV8ExsTXBSV5W6aU4QrcoOOkQ_DiOQu63P6rWo5X7tdYHOzCoqiPGEIqen7WVwhE_xqUKuZ_AzmnqUZxMKG9aMDmU_EFY8DQfzbIKNMw0RcHngTWCKfLvQcnk",
+      description: "Compartimento acolchado aislante apto termo Stanley / Lumilagro. Correa al hombro reforzada y tela lavable de alta resistencia.",
+      variants: ["Marrón Suela", "Negro Clásico"]
+    },
+    {
+      id: "prod-licuadora",
+      category: "cocina",
+      name: "Licuadora de Mano Profile KBM-500 500W con Vaso Medidor",
+      price: 30000,
+      badge: "500W",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAN7OfUdWNco0SgA81yo8KFSJhofnvN2eHMp-2yty1XZeOxp95Ud5LljrHqKrOgmuRsRnV133cTobK87CFJ0rpRsQPr3qG2ReXRO7vhujbBVesmOruUhAwug0flKK4Cc_ZQFDUEA4wT2i07yC_u_iQLrIyIXaoXcR_JL0RJ_zfDoj21iZEdSRycr26kBUIi46DsKZANgYN1PdUnHQzlUCNfLca5tclV_cptr_sU3X2tHxzh9-B7PstqHyLtB0RE9JPlaUQ",
+      description: "Brazo desmontable de acero inoxidable con cuchillas de corte cruzado. Selector de 2 velocidades de alta potencia y vaso medidor graduado.",
+      variants: ["Blanco & Inox"]
+    },
+    {
+      id: "prod-anafe-2",
+      category: "cocina",
+      name: "Anafe Eléctrico Hytoshy Doble Hornalla HT-200A-1",
+      price: 36000,
+      badge: "Doble Hornalla",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAjQnWK5JiCBBLAc43oFd0fP6w1yontE4_GxovlQ2e6ImnU9Vm4XSzi3Gj17JGUpyWLFTjY6iGYW4DAecBGXDVwhoL04yycHQkED1y0_g_wEKYumniqZXuQA3Ic6UVgfRcjq9WJ0u6yf25zaPSnf7BycWRcPZf5eVDkDDNtBcqf5eAyQ7qi-VmfrpDTImX0zX4ebRen3Hk2oWtnF-ghPk_d4qrJUatU2LNd39GIQhdsG_zEkkQa6lp2Sg54IZN8Q39v2Gc",
+      description: "Doble plato calefactor con controles individuales independientes, 2000W de potencia total combinada y protección contra sobrecalentamiento.",
+      variants: ["2000W Total"]
+    },
+    {
+      id: "prod-estufa",
+      category: "climatizacion",
+      name: "Estufa de Cuarzo Magiclick 1200W Anticaída",
+      price: 32000,
+      badge: "Climatización",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBlBFlEAygFrGex23JoMe1FFU8IW_1ljWvDTuDl15nX8DoMpWp4oIQ5c7MY0mZWreysMLFm-2eTrXvVl7t8cryfpnEYoEDHO5YGm-VSftGeu5zIdVFxCv_hOElckTt88YmINehwl14AEf_dyCbjlyS7iHjAEqtKYIqM2NzRLWvFPbq5iPZo8HScEIYdJm6mjLZkSOD6uuGp8qkAdmlf6NiXsVZ2c6RWQWz-ZL3ehn9q6I4U13AJ2NOg4fQj6fxy7YpV8PA",
+      description: "Tubos de cuarzo de alta eficiencia con interruptor de corte automático de seguridad ante caídas o tropiezos accidentales. Calor limpio e instantáneo.",
+      variants: ["1200W"]
+    },
+    {
+      id: "prod-tender",
+      category: "hogar",
+      name: "Tender Vertical Plegable 3 Niveles Arfa 30KG",
+      price: 32000,
+      badge: "Capacidad 30kg",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCF8VK81ZWiOD9p6e6b4f8BJyT8FwpURDj-F1wiYcIeFBrRugMJvNYu-dcYZ5dLjErFouQzvNMZiE9zpn24cQl4bL8foa8kVSHnziQLlyZfl-NZwIWeKI_LGq1lYejBVqqu-Wx7UOOCO6fCXAwWSh1Rf2cW0HcRA_DjgNv1KOF9bT_cCBMZ8M3WPeUXm9enJIqfF2mWvv0Mn3UjIN5269Do4NOQ2VjoCzjHDk-cd4rBB_uEEUwunmBWyXLSiWA-xKBRTVM",
+      description: "Estructura de caños de acero esmaltado con alas desplegables y ruedas multidireccionales con frenos para facilitar el traslado cargado.",
+      variants: ["Azul & Blanco"]
+    },
+    {
+      id: "prod-anafe-pasion",
+      category: "cocina",
+      name: "Anafe Doble Hornalla Hytoshy Pasión por la Cocina",
+      price: 36000,
+      badge: "Gourmet",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDmF_NqVBd2a3gAp3_8wF191IlpxeeZeJcTFZSqQ3UL78L3BzRZe8V-rGucxELTfFYQOz7Hg6RylNUBoi43xtul4_zXtUoP1dTLKPTxSx61esMuAKnUEqW1DndVj_zuVop8krHVT49vRZetym_mopy6FhMXD6p4Jik58GQoDtAodGCGvIt3AifUKvkMUOwUcQVjKVm3zjkGBk4uniClMNy1ANLff_nr_7boY2yWiz1ZZJiDT3XSq4VbSFEe_cMFib05_lI",
+      description: "Edición especial con distribución térmica optimizada, indicadores lumínicos independientes de encendido y base antideslizante con ventilación reforzada.",
+      variants: ["HT-200A-1 Pasión"]
+    },
+    {
+      id: "prod-caloventor",
+      category: "climatizacion",
+      name: "Caloventor Oryx 2 Velocidades CAL-CH100",
+      price: 26000,
+      badge: "Calor Rápido",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDI4wl7cvwuPMZEsr0O2ZYXtUnCeT3Rq_iGZSLUvbDY-8y0osJt_RMe21bMFYp5fJ2dx_5-a_hpar4vpy9XpnfjPfTTsPvSMFxtQKboJy3OxGthZfmHx7zifbtYx12lR2IwqVWTspsUfNKdOR-zeM9OPeZXgfuL0z2D3OTrVk58hoUZH-Qiw14htz-yL5qsbKXwaWxK2ss6QyYW4BFPvB-WooHlBkM8O_L8g1zZ5JKifVIVI1k8CWCawFQeOsOrJ0McMPI",
+      description: "Termostato ambiental regulable, función ventilador de aire fresco para verano y selector de dos intensidades de calor con corte térmico.",
+      variants: ["Gris Claro"]
+    },
+    {
+      id: "prod-vitro-yelmo",
+      category: "tecnologia",
+      name: "Anafe Vitrocerámico Yelmo AN 9901 Táctil Digital",
+      price: 75000,
+      badge: "Tecnología",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCosGPqJPUF2q17wtZY1pbRytXi-hiLWehIXTmnQMJPzdCnKx3ennappeyR4cp9J7vHnm7dvJrKK16vSwOJaWQaB0BdxHi-V1fbGlTnNn_tW0yRLLPZIIVFBoB2dyY5nyoWPEjBCDfdFtHd2ixc1aYiYiaMIJyu2-r3XCoN8sxDIbVJHT3kIM13sHFAFyQsVzU6t4AMgvkpv-UfKW7NXs52vr--GyiusyLTmR_Wl4QTFImseZt8QqIL6R6PhGAXnqQiaMg",
+      description: "Panel 100% táctil digital de última generación con temporizador programable, bloqueo infantil de seguridad y control térmico de precisión ultrarrápido.",
+      variants: ["Negro Cerámico"]
+    },
+    {
+      id: "prod-vitro-hytoshy",
+      category: "tecnologia",
+      name: "Anafe Vitrocerámico Infrarrojo Hytoshy 2000W HT-250A-4",
+      price: 60000,
+      badge: "Infrarrojo",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBcIkd52iF9FYaC1srgef6U3i8KTCEc8cuXIrbI6MK6hLRH-B3B9HEt3fZWDiV2ST06Vqm-sUh1DyuxYVje6Xm8TT2DUe564_oPBJmtHkggCsF-XCFiCUvgXe4hdZzt5_Ox_D6MyF91IIEPK2zcY4il7yn2K48aWRjT_B3MID9psvx5TWt-vGVd-Su14X2YfniZQevgfhqkcwHqWK_Oz-zmxlWLExjmoB27ZUIvdh5FsJd7YFtoHs4zFm7koScaRnrJ4Hk",
+      description: "Placa infrarroja de alta resistencia compatible con cualquier tipo de olla o sartén (acero, cerámica, vidrio, aluminio). Disipador silencioso y control touch.",
+      variants: ["HT-250A-4"]
+    },
+    {
+      id: "prod-batidora-bowl",
+      category: "cocina",
+      name: "Batidora con Bowl Giratorio Kanji Home 2L 300W",
+      price: 40000,
+      badge: "Bowl 2L",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCcjDE0QGgTl6GI8XF_p083dD9f08mk1zDpNo8r0ALgIBf03SzsmIt4D5moYqVpX9G9datwY_JH7jU6cAM2kBfac4JmYkibZ0qIfj1kSYTBeExdomxFvWstWQpXDettbdSS1zfC757NdMSwAoVhBHEfoJOHD-YN66Ge8eMcxtxxMcDl-nZtONDzJarMKlZu0mgmtVvqD1qCKROSgb9uClbNk9X3WK9fUzbgOnsWxRt_Rn3PGRiXi4kBTN3CsVBXbd0m2po",
+      description: "Motor potente de 300W con batidores y ganchos amasadores incluidos. Recipiente giratorio de 2 litros para mezclas homogéneas y repostería uniforme.",
+      variants: ["Borgoña / Rojo"]
+    },
+    {
+      id: "prod-batidora-mano",
+      category: "cocina",
+      name: "Batidora de Mano Profile LY-PR200 7 Velocidades 200W",
+      price: 25000,
+      badge: "7 Velocidades",
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDZ8SrOh8yUK3ZnT8d7ptDuNtNqwuId1rc39Hmqe1Y7Lx5CyVg9PtyB8pgBdTC0aLZOL3zrP2KJvmMIAIQS3SbfUXlTa1GU3GPZj3Sj_m3lFnpOdgvfgCWLMa5IemzSM3-pe-AVHntrBQM13MurDmoT83Uiq9ubumlldW9t9AsdPKtlgLNUNN1-vErtMEL6GqMSyanlVw6-RJQxoUMf5Gtr-FYWHiaflbQ48TBp9sRWisXU4YghZf2PrxLxxrkPrzWuAeA",
+      description: "Compacta, ligera y potente para repostería diaria. Botón eyector rápido de accesorios y mango ergonómico soft-touch con selector graduado.",
+      variants: ["Blanco & Rojo"]
+    }
+  ];
+
+  let currentCategory = "all";
+  let currentSearch = "";
+  let cart = [];
+  let modalActiveProduct = null;
+  let modalSelectedVariant = "";
+  let modalQty = 1;
+
+  // Smooth Navigation Helper
+  function smoothNavTo(elementId, evt) {
+    if (evt) evt.preventDefault();
+    const el = document.getElementById(elementId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  // Init
+  function init() {
+    loadCart();
+    renderProducts();
+    updateCartUI();
+
+    // Ensure keyboard ESC closes overlays
+    window.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") {
+        closeProductModal();
+        closeCartDrawer();
+      }
+    });
+  }
+
+  function loadCart() {
+    try {
+      const stored = localStorage.getItem("fk_cart_desktop");
+      if (stored) cart = JSON.parse(stored);
+    } catch (e) {
+      cart = [];
+    }
+  }
+
+  function saveCart() {
+    try {
+      localStorage.setItem("fk_cart_desktop", JSON.stringify(cart));
+    } catch (e) {}
+    updateCartUI();
+  }
+
+  // Category Filtering
+  function selectCategory(cat) {
+    currentCategory = cat;
+    document.querySelectorAll(".cat-pill").forEach(btn => {
+      if (btn.getAttribute("data-cat") === cat) {
+        btn.className = "cat-pill px-3.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap bg-primary-container text-on-primary-container shadow transition-all cursor-pointer";
+      } else {
+        btn.className = "cat-pill px-3.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface hover:bg-surface-container-high transition-all cursor-pointer";
+      }
+    });
+
+    const catNames = {
+      all: "Todos los productos seleccionados y testeados",
+      hogar: "Soluciones para el hogar y confort",
+      tecnologia: "Tecnología, placas y vitrocerámicos",
+      climatizacion: "Caloventores y estufas de cuarzo",
+      cocina: "Equipamiento gastronómico y anafes",
+      accesorios: "Accesorios, bolsos y complementos"
+    };
+    const label = document.getElementById("active-cat-label");
+    if (label) label.textContent = catNames[cat] || "Catálogo de productos";
+    renderProducts();
+  }
+
+  // Live Search
+  function handleSearch(val) {
+    currentSearch = (val || "").trim().toLowerCase();
+    const clearBtn = document.getElementById("search-clear-btn");
+    const mobClearBtn = document.getElementById("mobile-search-clear-btn");
+
+    const dInput = document.getElementById("buscar-input");
+    const mInput = document.getElementById("mobile-search-input");
+    if (dInput && dInput.value !== val) dInput.value = val;
+    if (mInput && mInput.value !== val) mInput.value = val;
+
+    if (currentSearch) {
+      if (clearBtn) clearBtn.classList.remove("hidden");
+      if (mobClearBtn) mobClearBtn.classList.remove("hidden");
+    } else {
+      if (clearBtn) clearBtn.classList.add("hidden");
+      if (mobClearBtn) mobClearBtn.classList.add("hidden");
+    }
+    renderProducts();
+  }
+
+  function clearSearch() {
+    currentSearch = "";
+    const dInput = document.getElementById("buscar-input");
+    const mInput = document.getElementById("mobile-search-input");
+    if (dInput) dInput.value = "";
+    if (mInput) mInput.value = "";
+
+    const clearBtn = document.getElementById("search-clear-btn");
+    const mobClearBtn = document.getElementById("mobile-search-clear-btn");
+    if (clearBtn) clearBtn.classList.add("hidden");
+    if (mobClearBtn) mobClearBtn.classList.add("hidden");
+    renderProducts();
+  }
+
+  // Render Grid
+  function renderProducts() {
+    const grid = document.getElementById("products-grid");
+    const empty = document.getElementById("empty-state");
+    const countLabel = document.getElementById("active-count-label");
+
+    if (!grid) return;
+
+    let filtered = PRODUCTS;
+    if (currentCategory !== "all") {
+      filtered = filtered.filter(p => p.category === currentCategory);
+    }
+    if (currentSearch) {
+      filtered = filtered.filter(p =>
+        p.name.toLowerCase().includes(currentSearch) ||
+        p.description.toLowerCase().includes(currentSearch) ||
+        p.category.toLowerCase().includes(currentSearch)
+      );
+    }
+
+    if (countLabel) countLabel.textContent = `${filtered.length} artículos`;
+
+    if (filtered.length === 0) {
+      grid.innerHTML = "";
+      if (empty) empty.classList.remove("hidden");
+      return;
+    }
+
+    if (empty) empty.classList.add("hidden");
+
+    grid.innerHTML = filtered.map(prod => {
+      const formattedPrice = "$" + prod.price.toLocaleString("es-AR");
+      return `
+        <article class="group bg-surface-container rounded-3xl p-3.5 flex flex-col justify-between border border-surface-container-high hover:border-surface-container-highest transition-all duration-200 shadow hover:shadow-xl">
+          <div onclick="openProductModal('${prod.id}')" class="relative w-full aspect-square bg-surface-container-lowest rounded-2xl overflow-hidden p-3 flex items-center justify-center cursor-pointer border border-surface-container-high/60 group-hover:border-primary-container/30 transition-all">
+            <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
+            <span class="absolute top-2.5 left-2.5 bg-surface-container-highest/90 text-primary-container text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider backdrop-blur-sm shadow">
+              ${prod.badge}
+            </span>
+          </div>
+
+          <div class="mt-3 flex-1 flex flex-col justify-between">
+            <div onclick="openProductModal('${prod.id}')" class="cursor-pointer">
+              <span class="text-[10px] uppercase font-mono text-secondary tracking-widest block">${prod.category}</span>
+              <h3 class="font-headline font-bold text-xs sm:text-sm text-primary group-hover:text-primary-container transition-colors line-clamp-2 leading-snug mt-1">
+                ${prod.name}
+              </h3>
+            </div>
+
+            <div class="mt-3 pt-2 border-t border-surface-container-high/60">
+              <div class="flex items-baseline justify-between mb-2.5">
+                <span class="text-base sm:text-lg font-headline font-extrabold text-primary-container">${formattedPrice}</span>
+                <span class="text-[10px] font-semibold text-tertiary flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-[12px]">bolt</span> Stock
+                </span>
+              </div>
+
+              <div class="grid grid-cols-2 gap-1.5">
+                <button type="button" onclick="quickAddToCart('${prod.id}')" class="py-2.5 px-2 bg-primary-container hover:bg-primary-fixed text-on-primary-container font-headline font-bold text-xs rounded-xl flex items-center justify-center gap-1 active:scale-95 transition-all shadow cursor-pointer">
+                  <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+                  <span>Añadir</span>
+                </button>
+                <button type="button" onclick="openProductModal('${prod.id}')" class="py-2.5 px-2 bg-surface-container-high hover:bg-surface-highest text-on-surface font-headline font-semibold text-xs rounded-xl flex items-center justify-center gap-1 border border-surface-container-highest active:scale-95 transition-all cursor-pointer">
+                  <span class="material-symbols-outlined text-[16px]">info</span>
+                  <span>Detalle</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join("");
+  }
+
+  // Cart operations
+  function quickAddToCart(id) {
+    const prod = PRODUCTS.find(p => p.id === id);
+    if (!prod) return;
+    addToCart(prod, prod.variants[0] || "Estándar", 1);
+    showToast(`¡Añadido! ${prod.name}`);
+  }
+
+  function addToCart(prod, variant, qty) {
+    const idx = cart.findIndex(item => item.id === prod.id && item.variant === variant);
+    if (idx > -1) {
+      cart[idx].qty += qty;
+    } else {
+      cart.push({
+        id: prod.id,
+        name: prod.name,
+        price: prod.price,
+        variant: variant,
+        qty: qty,
+        image: prod.image
+      });
+    }
+    saveCart();
+  }
+
+  function changeQty(index, delta) {
+    if (cart[index]) {
+      cart[index].qty += delta;
+      if (cart[index].qty <= 0) {
+        cart.splice(index, 1);
+      }
+      saveCart();
+    }
+  }
+
+  function removeFromCart(index) {
+    if (cart[index]) {
+      cart.splice(index, 1);
+      saveCart();
+    }
+  }
+
+  function updateCartUI() {
+    const badge = document.getElementById("cart-badge");
+    const drawerCount = document.getElementById("drawer-items-count");
+    const drawerList = document.getElementById("drawer-items-list");
+    const drawerTotal = document.getElementById("drawer-total-price");
+    const chkBadge = document.getElementById("chk-total-items-badge");
+    const chkTotal = document.getElementById("chk-total-amount");
+    const waLink = document.getElementById("drawer-whatsapp-btn");
+
+    let totalQty = 0;
+    let totalPrice = 0;
+
+    cart.forEach(item => {
+      totalQty += item.qty;
+      totalPrice += item.price * item.qty;
+    });
+
+    if (badge) badge.textContent = totalQty;
+    if (drawerCount) drawerCount.textContent = totalQty;
+    const formattedTotal = "$" + totalPrice.toLocaleString("es-AR");
+    if (drawerTotal) drawerTotal.textContent = formattedTotal;
+    if (chkBadge) chkBadge.textContent = `${totalQty} artículos`;
+    if (chkTotal) chkTotal.textContent = formattedTotal;
+
+    if (drawerList) {
+      if (cart.length === 0) {
+        drawerList.innerHTML = `
+          <div class="py-16 text-center text-secondary space-y-3">
+            <span class="material-symbols-outlined text-4xl text-secondary/60">shopping_bag</span>
+            <p class="text-xs">Tu carrito está vacío.</p>
+            <button onclick="closeCartDrawer()" type="button" class="px-4 py-2 rounded-xl bg-surface-container-high text-xs font-bold text-on-surface hover:bg-surface-bright transition-colors cursor-pointer">
+              Explorar Catálogo
+            </button>
+          </div>
+        `;
+      } else {
+        drawerList.innerHTML = cart.map((item, idx) => `
+          <div class="flex items-center gap-3 p-2.5 bg-surface-container-lowest rounded-2xl border border-surface-container-high">
+            <div class="w-14 h-14 aspect-square bg-surface-container rounded-xl p-1 flex-shrink-0 flex items-center justify-center">
+              <img src="${item.image}" alt="${item.name}" class="w-full h-full object-contain">
+            </div>
+            <div class="flex-1 min-w-0">
+              <h4 class="text-xs font-bold text-on-surface truncate">${item.name}</h4>
+              <span class="text-[10px] text-secondary font-mono">${item.variant}</span>
+              <div class="text-xs font-bold text-primary-container mt-0.5">$${(item.price * item.qty).toLocaleString("es-AR")}</div>
+            </div>
+            <div class="flex flex-col items-end gap-1.5 flex-shrink-0">
+              <div class="flex items-center bg-surface-container rounded-lg border border-surface-container-high">
+                <button onclick="changeQty(${idx}, -1)" type="button" class="w-6 h-6 flex items-center justify-center text-xs font-bold text-secondary hover:text-on-surface cursor-pointer">-</button>
+                <span class="w-5 text-center text-[11px] font-bold text-on-surface font-mono">${item.qty}</span>
+                <button onclick="changeQty(${idx}, 1)" type="button" class="w-6 h-6 flex items-center justify-center text-xs font-bold text-secondary hover:text-on-surface cursor-pointer">+</button>
+              </div>
+              <button onclick="removeFromCart(${idx})" type="button" class="text-[10px] text-error hover:underline cursor-pointer">Eliminar</button>
+            </div>
+          </div>
+        `).join("");
+      }
+    }
+
+    if (waLink) {
+      let msg = `*CONSULTA / PEDIDO DESDE FK TIENDA ONLINE*\n\n`;
+      cart.forEach(i => {
+        msg += `• ${i.name} [${i.variant}] x${i.qty} = $${(i.price * i.qty).toLocaleString("es-AR")}\n`;
+      });
+      msg += `\n*TOTAL: $${totalPrice.toLocaleString("es-AR")}*\n¿Tienen disponibilidad para coordinar entrega o retiro en Las Heras 5267?`;
+      waLink.href = `https://wa.me/${FK_CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+    }
+  }
+
+  // Modal controls
+  function openProductModal(id) {
+    const prod = PRODUCTS.find(p => p.id === id);
+    if (!prod) return;
+
+    modalActiveProduct = prod;
+    modalSelectedVariant = prod.variants[0] || "Estándar";
+    modalQty = 1;
+
+    document.getElementById("modal-category-tag").textContent = prod.category;
+    document.getElementById("modal-title").textContent = prod.name;
+    document.getElementById("modal-price").textContent = "$" + prod.price.toLocaleString("es-AR");
+    document.getElementById("modal-desc").textContent = prod.description;
+    document.getElementById("modal-badge-tag").textContent = prod.badge;
+    document.getElementById("modal-image").src = prod.image;
+    document.getElementById("modal-qty-text").textContent = "1";
+
+    const varsContainer = document.getElementById("modal-variants-list");
+    varsContainer.innerHTML = prod.variants.map((v, i) => `
+      <button type="button" onclick="selectModalVar('${v}', this)" class="modal-var-pill px-3 py-1.5 rounded-xl text-xs font-bold ${i === 0 ? 'bg-primary-container text-on-primary-container' : 'bg-surface-container-highest text-secondary'} border border-surface-container-high transition-all cursor-pointer">
+        ${v}
+      </button>
+    `).join("");
+
+    updateModalWaLink();
+
+    const backdrop = document.getElementById("modal-backdrop");
+    const modal = document.getElementById("product-modal");
+    if (backdrop && modal) {
+      backdrop.classList.remove("hidden");
+      backdrop.classList.add("block");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+  }
+
+  function closeProductModal() {
+    const backdrop = document.getElementById("modal-backdrop");
+    const modal = document.getElementById("product-modal");
+    if (backdrop && modal) {
+      backdrop.classList.remove("block");
+      backdrop.classList.add("hidden");
+      modal.classList.remove("flex");
+      modal.classList.add("hidden");
+    }
+  }
+
+  function selectModalVar(v, btn) {
+    modalSelectedVariant = v;
+    document.querySelectorAll(".modal-var-pill").forEach(b => {
+      b.className = "modal-var-pill px-3 py-1.5 rounded-xl text-xs font-bold bg-surface-container-highest text-secondary border border-surface-container-high cursor-pointer";
+    });
+    btn.className = "modal-var-pill px-3 py-1.5 rounded-xl text-xs font-bold bg-primary-container text-on-primary-container border border-surface-container-high cursor-pointer";
+    updateModalWaLink();
+  }
+
+  function adjustModalQty(delta) {
+    modalQty = Math.max(1, modalQty + delta);
+    document.getElementById("modal-qty-text").textContent = modalQty;
+  }
+
+  function updateModalWaLink() {
+    if (!modalActiveProduct) return;
+    const text = `Hola ${FK_CONFIG.brand}, quiero consultar por ${modalActiveProduct.name} [Opción: ${modalSelectedVariant}] ($${modalActiveProduct.price.toLocaleString('es-AR')})`;
+    const wa = document.getElementById("modal-whatsapp-link");
+    if (wa) wa.href = `https://wa.me/${FK_CONFIG.whatsapp}?text=${encodeURIComponent(text)}`;
+  }
+
+  function addModalItemToCart() {
+    if (!modalActiveProduct) return;
+    addToCart(modalActiveProduct, modalSelectedVariant, modalQty);
+    closeProductModal();
+    showToast(`¡Añadido! ${modalActiveProduct.name}`);
+    openCartDrawer();
+  }
+
+  // Drawer controls
+  function openCartDrawer() {
+    const backdrop = document.getElementById("cart-drawer-backdrop");
+    const drawer = document.getElementById("cart-drawer");
+    if (backdrop && drawer) {
+      backdrop.classList.remove("hidden");
+      backdrop.classList.add("block");
+      drawer.classList.remove("hidden");
+      drawer.classList.add("flex");
+    }
+  }
+
+  function closeCartDrawer() {
+    const backdrop = document.getElementById("cart-drawer-backdrop");
+    const drawer = document.getElementById("cart-drawer");
+    if (backdrop && drawer) {
+      backdrop.classList.remove("block");
+      backdrop.classList.add("hidden");
+      drawer.classList.remove("flex");
+      drawer.classList.add("hidden");
+    }
+  }
+
+  function goToCheckout() {
+    closeCartDrawer();
+    smoothNavTo("checkout-section");
+  }
+
+  function toggleShippingField(show) {
+    const box = document.getElementById("chk-address-box");
+    const input = document.getElementById("chk-address");
+    if (box && input) {
+      if (show) {
+        box.classList.remove("hidden");
+        input.setAttribute("required", "true");
+      } else {
+        box.classList.add("hidden");
+        input.removeAttribute("required");
+      }
+    }
+  }
+
+  function handlePaymentChange(val) {
+    const mpBox = document.getElementById("mp-info-box");
+    if (mpBox) {
+      if (val === "mercadopago") {
+        mpBox.classList.remove("hidden");
+      } else {
+        mpBox.classList.add("hidden");
+      }
+    }
+  }
+
+  function copyMpAlias(evt) {
+    if (evt) evt.preventDefault();
+    const alias = FK_CONFIG.payment.mercadoPagoAlias;
+    navigator.clipboard.writeText(alias).then(() => {
+      const label = document.getElementById("copy-btn-label");
+      if (label) {
+        label.textContent = "¡Copiado!";
+        setTimeout(() => { label.textContent = "Copiar"; }, 2000);
+      }
+      showToast("Alias copiado al portapapeles: " + alias);
+    }).catch(() => {
+      showToast("Alias: " + alias);
+    });
+  }
+
+  function handleTechServiceSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById("tech-name").value.trim();
+    const phone = document.getElementById("tech-phone").value.trim();
+    const brand = document.getElementById("tech-brand").value;
+    const model = document.getElementById("tech-model").value.trim();
+    const issue = document.getElementById("tech-issue").value.trim();
+
+    let msg = `*SOLICITUD DE TURNO TALLER - ${FK_CONFIG.fullName.toUpperCase()}*\n`;
+    msg += `━━━━━━━━━━━━━━━━━━━━━\n`;
+    msg += `• *Cliente:* ${name}\n`;
+    msg += `• *Teléfono / WhatsApp:* ${phone}\n`;
+    msg += `• *Dispositivo:* ${brand} - ${model}\n`;
+    msg += `• *Falla declarada:* ${issue}\n`;
+    msg += `━━━━━━━━━━━━━━━━━━━━━\n`;
+    msg += `¿Podemos coordinar para recibirlo en Las Heras 5267 para diagnóstico?`;
+
+    window.open(`https://wa.me/${FK_CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`, "_blank");
+  }
+
+  function handleCheckoutSubmit(e) {
+    e.preventDefault();
+    if (cart.length === 0) {
+      alert("Tu carrito está vacío. Añadí algún producto antes de finalizar.");
+      return;
+    }
+
+    const name = document.getElementById("chk-name").value.trim();
+    const phone = document.getElementById("chk-phone").value.trim();
+    const email = document.getElementById("chk-email").value.trim();
+    const shipping = document.querySelector('input[name="chk-shipping"]:checked').value;
+    const payment = document.querySelector('input[name="chk-payment"]:checked').value;
+    const address = document.getElementById("chk-address").value.trim();
+
+    let total = 0;
+    cart.forEach(i => { total += i.price * i.qty; });
+
+    let order = `*NUEVO PEDIDO EXPRESS - ${FK_CONFIG.fullName.toUpperCase()}*\n`;
+    order += `━━━━━━━━━━━━━━━━━━━━━\n`;
+    order += `*Cliente:* ${name}\n`;
+    order += `*Teléfono:* ${phone}\n`;
+    order += `*Email:* ${email}\n\n`;
+    order += `*ENTREGA:* ${shipping === 'retiro' ? 'Retiro en Local (Las Heras 5267)' : 'Envío en el día a: ' + address}\n`;
+    order += `*FORMA DE PAGO:* ${payment === 'mercadopago' ? 'Mercado Pago (Alias: ' + FK_CONFIG.payment.mercadoPagoAlias + ' / QR)' : 'Efectivo en Local'}\n\n`;
+    order += `*PRODUCTOS:*\n`;
+    cart.forEach(i => {
+      order += `• ${i.name} [${i.variant}] x${i.qty} = $${(i.price * i.qty).toLocaleString("es-AR")}\n`;
+    });
+    order += `━━━━━━━━━━━━━━━━━━━━━\n`;
+    order += `*TOTAL ESTIMADO: $${total.toLocaleString("es-AR")}*\n\n`;
+    order += `Adjunto el comprobante una vez realizada la transferencia/pago con MP para coordinar el despacho o retiro.`;
+
+    window.open(`https://wa.me/${FK_CONFIG.whatsapp}?text=${encodeURIComponent(order)}`, "_blank");
+  }
+
+  function showToast(text) {
+    const toast = document.getElementById("toast");
+    const toastText = document.getElementById("toast-text");
+    if (!toast || !toastText) return;
+    toastText.textContent = text;
+    toast.classList.remove("hidden");
+    setTimeout(() => {
+      toast.classList.add("hidden");
+    }, 2600);
+  }
+
+  document.addEventListener("DOMContentLoaded", init);
+</script>
+</body></html>
